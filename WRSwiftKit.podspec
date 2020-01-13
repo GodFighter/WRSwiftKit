@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
