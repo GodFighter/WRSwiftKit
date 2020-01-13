@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("\(WRDevice.isIpad) \n \(WRDevice.safeAreaInset) \n \(Info.appName)")
+        print("\(WRDevice.isIpad) \n \(WRDevice.safeAreaInset) \n \(WRDevice.Info.appName)")
+        
+        
 
     }
 
