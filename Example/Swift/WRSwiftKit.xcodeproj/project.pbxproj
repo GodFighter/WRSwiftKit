@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565FF39623CCC786003C5D24 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 565FF39323CCC786003C5D24 /* README.md */; };
+		565FF39723CCC786003C5D24 /* WRSwiftKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 565FF39423CCC786003C5D24 /* WRSwiftKit.podspec */; };
+		565FF39823CCC786003C5D24 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 565FF39523CCC786003C5D24 /* LICENSE */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		C56A65274FFA0DB619DF28D2 /* Pods_WRSwiftKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680CA901C4C49F6E07342F9F /* Pods_WRSwiftKit_Tests.framework */; };
 		E40CC425C6EBE16B2F0D37DD /* Pods_WRSwiftKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE69B50B7B86C8B71658CE3 /* Pods_WRSwiftKit_Example.framework */; };
 /* End PBXBuildFile section */
@@ -28,12 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06B5346C7D556238FE8108AF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		19D31C39F03ABD739D26447B /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftKit_Example.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftKit_Example/Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2CDCF4D25CBBC3DD2F68B471 /* Pods-WRSwiftKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-WRSwiftKit_Tests/Pods-WRSwiftKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2F5820AE2DF454BB0E04022E /* Pods-WRSwiftKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftKit_Example/Pods-WRSwiftKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		31D24ED0EAFAA9EB67BE2C47 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3BE69B50B7B86C8B71658CE3 /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		565FF39323CCC786003C5D24 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		565FF39423CCC786003C5D24 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WRSwiftKit.podspec; path = ../../WRSwiftKit.podspec; sourceTree = "<group>"; };
+		565FF39523CCC786003C5D24 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* WRSwiftKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WRSwiftKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,11 +45,8 @@
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WRSwiftKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WRSwiftKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		680CA901C4C49F6E07342F9F /* Pods_WRSwiftKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1298E11360E4BAADF6B2EF /* Pods-WRSwiftKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftKit_Tests/Pods-WRSwiftKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BAC090543A80ACBBF9A40395 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WRSwiftKit.podspec; path = ../WRSwiftKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,6 @@
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for WRSwiftKit */,
-				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				66A32DF789444E55F0B6CB12 /* Pods */,
 				A3EE34941EC8CEFA28B12CF5 /* Frameworks */,
@@ -112,29 +111,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACE81AFB9204008FA782 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
-				607FACE91AFB9204008FA782 /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		607FACE91AFB9204008FA782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				607FACEA1AFB9204008FA782 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				BAC090543A80ACBBF9A40395 /* WRSwiftKit.podspec */,
-				06B5346C7D556238FE8108AF /* README.md */,
-				31D24ED0EAFAA9EB67BE2C47 /* LICENSE */,
+				565FF39523CCC786003C5D24 /* LICENSE */,
+				565FF39323CCC786003C5D24 /* README.md */,
+				565FF39423CCC786003C5D24 /* WRSwiftKit.podspec */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
@@ -147,7 +129,6 @@
 				7E1298E11360E4BAADF6B2EF /* Pods-WRSwiftKit_Tests.debug.xcconfig */,
 				2CDCF4D25CBBC3DD2F68B471 /* Pods-WRSwiftKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +208,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -246,8 +228,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565FF39823CCC786003C5D24 /* LICENSE in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				565FF39623CCC786003C5D24 /* README.md in Resources */,
+				565FF39723CCC786003C5D24 /* WRSwiftKit.podspec in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

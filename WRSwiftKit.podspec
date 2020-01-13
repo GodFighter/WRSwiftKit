@@ -30,9 +30,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
-  s.subspec 'Device' do |ss|
-      ss.source_files = 'Source/Device/*.swift'
-  end
+  #s.subspec 'Device' do |ss|
+  #  ss.source_files = 'Source/Device/*.swift'
+  #end
   
   
   

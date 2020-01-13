@@ -1,11 +1,6 @@
 use_frameworks!
 
 target 'WRSwiftKit_Example' do
-  pod 'WRSwiftKit', :path => '../'
+  pod 'WRSwiftKit'
 
-  target 'WRSwiftKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
