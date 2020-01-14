@@ -73,7 +73,7 @@
 
 /* Begin PBXFileReference section */
 		0F195B9DE0FC6E29AE98E738804FC481 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		22C4954E147E589E22DA9ABEDA11C4A0 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WRSwiftKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		22C4954E147E589E22DA9ABEDA11C4A0 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WRSwiftKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		22E5DAFB5BAC9F4DCFEF22EE6087B90C /* WRSwiftKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WRSwiftKit.modulemap; sourceTree = "<group>"; };
 		25A440309303E1BB12A29A308EAC36AE /* Pods-WRSwiftKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3006F3DC76C32275E209C98FB689F51E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -42,6 +42,34 @@ Pod::Spec.new do |s|
     ss.source_files = 'WRSwiftKit/Classes/Notification/*.swift'
   end
   
+  s.subspec 'Image' do |ss|
+    ss.source_files = 'WRSwiftKit/Classes/Image/*.swift'
+    ss.dependency 'WRSwiftKit/Classes/Common'
+  end
+
+    s.subspec 'Color' do |ss|
+      ss.source_files = 'WRSwiftKit/Classes/Color/*.swift'
+      ss.dependency 'WRSwiftKit/Classes/Common'
+    end
+
+    s.subspec 'View' do |ss|
+      ss.source_files = 'WRSwiftKit/Classes/View/*.swift'
+      ss.dependency 'WRSwiftKit/Classes/Common'
+    end
+
+    s.subspec 'Activity' do |ss|
+      ss.source_files = 'WRSwiftKit/Classes/Activity/*.swift'
+      ss.dependency 'WRSwiftKit/Classes/Common'
+      ss.subspec 'Animations' do |sss|
+          sss.source_files = 'WRSwiftKit/Classes/Activity/Animations/*.swift'
+      end
+    end
+
+    s.subspec 'ViewController' do |ss|
+      ss.source_files = 'WRSwiftKit/Classes/ViewController/*.swift'
+      ss.dependency 'WRSwiftKit/Classes/Image'
+    end
+
   
   # s.resource_bundles = {
   #   'WRSwiftKit' => ['WRSwiftKit/Assets/*.png']
