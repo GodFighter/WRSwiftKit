@@ -13,6 +13,7 @@ import UIKit
 
 @objc extension NSObject : WRObjectProtocol {
     
+    /**NSObject扩展*/
     @objc public var wr: WRObjectExtension {
         return WRObjectExtension(self)
     }

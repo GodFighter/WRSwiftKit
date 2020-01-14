@@ -25,6 +25,18 @@
 		5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09923CDD5D800D96354 /* WRDevice.swift */; };
 		5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09B23CDD5D800D96354 /* WRImage.swift */; };
 		5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09B23CDD5D800D96354 /* WRImage.swift */; };
+		5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0AD23CDDB6E00D96354 /* WRColor.swift */; };
+		5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0AD23CDDB6E00D96354 /* WRColor.swift */; };
+		5688D0B223CDDDAE00D96354 /* WRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0B123CDDDAE00D96354 /* WRView.swift */; };
+		5688D0B323CDDDAE00D96354 /* WRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0B123CDDDAE00D96354 /* WRView.swift */; };
+		5688D0B523CDDED900D96354 /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0B423CDDED900D96354 /* WRControl.swift */; };
+		5688D0B623CDDED900D96354 /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0B423CDDED900D96354 /* WRControl.swift */; };
+		5688D0B923CDEDDE00D96354 /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0B823CDEDDD00D96354 /* WRNavigationBar.swift */; };
+		5688D0BA23CDEDDE00D96354 /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0B823CDEDDD00D96354 /* WRNavigationBar.swift */; };
+		5688D0BC23CDFB1000D96354 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BB23CDFB1000D96354 /* WRNavigationController.swift */; };
+		5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BB23CDFB1000D96354 /* WRNavigationController.swift */; };
+		5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */; };
+		5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79BD5EB3D9E1228291F139C8945C32D /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -59,6 +71,12 @@
 		5688D09823CDD5D800D96354 /* WRFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFolder.swift; sourceTree = "<group>"; };
 		5688D09923CDD5D800D96354 /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		5688D09B23CDD5D800D96354 /* WRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
+		5688D0AD23CDDB6E00D96354 /* WRColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRColor.swift; sourceTree = "<group>"; };
+		5688D0B123CDDDAE00D96354 /* WRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRView.swift; sourceTree = "<group>"; };
+		5688D0B423CDDED900D96354 /* WRControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRControl.swift; sourceTree = "<group>"; };
+		5688D0B823CDEDDD00D96354 /* WRNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
+		5688D0BB23CDFB1000D96354 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
+		5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRBaseViewController.swift; sourceTree = "<group>"; };
 		68A99592FEB011570DE69C6F1B1D77C9 /* Pods-WRSwiftKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-Info.plist"; sourceTree = "<group>"; };
 		6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
 		72932F8DB002D3EEC93F7F21E4A907EE /* WRSwiftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WRSwiftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,10 +123,13 @@
 		0DCE5BC6780726A86896A02C5D21552B /* WRSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				5688D0AC23CDDB5C00D96354 /* Color */,
 				5688D09023CDD5D800D96354 /* Common */,
 				5688D09623CDD5D800D96354 /* Device */,
 				5688D09A23CDD5D800D96354 /* Image */,
 				5688D09423CDD5D800D96354 /* Notification */,
+				5688D0B023CDDDA100D96354 /* View */,
+				5688D0B723CDECC700D96354 /* ViewController */,
 				143AF687555BC3D1EE0BE10DCD3FF52A /* Pod */,
 				908CFCEE42621AF9CAADD65993EFBCC1 /* Support Files */,
 			);
@@ -164,6 +185,36 @@
 			);
 			name = Image;
 			path = WRSwiftKit/Classes/Image;
+			sourceTree = "<group>";
+		};
+		5688D0AC23CDDB5C00D96354 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				5688D0AD23CDDB6E00D96354 /* WRColor.swift */,
+			);
+			name = Color;
+			path = WRSwiftKit/Classes/Color;
+			sourceTree = "<group>";
+		};
+		5688D0B023CDDDA100D96354 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5688D0B123CDDDAE00D96354 /* WRView.swift */,
+				5688D0B423CDDED900D96354 /* WRControl.swift */,
+			);
+			name = View;
+			path = WRSwiftKit/Classes/View;
+			sourceTree = "<group>";
+		};
+		5688D0B723CDECC700D96354 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5688D0B823CDEDDD00D96354 /* WRNavigationBar.swift */,
+				5688D0BB23CDFB1000D96354 /* WRNavigationController.swift */,
+				5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */,
+			);
+			name = ViewController;
+			path = WRSwiftKit/Classes/ViewController;
 			sourceTree = "<group>";
 		};
 		6E5B4770F8579214970B1E15BF30EA53 /* Development Pods */ = {
@@ -380,10 +431,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5688D0BA23CDEDDE00D96354 /* WRNavigationBar.swift in Sources */,
+				5688D0B623CDDED900D96354 /* WRControl.swift in Sources */,
+				5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
+				5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
+				5688D0B323CDDDAE00D96354 /* WRView.swift in Sources */,
 				5688D09D23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
 				5688D0A123CDD5D800D96354 /* WRObject.swift in Sources */,
 				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
+				5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D09F23CDD5D800D96354 /* WRString.swift in Sources */,
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
@@ -396,10 +453,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5688D0B923CDEDDE00D96354 /* WRNavigationBar.swift in Sources */,
+				5688D0B523CDDED900D96354 /* WRControl.swift in Sources */,
+				5688D0BC23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
+				5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
+				5688D0B223CDDDAE00D96354 /* WRView.swift in Sources */,
 				5688D09C23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
 				5688D0A023CDD5D800D96354 /* WRObject.swift in Sources */,
 				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,
+				5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D09E23CDD5D800D96354 /* WRString.swift in Sources */,
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,

@@ -24,6 +24,12 @@ public struct WRTimeIntervalExtension{
         self.value = value
     }
     
+    /**时间字符串*/
+    /**
+    00:00:00 和 00:00 格式
+    */
+    /// - parameter unit: 时间字符串格式
+    /// - returns: 时间字符串
     public func durationString(_ unit : NSCalendar.Unit) -> String {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = unit

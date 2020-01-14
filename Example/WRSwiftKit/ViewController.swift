@@ -30,11 +30,34 @@ class ViewController: UIViewController {
         imageview.frame = CGRect(x: 0, y: 100, width: 102.4, height: 136.5)
         self.view.addSubview(imageview)
          */
-        
+
+        /*
         let image = UIImage.size(CGSize(width: 50, height: 50), image: UIImage(named: "wuren")!)
         let imageview = UIImageView(image: image)
         imageview.frame = CGRect(x: 100, y: 100, width: 50, height: 50)
         self.view.addSubview(imageview)
+        */
+        
+        /*
+        let view = UIView()
+        view.backgroundColor = .blue
+        view.frame = CGRect(x: 100, y: 100, width: 300, height: 200)
+        self.view.addSubview(view);
+        view.wr.clipCorner([.bottomLeft, .bottomRight], cornerRadius: CGSize(width: 20, height: 20))
+        */
+        
+        let button = UIButton.init(type: .system)
+        self.view.addSubview(button)
+        button.frame = CGRect(x: 100, y: 100, width: 100, height: 40)
+        button.backgroundColor = .blue
+        button.setTitle("button", for: .normal)
+        button.event(.touchDown) { (sender, event) in
+            print("touchDown")
+            }?.event(.touchUpInside, handler: { (sender, event) in
+                print("touchUpInside")
+            })
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
