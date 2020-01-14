@@ -11,11 +11,11 @@ import UIKit
 @objc public protocol WRImageProtocol{
     var wr: WRImageExtension { get }
     
-    static func size(_ image : UIImage, size : CGSize) -> UIImage?
-    static func color(_ size : CGSize, _ color : UIColor) -> UIImage?
-    static func color(size : CGSize, colors : [UIColor], locations: [CGFloat], start: CGPoint, end: CGPoint) -> UIImage?
-    static func tintColor(_ image : UIImage, tintColor: UIColor) -> UIImage?
-    static func cutting(image : UIImage, _ rect : CGRect) -> UIImage?
+    static func size(_ size : CGSize, image : UIImage) -> UIImage?
+    static func color(_ color : UIColor, size : CGSize) -> UIImage?
+    static func color(colors : [UIColor], size : CGSize, locations: [CGFloat], start: CGPoint, end: CGPoint) -> UIImage?
+    static func tintColor(_ tintColor: UIColor, image : UIImage) -> UIImage?
+    static func cutting(image : UIImage, rect : CGRect) -> UIImage?
     static func snapshot(_ view : UIView, size : CGSize, scale : CGFloat, opaque: Bool) -> UIImage?
     static func combination(_ image : CGImage?, bgImage : CGImage?, size : CGSize, scale : CGFloat) -> UIImage?
     static func fixOrientation(_ fixImage : UIImage) -> UIImage
@@ -40,7 +40,7 @@ import UIKit
     /// - parameter image: 需要修改的图片
     /// - parameter size: 修改的目标尺寸
     /// - returns: 新图片
-    @objc public static func size(_ image: UIImage, size: CGSize) -> UIImage? {
+    @objc public static func size(_ size: CGSize, image: UIImage) -> UIImage? {
         return WRImageExtension.size(image, size: size)
     }
 
@@ -51,7 +51,7 @@ import UIKit
 /// - parameter image: 需要修改的图片
     /// - parameter rect: 修改的目标frame
     /// - returns: 生成的图片
-    @objc public static func cutting(image : UIImage, _ rect : CGRect) -> UIImage? {
+    @objc public static func cutting(image : UIImage, rect : CGRect) -> UIImage? {
         return WRImageExtension.cutting(image: image, rect)
     }
 
@@ -59,7 +59,7 @@ import UIKit
     /// - parameter color: 图片颜色
     /// - parameter size: 修改的目标尺寸
     /// - returns: 生成的图片
-    @objc public static func color(_ size : CGSize, _ color : UIColor) -> UIImage? {
+    @objc public static func color(_ color : UIColor, size : CGSize) -> UIImage? {
         return WRImageExtension.color(size, color)
     }
 
@@ -70,7 +70,7 @@ import UIKit
     /// - parameter start: 开始点
     /// - parameter end: 结束点
     /// - returns: 生成的图片
-    @objc public static func color(size : CGSize, colors : [UIColor], locations: [CGFloat], start: CGPoint, end: CGPoint) -> UIImage? {
+    @objc public static func color(colors : [UIColor], size : CGSize, locations: [CGFloat], start: CGPoint, end: CGPoint) -> UIImage? {
         return WRImageExtension.color(size: size, colors: colors, locations: locations, start: start, end: end)
     }
     
@@ -78,7 +78,7 @@ import UIKit
     /// - parameter image: 待修改颜色图片
     /// - parameter tintColor: 目标颜色
     /// - returns: 生成的图片
-    @objc public static func tintColor(_ image : UIImage, tintColor: UIColor) -> UIImage? {
+    @objc public static func tintColor(_ tintColor: UIColor, image : UIImage) -> UIImage? {
         return WRImageExtension.tintColor(image, tintColor: tintColor)
     }
 

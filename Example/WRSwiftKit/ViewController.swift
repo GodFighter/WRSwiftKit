@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         self.view.addSubview(imageview)
          */
         
-        let image = UIImage.size(UIImage(named: "wuren")!, size: CGSize(width: 50, height: 50))
+        let image = UIImage.size(CGSize(width: 50, height: 50), image: UIImage(named: "wuren")!)
         let imageview = UIImageView(image: image)
         imageview.frame = CGRect(x: 100, y: 100, width: 50, height: 50)
         self.view.addSubview(imageview)
