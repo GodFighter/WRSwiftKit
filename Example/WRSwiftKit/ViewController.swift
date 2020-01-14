@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         self.view.addSubview(view);
         view.wr.clipCorner([.bottomLeft, .bottomRight], cornerRadius: CGSize(width: 20, height: 20))
         */
-        
+        /*
         let button = UIButton.init(type: .system)
         self.view.addSubview(button)
         button.frame = CGRect(x: 100, y: 100, width: 100, height: 40)
@@ -56,8 +56,9 @@ class ViewController: UIViewController {
             }?.event(.touchUpInside, handler: { (sender, event) in
                 print("touchUpInside")
             })
+        */
         
-        
+        self.view.indicator.startAnimating(.audioEqualizer, size: CGSize(width: 40, height: 40), padding: 0)
     }
 
     override func didReceiveMemoryWarning() {

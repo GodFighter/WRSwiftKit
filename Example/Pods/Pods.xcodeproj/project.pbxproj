@@ -37,6 +37,24 @@
 		5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BB23CDFB1000D96354 /* WRNavigationController.swift */; };
 		5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */; };
 		5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */; };
+		5688D0C323CDFE4F00D96354 /* WRActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C223CDFE4F00D96354 /* WRActivityIndicator.swift */; };
+		5688D0C423CDFE4F00D96354 /* WRActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C223CDFE4F00D96354 /* WRActivityIndicator.swift */; };
+		5688D0CE23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C623CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift */; };
+		5688D0CF23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C623CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift */; };
+		5688D0D023CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C723CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		5688D0D123CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C723CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C823CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift */; };
+		5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C823CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift */; };
+		5688D0D423CE044B00D96354 /* WRActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C923CE044B00D96354 /* WRActivityIndicatorShape.swift */; };
+		5688D0D523CE044B00D96354 /* WRActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0C923CE044B00D96354 /* WRActivityIndicatorShape.swift */; };
+		5688D0D623CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CA23CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift */; };
+		5688D0D723CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CA23CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift */; };
+		5688D0D823CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CB23CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift */; };
+		5688D0D923CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CB23CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift */; };
+		5688D0DA23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CC23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift */; };
+		5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CC23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift */; };
+		5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */; };
+		5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79BD5EB3D9E1228291F139C8945C32D /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -77,6 +95,15 @@
 		5688D0B823CDEDDD00D96354 /* WRNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
 		5688D0BB23CDFB1000D96354 /* WRNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
 		5688D0BE23CDFBD000D96354 /* WRBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRBaseViewController.swift; sourceTree = "<group>"; };
+		5688D0C223CDFE4F00D96354 /* WRActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRActivityIndicator.swift; sourceTree = "<group>"; };
+		5688D0C623CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationRing.swift; sourceTree = "<group>"; };
+		5688D0C723CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		5688D0C823CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
+		5688D0C923CE044B00D96354 /* WRActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		5688D0CA23CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		5688D0CB23CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationRingSpring.swift; sourceTree = "<group>"; };
+		5688D0CC23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationSystem.swift; sourceTree = "<group>"; };
+		5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorView.swift; sourceTree = "<group>"; };
 		68A99592FEB011570DE69C6F1B1D77C9 /* Pods-WRSwiftKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-Info.plist"; sourceTree = "<group>"; };
 		6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
 		72932F8DB002D3EEC93F7F21E4A907EE /* WRSwiftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WRSwiftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +150,7 @@
 		0DCE5BC6780726A86896A02C5D21552B /* WRSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
+				5688D0C123CDFE3C00D96354 /* Activity */,
 				5688D0AC23CDDB5C00D96354 /* Color */,
 				5688D09023CDD5D800D96354 /* Common */,
 				5688D09623CDD5D800D96354 /* Device */,
@@ -215,6 +243,31 @@
 			);
 			name = ViewController;
 			path = WRSwiftKit/Classes/ViewController;
+			sourceTree = "<group>";
+		};
+		5688D0C123CDFE3C00D96354 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				5688D0C223CDFE4F00D96354 /* WRActivityIndicator.swift */,
+				5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */,
+				5688D0C523CE044B00D96354 /* Animations */,
+			);
+			name = Activity;
+			path = WRSwiftKit/Classes/Activity;
+			sourceTree = "<group>";
+		};
+		5688D0C523CE044B00D96354 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				5688D0C923CE044B00D96354 /* WRActivityIndicatorShape.swift */,
+				5688D0C623CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift */,
+				5688D0C723CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */,
+				5688D0C823CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift */,
+				5688D0CA23CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift */,
+				5688D0CB23CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift */,
+				5688D0CC23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		6E5B4770F8579214970B1E15BF30EA53 /* Development Pods */ = {
@@ -435,13 +488,22 @@
 				5688D0B623CDDED900D96354 /* WRControl.swift in Sources */,
 				5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
+				5688D0D123CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
+				5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
 				5688D0B323CDDDAE00D96354 /* WRView.swift in Sources */,
+				5688D0D723CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				5688D09D23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
+				5688D0C423CDFE4F00D96354 /* WRActivityIndicator.swift in Sources */,
+				5688D0D523CE044B00D96354 /* WRActivityIndicatorShape.swift in Sources */,
 				5688D0A123CDD5D800D96354 /* WRObject.swift in Sources */,
+				5688D0CF23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
+				5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */,
+				5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09F23CDD5D800D96354 /* WRString.swift in Sources */,
+				5688D0D923CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
 				41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */,
@@ -457,13 +519,22 @@
 				5688D0B523CDDED900D96354 /* WRControl.swift in Sources */,
 				5688D0BC23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
+				5688D0D023CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
+				5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
 				5688D0B223CDDDAE00D96354 /* WRView.swift in Sources */,
+				5688D0D623CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				5688D09C23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
+				5688D0C323CDFE4F00D96354 /* WRActivityIndicator.swift in Sources */,
+				5688D0D423CE044B00D96354 /* WRActivityIndicatorShape.swift in Sources */,
 				5688D0A023CDD5D800D96354 /* WRObject.swift in Sources */,
+				5688D0CE23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,
+				5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */,
+				5688D0DA23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09E23CDD5D800D96354 /* WRString.swift in Sources */,
+				5688D0D823CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,
