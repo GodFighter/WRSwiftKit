@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -30,46 +30,46 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
 
-  s.subspec 'Common' do |ss|
-    ss.source_files = 'WRSwiftKit/Classes/Common/*.swift'
-  end
+    s.subspec 'Common' do |ss|
+        ss.source_files = 'WRSwiftKit/Classes/Common/*.swift'
+    end
 
-  s.subspec 'Device' do |ss|
-    ss.source_files = 'WRSwiftKit/Classes/Device/*.swift'
-  end
+    s.subspec 'Device' do |ss|
+        ss.source_files = 'WRSwiftKit/Classes/Device/*.swift'
+    end
   
-  s.subspec 'Notification' do |ss|
-    ss.source_files = 'WRSwiftKit/Classes/Notification/*.swift'
-  end
+    s.subspec 'Notification' do |ss|
+        ss.source_files = 'WRSwiftKit/Classes/Notification/*.swift'
+    end
   
-  s.subspec 'Image' do |ss|
-    ss.source_files = 'WRSwiftKit/Classes/Image/*.swift'
-    ss.dependency 'WRSwiftKit/Classes/Common'
-  end
-
-    s.subspec 'Color' do |ss|
-      ss.source_files = 'WRSwiftKit/Classes/Color/*.swift'
-      ss.dependency 'WRSwiftKit/Classes/Common'
+    s.subspec 'Image' do |image|
+        image.source_files = 'WRSwiftKit/Classes/Image/*.swift'
+        image.dependency 'WRSwiftKit/Common'
     end
 
-    s.subspec 'View' do |ss|
-      ss.source_files = 'WRSwiftKit/Classes/View/*.swift'
-      ss.dependency 'WRSwiftKit/Classes/Common'
+    s.subspec 'Color' do |color|
+        color.source_files = 'WRSwiftKit/Classes/Color/*.swift'
+        color.dependency 'WRSwiftKit/Common'
     end
 
-    s.subspec 'Activity' do |ss|
-      ss.source_files = 'WRSwiftKit/Classes/Activity/*.swift'
-      ss.dependency 'WRSwiftKit/Classes/Common'
-      ss.subspec 'Animations' do |sss|
-          sss.source_files = 'WRSwiftKit/Classes/Activity/Animations/*.swift'
-      end
+    s.subspec 'View' do |view|
+        view.source_files = 'WRSwiftKit/Classes/View/*.swift'
+        view.dependency 'WRSwiftKit/Common'
     end
 
-    #s.subspec 'ViewController' do |ss|
-    #  ss.source_files = 'WRSwiftKit/Classes/ViewController/*.swift'
-    #  ss.dependency 'WRSwiftKit/Classes/Color'
-    #  ss.dependency 'WRSwiftKit/Classes/Image'
-    #end
+    s.subspec 'Activity' do |activity|
+        activity.source_files = 'WRSwiftKit/Classes/Activity/*.swift'
+        activity.subspec 'Animations' do |animations|
+            animations.source_files = 'WRSwiftKit/Classes/Activity/Animations/*.swift'
+        end
+        activity.dependency 'WRSwiftKit/Common'
+    end
+
+    s.subspec 'ViewController' do |viewController|
+        viewController.source_files = 'WRSwiftKit/Classes/ViewController/*.swift'
+        viewController.dependency 'WRSwiftKit/Color'
+        viewController.dependency 'WRSwiftKit/Image'
+    end
 
   
   # s.resource_bundles = {
