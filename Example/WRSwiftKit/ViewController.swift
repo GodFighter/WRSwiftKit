@@ -14,8 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("\(WRDevice.Info.appName)")
+        WRFolder.cacheUrl = Bundle.main.bundleURL
+        print("\(WRFolder.folderSize(WRFolder.cacheUrl!))")
 
+        let email = "100000000000@qq.com"
+        
+        print("\(email.wr.isEmail)")
+        
     }
 
     override func didReceiveMemoryWarning() {

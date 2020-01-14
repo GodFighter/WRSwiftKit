@@ -19,7 +19,11 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"%f",[WRDevice spaceValue:SpaceFree]);
+    WRFolder.cacheUrl = [NSBundle mainBundle].bundleURL;
+
+    NSString *email = @"586261110000@qq.com";
+
+    NSLog(@"%d",email.wr.isEmail);
     
     
     //    NSLog(@"%@", [WRDevice space]);
