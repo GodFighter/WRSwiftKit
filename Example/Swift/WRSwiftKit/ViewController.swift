@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         print("\(WRDevice.isIpad) \n \(WRDevice.safeAreaInset) \n \(WRDevice.Info.appName)")
         
-        
+        print("\(WRDevice.Space.free.gbString)")
 
     }
 
