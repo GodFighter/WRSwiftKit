@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  WRSwiftKit
 //
-//  Created by GodFighter on 01/14/2020.
-//  Copyright (c) 2020 GodFighter. All rights reserved.
+//  Created by Godfighter on 01/14/2020.
+//  Copyright (c) 2020 Godfighter. All rights reserved.
 //
 
 import UIKit
@@ -35,9 +35,6 @@ class ViewController: UIViewController {
         let imageview = UIImageView(image: image)
         imageview.frame = CGRect(x: 100, y: 100, width: 50, height: 50)
         self.view.addSubview(imageview)
-
-
-//        print("\(UIImage.WR)")
     }
 
     override func didReceiveMemoryWarning() {

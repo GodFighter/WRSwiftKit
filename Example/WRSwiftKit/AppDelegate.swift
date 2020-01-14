@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  WRSwiftKit
 //
-//  Created by GodFighter on 01/14/2020.
-//  Copyright (c) 2020 GodFighter. All rights reserved.
+//  Created by Godfighter on 01/14/2020.
+//  Copyright (c) 2020 Godfighter. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    internal func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }

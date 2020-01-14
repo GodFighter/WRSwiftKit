@@ -9,24 +9,24 @@
 /* Begin PBXBuildFile section */
 		1073B13D8ACAE92BF9D30AB8F41400ED /* Pods-WRSwiftKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */; };
+		5688D09C23CDD5D800D96354 /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09123CDD5D800D96354 /* WRTimeInterval.swift */; };
+		5688D09D23CDD5D800D96354 /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09123CDD5D800D96354 /* WRTimeInterval.swift */; };
+		5688D09E23CDD5D800D96354 /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09223CDD5D800D96354 /* WRString.swift */; };
+		5688D09F23CDD5D800D96354 /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09223CDD5D800D96354 /* WRString.swift */; };
+		5688D0A023CDD5D800D96354 /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09323CDD5D800D96354 /* WRObject.swift */; };
+		5688D0A123CDD5D800D96354 /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09323CDD5D800D96354 /* WRObject.swift */; };
+		5688D0A223CDD5D800D96354 /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09523CDD5D800D96354 /* WRNotification.swift */; };
+		5688D0A323CDD5D800D96354 /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09523CDD5D800D96354 /* WRNotification.swift */; };
+		5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09723CDD5D800D96354 /* WRPath.swift */; };
+		5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09723CDD5D800D96354 /* WRPath.swift */; };
+		5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09823CDD5D800D96354 /* WRFolder.swift */; };
+		5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09823CDD5D800D96354 /* WRFolder.swift */; };
+		5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09923CDD5D800D96354 /* WRDevice.swift */; };
+		5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09923CDD5D800D96354 /* WRDevice.swift */; };
+		5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09B23CDD5D800D96354 /* WRImage.swift */; };
+		5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09B23CDD5D800D96354 /* WRImage.swift */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79BD5EB3D9E1228291F139C8945C32D /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
-		BB90752023CD70E800CC08AF /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90751E23CD70E800CC08AF /* WRFolder.swift */; };
-		BB90752123CD70E800CC08AF /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90751E23CD70E800CC08AF /* WRFolder.swift */; };
-		BB90752223CD70E800CC08AF /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90751F23CD70E800CC08AF /* WRDevice.swift */; };
-		BB90752323CD70E800CC08AF /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90751F23CD70E800CC08AF /* WRDevice.swift */; };
-		BB90753123CD753F00CC08AF /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753023CD753F00CC08AF /* WRPath.swift */; };
-		BB90753223CD753F00CC08AF /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753023CD753F00CC08AF /* WRPath.swift */; };
-		BB90753623CD75F000CC08AF /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753523CD75F000CC08AF /* WRObject.swift */; };
-		BB90753723CD75F000CC08AF /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753523CD75F000CC08AF /* WRObject.swift */; };
-		BB90753923CD76B000CC08AF /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753823CD76B000CC08AF /* WRString.swift */; };
-		BB90753A23CD76B000CC08AF /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753823CD76B000CC08AF /* WRString.swift */; };
-		BB90754323CD9D3500CC08AF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754223CD9D3500CC08AF /* WRTimeInterval.swift */; };
-		BB90754423CD9D3500CC08AF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754223CD9D3500CC08AF /* WRTimeInterval.swift */; };
-		BB90755023CD9F8A00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754F23CD9F8A00CC08AF /* WRNotification.swift */; };
-		BB90755123CD9F8A00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754F23CD9F8A00CC08AF /* WRNotification.swift */; };
-		BB90757923CDA45900CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757823CDA45900CC08AF /* WRImage.swift */; };
-		BB90757A23CDA45900CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757823CDA45900CC08AF /* WRImage.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		0F195B9DE0FC6E29AE98E738804FC481 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		22C4954E147E589E22DA9ABEDA11C4A0 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WRSwiftKit.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		22C4954E147E589E22DA9ABEDA11C4A0 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WRSwiftKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		22E5DAFB5BAC9F4DCFEF22EE6087B90C /* WRSwiftKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WRSwiftKit.modulemap; sourceTree = "<group>"; };
 		25A440309303E1BB12A29A308EAC36AE /* Pods-WRSwiftKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3006F3DC76C32275E209C98FB689F51E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -51,6 +51,14 @@
 		335B7E46827A3B8F7E055AEB3449C6D6 /* Pods-WRSwiftKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WRSwiftKit_Example-dummy.m"; sourceTree = "<group>"; };
 		49B8F3D4B316E239059C08AE1F2C8F72 /* WRSwiftKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WRSwiftKit-Info.plist"; sourceTree = "<group>"; };
+		5688D09123CDD5D800D96354 /* WRTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
+		5688D09223CDD5D800D96354 /* WRString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
+		5688D09323CDD5D800D96354 /* WRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRObject.swift; sourceTree = "<group>"; };
+		5688D09523CDD5D800D96354 /* WRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNotification.swift; sourceTree = "<group>"; };
+		5688D09723CDD5D800D96354 /* WRPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
+		5688D09823CDD5D800D96354 /* WRFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFolder.swift; sourceTree = "<group>"; };
+		5688D09923CDD5D800D96354 /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
+		5688D09B23CDD5D800D96354 /* WRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		68A99592FEB011570DE69C6F1B1D77C9 /* Pods-WRSwiftKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-Info.plist"; sourceTree = "<group>"; };
 		6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
 		72932F8DB002D3EEC93F7F21E4A907EE /* WRSwiftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WRSwiftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,14 +71,6 @@
 		AA459AD3278226854C12B4DF0E8EBF6E /* WRSwiftKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WRSwiftKit.xcconfig; sourceTree = "<group>"; };
 		AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		AE7DD37D02D226D7275CA66FABF4DB16 /* Pods-WRSwiftKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB90751E23CD70E800CC08AF /* WRFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFolder.swift; sourceTree = "<group>"; };
-		BB90751F23CD70E800CC08AF /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
-		BB90753023CD753F00CC08AF /* WRPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
-		BB90753523CD75F000CC08AF /* WRObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRObject.swift; sourceTree = "<group>"; };
-		BB90753823CD76B000CC08AF /* WRString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
-		BB90754223CD9D3500CC08AF /* WRTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
-		BB90754F23CD9F8A00CC08AF /* WRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNotification.swift; sourceTree = "<group>"; };
-		BB90757823CDA45900CC08AF /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,10 +105,10 @@
 		0DCE5BC6780726A86896A02C5D21552B /* WRSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
-				BB90753423CD75E000CC08AF /* Common */,
-				BB90751D23CD70E800CC08AF /* Device */,
-				BB90757723CDA44500CC08AF /* Image */,
-				BB90754E23CD9F8A00CC08AF /* Notification */,
+				5688D09023CDD5D800D96354 /* Common */,
+				5688D09623CDD5D800D96354 /* Device */,
+				5688D09A23CDD5D800D96354 /* Image */,
+				5688D09423CDD5D800D96354 /* Notification */,
 				143AF687555BC3D1EE0BE10DCD3FF52A /* Pod */,
 				908CFCEE42621AF9CAADD65993EFBCC1 /* Support Files */,
 			);
@@ -124,6 +124,46 @@
 				22C4954E147E589E22DA9ABEDA11C4A0 /* WRSwiftKit.podspec */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		5688D09023CDD5D800D96354 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5688D09123CDD5D800D96354 /* WRTimeInterval.swift */,
+				5688D09223CDD5D800D96354 /* WRString.swift */,
+				5688D09323CDD5D800D96354 /* WRObject.swift */,
+			);
+			name = Common;
+			path = WRSwiftKit/Classes/Common;
+			sourceTree = "<group>";
+		};
+		5688D09423CDD5D800D96354 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				5688D09523CDD5D800D96354 /* WRNotification.swift */,
+			);
+			name = Notification;
+			path = WRSwiftKit/Classes/Notification;
+			sourceTree = "<group>";
+		};
+		5688D09623CDD5D800D96354 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				5688D09723CDD5D800D96354 /* WRPath.swift */,
+				5688D09823CDD5D800D96354 /* WRFolder.swift */,
+				5688D09923CDD5D800D96354 /* WRDevice.swift */,
+			);
+			name = Device;
+			path = WRSwiftKit/Classes/Device;
+			sourceTree = "<group>";
+		};
+		5688D09A23CDD5D800D96354 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5688D09B23CDD5D800D96354 /* WRImage.swift */,
+			);
+			name = Image;
+			path = WRSwiftKit/Classes/Image;
 			sourceTree = "<group>";
 		};
 		6E5B4770F8579214970B1E15BF30EA53 /* Development Pods */ = {
@@ -172,46 +212,6 @@
 				D279D2B988EEBA6EBA86F8D16D38BDCF /* Pods-WRSwiftKit_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BB90751D23CD70E800CC08AF /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				BB90751F23CD70E800CC08AF /* WRDevice.swift */,
-				BB90751E23CD70E800CC08AF /* WRFolder.swift */,
-				BB90753023CD753F00CC08AF /* WRPath.swift */,
-			);
-			name = Device;
-			path = WRSwiftKit/Classes/Device;
-			sourceTree = "<group>";
-		};
-		BB90753423CD75E000CC08AF /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				BB90753523CD75F000CC08AF /* WRObject.swift */,
-				BB90753823CD76B000CC08AF /* WRString.swift */,
-				BB90754223CD9D3500CC08AF /* WRTimeInterval.swift */,
-			);
-			name = Common;
-			path = WRSwiftKit/Classes/Common;
-			sourceTree = "<group>";
-		};
-		BB90754E23CD9F8A00CC08AF /* Notification */ = {
-			isa = PBXGroup;
-			children = (
-				BB90754F23CD9F8A00CC08AF /* WRNotification.swift */,
-			);
-			name = Notification;
-			path = WRSwiftKit/Classes/Notification;
-			sourceTree = "<group>";
-		};
-		BB90757723CDA44500CC08AF /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				BB90757823CDA45900CC08AF /* WRImage.swift */,
-			);
-			name = Image;
-			path = WRSwiftKit/Classes/Image;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -333,11 +333,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					14ADD185EA24A103038244E3C7845F7F = {
-						LastSwiftMigration = 1130;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -380,15 +375,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB90757A23CDA45900CC08AF /* WRImage.swift in Sources */,
-				BB90753723CD75F000CC08AF /* WRObject.swift in Sources */,
-				BB90753A23CD76B000CC08AF /* WRString.swift in Sources */,
-				BB90752323CD70E800CC08AF /* WRDevice.swift in Sources */,
-				BB90754423CD9D3500CC08AF /* WRTimeInterval.swift in Sources */,
-				BB90753223CD753F00CC08AF /* WRPath.swift in Sources */,
-				BB90752123CD70E800CC08AF /* WRFolder.swift in Sources */,
+				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
+				5688D09D23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
+				5688D0A123CDD5D800D96354 /* WRObject.swift in Sources */,
+				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
+				5688D09F23CDD5D800D96354 /* WRString.swift in Sources */,
+				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
+				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
 				41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */,
-				BB90755123CD9F8A00CC08AF /* WRNotification.swift in Sources */,
+				5688D0A323CDD5D800D96354 /* WRNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,15 +391,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB90757923CDA45900CC08AF /* WRImage.swift in Sources */,
-				BB90753623CD75F000CC08AF /* WRObject.swift in Sources */,
-				BB90753923CD76B000CC08AF /* WRString.swift in Sources */,
-				BB90752223CD70E800CC08AF /* WRDevice.swift in Sources */,
-				BB90754323CD9D3500CC08AF /* WRTimeInterval.swift in Sources */,
-				BB90753123CD753F00CC08AF /* WRPath.swift in Sources */,
-				BB90752023CD70E800CC08AF /* WRFolder.swift in Sources */,
+				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
+				5688D09C23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
+				5688D0A023CDD5D800D96354 /* WRObject.swift in Sources */,
+				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,
+				5688D09E23CDD5D800D96354 /* WRString.swift in Sources */,
+				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
+				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,
-				BB90755023CD9F8A00CC08AF /* WRNotification.swift in Sources */,
+				5688D0A223CDD5D800D96354 /* WRNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +473,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -509,7 +504,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
