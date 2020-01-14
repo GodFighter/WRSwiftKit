@@ -226,19 +226,19 @@ import UIKit
             return "512GB"
         }
     }
-
-    @objc public func spaceValue(_ space : Space) -> Double {
+    
+    @objc public static func spaceValue(_ space : Space) -> Double {
         guard let attributes = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else{
             return 0
         }
-        
+
         switch space{
         case .free: return Double((attributes[FileAttributeKey.systemFreeSize] as? NSNumber)?.uint64Value ?? 0)
         case .total: return attributes[FileAttributeKey.systemSize] as? Double ?? 0
         }
     }
 
-    @objc public func gbString(_ space : Space) -> String {
+    @objc public static func gbString(_ space : Space) -> String {
         switch space{
         case .free: return String(format: "%.2fGB", WRDevice.doubleGbSpace(space: space.value))
         case .total: return WRDevice.calculateDeviceSpace(spaceGb: space.value)

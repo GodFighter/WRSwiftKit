@@ -2,18 +2,16 @@
 //  main.m
 //  WRSwiftKit
 //
-//  Created by 项辉 on 2020/1/14.
-//  Copyright © 2020 项辉. All rights reserved.
+//  Created by GodFighter on 01/14/2020.
+//  Copyright (c) 2020 GodFighter. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+@import UIKit;
+#import "WRAppDelegate.h"
 
-int main(int argc, char * argv[]) {
-    NSString * appDelegateClassName;
+int main(int argc, char * argv[])
+{
     @autoreleasepool {
-        // Setup code that might create autoreleased objects goes here.
-        appDelegateClassName = NSStringFromClass([AppDelegate class]);
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([WRAppDelegate class]));
     }
-    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
