@@ -23,6 +23,8 @@
 		BB90754723CD9D9000CC08AF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754523CD9D9000CC08AF /* WRTimeInterval.swift */; };
 		BB90755423CD9F9C00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90755323CD9F9C00CC08AF /* WRNotification.swift */; };
 		BB90755523CD9F9D00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90755323CD9F9C00CC08AF /* WRNotification.swift */; };
+		BB90757D23CDAD4800CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757C23CDAD4800CC08AF /* WRImage.swift */; };
+		BB90757E23CDAD4800CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757C23CDAD4800CC08AF /* WRImage.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F7EAF210000DBD09BFBE802D4E281480 /* WRSwiftKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C98ABFAED371F139193E1A79541DED /* WRSwiftKit-dummy.m */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -70,6 +72,7 @@
 		BB90753D23CD94C900CC08AF /* WRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRObject.swift; sourceTree = "<group>"; };
 		BB90754523CD9D9000CC08AF /* WRTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
 		BB90755323CD9F9C00CC08AF /* WRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNotification.swift; sourceTree = "<group>"; };
+		BB90757C23CDAD4800CC08AF /* WRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D1C98ABFAED371F139193E1A79541DED /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
@@ -182,6 +185,15 @@
 			path = WRSwiftKit/Classes/Notification;
 			sourceTree = "<group>";
 		};
+		BB90757B23CDAD4800CC08AF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BB90757C23CDAD4800CC08AF /* WRImage.swift */,
+			);
+			name = Image;
+			path = WRSwiftKit/Classes/Image;
+			sourceTree = "<group>";
+		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +207,7 @@
 			children = (
 				BB90753B23CD94C900CC08AF /* Common */,
 				BB90750423CD61FB00CC08AF /* Device */,
+				BB90757B23CDAD4800CC08AF /* Image */,
 				BB90755223CD9F9C00CC08AF /* Notification */,
 				FE2824AF64263D5188015B194CADBB84 /* Pod */,
 				635D8E4F97BFCED85647C12261BE9138 /* Support Files */,
@@ -393,6 +406,7 @@
 				BB90754023CD94C900CC08AF /* WRObject.swift in Sources */,
 				BB90752E23CD72C100CC08AF /* WRFolder.swift in Sources */,
 				BB90755423CD9F9C00CC08AF /* WRNotification.swift in Sources */,
+				BB90757D23CDAD4800CC08AF /* WRImage.swift in Sources */,
 				BB90753E23CD94C900CC08AF /* WRString.swift in Sources */,
 				BB90750623CD61FC00CC08AF /* WRDevice.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,
@@ -407,6 +421,7 @@
 				BB90754123CD94C900CC08AF /* WRObject.swift in Sources */,
 				BB90752F23CD72C100CC08AF /* WRFolder.swift in Sources */,
 				BB90755523CD9F9D00CC08AF /* WRNotification.swift in Sources */,
+				BB90757E23CDAD4800CC08AF /* WRImage.swift in Sources */,
 				BB90753F23CD94C900CC08AF /* WRString.swift in Sources */,
 				BB90750723CD61FC00CC08AF /* WRDevice.swift in Sources */,
 				F7EAF210000DBD09BFBE802D4E281480 /* WRSwiftKit-dummy.m in Sources */,

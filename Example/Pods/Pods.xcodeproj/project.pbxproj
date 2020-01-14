@@ -25,6 +25,8 @@
 		BB90754423CD9D3500CC08AF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754223CD9D3500CC08AF /* WRTimeInterval.swift */; };
 		BB90755023CD9F8A00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754F23CD9F8A00CC08AF /* WRNotification.swift */; };
 		BB90755123CD9F8A00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754F23CD9F8A00CC08AF /* WRNotification.swift */; };
+		BB90757923CDA45900CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757823CDA45900CC08AF /* WRImage.swift */; };
+		BB90757A23CDA45900CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757823CDA45900CC08AF /* WRImage.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,7 @@
 		BB90753823CD76B000CC08AF /* WRString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
 		BB90754223CD9D3500CC08AF /* WRTimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
 		BB90754F23CD9F8A00CC08AF /* WRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNotification.swift; sourceTree = "<group>"; };
+		BB90757823CDA45900CC08AF /* WRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 			children = (
 				BB90753423CD75E000CC08AF /* Common */,
 				BB90751D23CD70E800CC08AF /* Device */,
+				BB90757723CDA44500CC08AF /* Image */,
 				BB90754E23CD9F8A00CC08AF /* Notification */,
 				143AF687555BC3D1EE0BE10DCD3FF52A /* Pod */,
 				908CFCEE42621AF9CAADD65993EFBCC1 /* Support Files */,
@@ -199,6 +203,15 @@
 			);
 			name = Notification;
 			path = WRSwiftKit/Classes/Notification;
+			sourceTree = "<group>";
+		};
+		BB90757723CDA44500CC08AF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BB90757823CDA45900CC08AF /* WRImage.swift */,
+			);
+			name = Image;
+			path = WRSwiftKit/Classes/Image;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -367,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB90757A23CDA45900CC08AF /* WRImage.swift in Sources */,
 				BB90753723CD75F000CC08AF /* WRObject.swift in Sources */,
 				BB90753A23CD76B000CC08AF /* WRString.swift in Sources */,
 				BB90752323CD70E800CC08AF /* WRDevice.swift in Sources */,
@@ -382,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB90757923CDA45900CC08AF /* WRImage.swift in Sources */,
 				BB90753623CD75F000CC08AF /* WRObject.swift in Sources */,
 				BB90753923CD76B000CC08AF /* WRString.swift in Sources */,
 				BB90752223CD70E800CC08AF /* WRDevice.swift in Sources */,
