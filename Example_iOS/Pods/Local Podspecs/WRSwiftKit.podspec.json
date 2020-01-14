@@ -1,0 +1,22 @@
+{
+  "name": "WRSwiftKit",
+  "version": "0.1.0",
+  "summary": "A short description of WRSwiftKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/GodFighter/WRSwiftKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "GodFighter": "{xianghui_ios@163.com}"
+  },
+  "source": {
+    "git": "https://github.com/GodFighter/WRSwiftKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WRSwiftKit/Classes/**/*"
+}
