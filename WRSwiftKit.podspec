@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -65,10 +65,11 @@ Pod::Spec.new do |s|
       end
     end
 
-    s.subspec 'ViewController' do |ss|
-      ss.source_files = 'WRSwiftKit/Classes/ViewController/*.swift'
-      ss.dependency 'WRSwiftKit/Classes/Image'
-    end
+    #s.subspec 'ViewController' do |ss|
+    #  ss.source_files = 'WRSwiftKit/Classes/ViewController/*.swift'
+    #  ss.dependency 'WRSwiftKit/Classes/Color'
+    #  ss.dependency 'WRSwiftKit/Classes/Image'
+    #end
 
   
   # s.resource_bundles = {
