@@ -11,20 +11,52 @@
 		1849DFC321A9E40EBD9DBD0FF88E2101 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A8B9F134704F54843D747CFC62C8D6B /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
-		BB90750623CD61FC00CC08AF /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90750523CD61FB00CC08AF /* WRDevice.swift */; };
-		BB90750723CD61FC00CC08AF /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90750523CD61FB00CC08AF /* WRDevice.swift */; };
-		BB90752E23CD72C100CC08AF /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90752D23CD72C100CC08AF /* WRFolder.swift */; };
-		BB90752F23CD72C100CC08AF /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90752D23CD72C100CC08AF /* WRFolder.swift */; };
-		BB90753E23CD94C900CC08AF /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753C23CD94C900CC08AF /* WRString.swift */; };
-		BB90753F23CD94C900CC08AF /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753C23CD94C900CC08AF /* WRString.swift */; };
-		BB90754023CD94C900CC08AF /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753D23CD94C900CC08AF /* WRObject.swift */; };
-		BB90754123CD94C900CC08AF /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90753D23CD94C900CC08AF /* WRObject.swift */; };
-		BB90754623CD9D9000CC08AF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754523CD9D9000CC08AF /* WRTimeInterval.swift */; };
-		BB90754723CD9D9000CC08AF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90754523CD9D9000CC08AF /* WRTimeInterval.swift */; };
-		BB90755423CD9F9C00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90755323CD9F9C00CC08AF /* WRNotification.swift */; };
-		BB90755523CD9F9D00CC08AF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90755323CD9F9C00CC08AF /* WRNotification.swift */; };
-		BB90757D23CDAD4800CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757C23CDAD4800CC08AF /* WRImage.swift */; };
-		BB90757E23CDAD4800CC08AF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB90757C23CDAD4800CC08AF /* WRImage.swift */; };
+		BB75691A23CEB5BE007330CF /* WRActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FB23CEB5BD007330CF /* WRActivityIndicator.swift */; };
+		BB75691B23CEB5BE007330CF /* WRActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FB23CEB5BD007330CF /* WRActivityIndicator.swift */; };
+		BB75691C23CEB5BE007330CF /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FC23CEB5BD007330CF /* WRActivityIndicatorView.swift */; };
+		BB75691D23CEB5BE007330CF /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FC23CEB5BD007330CF /* WRActivityIndicatorView.swift */; };
+		BB75691E23CEB5BE007330CF /* WRActivityIndicatorAnimationRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FE23CEB5BD007330CF /* WRActivityIndicatorAnimationRing.swift */; };
+		BB75691F23CEB5BE007330CF /* WRActivityIndicatorAnimationRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FE23CEB5BD007330CF /* WRActivityIndicatorAnimationRing.swift */; };
+		BB75692023CEB5BE007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FF23CEB5BD007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		BB75692123CEB5BE007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7568FF23CEB5BD007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */; };
+		BB75692223CEB5BE007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690023CEB5BD007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift */; };
+		BB75692323CEB5BE007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690023CEB5BD007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift */; };
+		BB75692423CEB5BE007330CF /* WRActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690123CEB5BD007330CF /* WRActivityIndicatorShape.swift */; };
+		BB75692523CEB5BE007330CF /* WRActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690123CEB5BD007330CF /* WRActivityIndicatorShape.swift */; };
+		BB75692623CEB5BE007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690223CEB5BD007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift */; };
+		BB75692723CEB5BE007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690223CEB5BD007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift */; };
+		BB75692823CEB5BE007330CF /* WRActivityIndicatorAnimationRingSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690323CEB5BD007330CF /* WRActivityIndicatorAnimationRingSpring.swift */; };
+		BB75692923CEB5BE007330CF /* WRActivityIndicatorAnimationRingSpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690323CEB5BD007330CF /* WRActivityIndicatorAnimationRingSpring.swift */; };
+		BB75692A23CEB5BE007330CF /* WRActivityIndicatorAnimationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690423CEB5BD007330CF /* WRActivityIndicatorAnimationSystem.swift */; };
+		BB75692B23CEB5BE007330CF /* WRActivityIndicatorAnimationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690423CEB5BD007330CF /* WRActivityIndicatorAnimationSystem.swift */; };
+		BB75692C23CEB5BE007330CF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690623CEB5BD007330CF /* WRNotification.swift */; };
+		BB75692D23CEB5BE007330CF /* WRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690623CEB5BD007330CF /* WRNotification.swift */; };
+		BB75692E23CEB5BE007330CF /* WRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690823CEB5BD007330CF /* WRColor.swift */; };
+		BB75692F23CEB5BE007330CF /* WRColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690823CEB5BD007330CF /* WRColor.swift */; };
+		BB75693023CEB5BE007330CF /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690A23CEB5BD007330CF /* WRNavigationController.swift */; };
+		BB75693123CEB5BE007330CF /* WRNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690A23CEB5BD007330CF /* WRNavigationController.swift */; };
+		BB75693223CEB5BE007330CF /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690B23CEB5BD007330CF /* WRNavigationBar.swift */; };
+		BB75693323CEB5BE007330CF /* WRNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690B23CEB5BD007330CF /* WRNavigationBar.swift */; };
+		BB75693423CEB5BE007330CF /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690C23CEB5BD007330CF /* WRBaseViewController.swift */; };
+		BB75693523CEB5BE007330CF /* WRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690C23CEB5BD007330CF /* WRBaseViewController.swift */; };
+		BB75693623CEB5BE007330CF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690E23CEB5BD007330CF /* WRImage.swift */; };
+		BB75693723CEB5BE007330CF /* WRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75690E23CEB5BD007330CF /* WRImage.swift */; };
+		BB75693823CEB5BE007330CF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691023CEB5BE007330CF /* WRTimeInterval.swift */; };
+		BB75693923CEB5BE007330CF /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691023CEB5BE007330CF /* WRTimeInterval.swift */; };
+		BB75693A23CEB5BE007330CF /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691123CEB5BE007330CF /* WRString.swift */; };
+		BB75693B23CEB5BE007330CF /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691123CEB5BE007330CF /* WRString.swift */; };
+		BB75693C23CEB5BE007330CF /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691223CEB5BE007330CF /* WRObject.swift */; };
+		BB75693D23CEB5BE007330CF /* WRObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691223CEB5BE007330CF /* WRObject.swift */; };
+		BB75693E23CEB5BE007330CF /* WRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691423CEB5BE007330CF /* WRView.swift */; };
+		BB75693F23CEB5BE007330CF /* WRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691423CEB5BE007330CF /* WRView.swift */; };
+		BB75694023CEB5BE007330CF /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691523CEB5BE007330CF /* WRControl.swift */; };
+		BB75694123CEB5BE007330CF /* WRControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691523CEB5BE007330CF /* WRControl.swift */; };
+		BB75694223CEB5BE007330CF /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691723CEB5BE007330CF /* WRPath.swift */; };
+		BB75694323CEB5BE007330CF /* WRPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691723CEB5BE007330CF /* WRPath.swift */; };
+		BB75694423CEB5BE007330CF /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691823CEB5BE007330CF /* WRFolder.swift */; };
+		BB75694523CEB5BE007330CF /* WRFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691823CEB5BE007330CF /* WRFolder.swift */; };
+		BB75694623CEB5BE007330CF /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691923CEB5BE007330CF /* WRDevice.swift */; };
+		BB75694723CEB5BE007330CF /* WRDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB75691923CEB5BE007330CF /* WRDevice.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F7EAF210000DBD09BFBE802D4E281480 /* WRSwiftKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C98ABFAED371F139193E1A79541DED /* WRSwiftKit-dummy.m */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -66,13 +98,29 @@
 		AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		AE7DD37D02D226D7275CA66FABF4DB16 /* Pods-WRSwiftKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B448470FDB190016CE3C4B7791EC9467 /* Pods_WRSwiftKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB90750523CD61FB00CC08AF /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
-		BB90752D23CD72C100CC08AF /* WRFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFolder.swift; sourceTree = "<group>"; };
-		BB90753C23CD94C900CC08AF /* WRString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
-		BB90753D23CD94C900CC08AF /* WRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRObject.swift; sourceTree = "<group>"; };
-		BB90754523CD9D9000CC08AF /* WRTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
-		BB90755323CD9F9C00CC08AF /* WRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNotification.swift; sourceTree = "<group>"; };
-		BB90757C23CDAD4800CC08AF /* WRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
+		BB7568FB23CEB5BD007330CF /* WRActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicator.swift; sourceTree = "<group>"; };
+		BB7568FC23CEB5BD007330CF /* WRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		BB7568FE23CEB5BD007330CF /* WRActivityIndicatorAnimationRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationRing.swift; sourceTree = "<group>"; };
+		BB7568FF23CEB5BD007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationBallSpinFadeLoader.swift; sourceTree = "<group>"; };
+		BB75690023CEB5BD007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationAudioEqualizer.swift; sourceTree = "<group>"; };
+		BB75690123CEB5BD007330CF /* WRActivityIndicatorShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorShape.swift; sourceTree = "<group>"; };
+		BB75690223CEB5BD007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationBallRotateChase.swift; sourceTree = "<group>"; };
+		BB75690323CEB5BD007330CF /* WRActivityIndicatorAnimationRingSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationRingSpring.swift; sourceTree = "<group>"; };
+		BB75690423CEB5BD007330CF /* WRActivityIndicatorAnimationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationSystem.swift; sourceTree = "<group>"; };
+		BB75690623CEB5BD007330CF /* WRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNotification.swift; sourceTree = "<group>"; };
+		BB75690823CEB5BD007330CF /* WRColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRColor.swift; sourceTree = "<group>"; };
+		BB75690A23CEB5BD007330CF /* WRNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNavigationController.swift; sourceTree = "<group>"; };
+		BB75690B23CEB5BD007330CF /* WRNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRNavigationBar.swift; sourceTree = "<group>"; };
+		BB75690C23CEB5BD007330CF /* WRBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRBaseViewController.swift; sourceTree = "<group>"; };
+		BB75690E23CEB5BD007330CF /* WRImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRImage.swift; sourceTree = "<group>"; };
+		BB75691023CEB5BE007330CF /* WRTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
+		BB75691123CEB5BE007330CF /* WRString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
+		BB75691223CEB5BE007330CF /* WRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRObject.swift; sourceTree = "<group>"; };
+		BB75691423CEB5BE007330CF /* WRView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRView.swift; sourceTree = "<group>"; };
+		BB75691523CEB5BE007330CF /* WRControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRControl.swift; sourceTree = "<group>"; };
+		BB75691723CEB5BE007330CF /* WRPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRPath.swift; sourceTree = "<group>"; };
+		BB75691823CEB5BE007330CF /* WRFolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFolder.swift; sourceTree = "<group>"; };
+		BB75691923CEB5BE007330CF /* WRDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDevice.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D1C98ABFAED371F139193E1A79541DED /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
@@ -155,43 +203,99 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BB90750423CD61FB00CC08AF /* Device */ = {
+		BB7568FA23CEB5BD007330CF /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				BB90750523CD61FB00CC08AF /* WRDevice.swift */,
-				BB90752D23CD72C100CC08AF /* WRFolder.swift */,
+				BB7568FB23CEB5BD007330CF /* WRActivityIndicator.swift */,
+				BB7568FC23CEB5BD007330CF /* WRActivityIndicatorView.swift */,
+				BB7568FD23CEB5BD007330CF /* Animations */,
 			);
-			name = Device;
-			path = WRSwiftKit/Classes/Device;
+			name = Activity;
+			path = WRSwiftKit/Classes/Activity;
 			sourceTree = "<group>";
 		};
-		BB90753B23CD94C900CC08AF /* Common */ = {
+		BB7568FD23CEB5BD007330CF /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				BB90753C23CD94C900CC08AF /* WRString.swift */,
-				BB90753D23CD94C900CC08AF /* WRObject.swift */,
-				BB90754523CD9D9000CC08AF /* WRTimeInterval.swift */,
+				BB7568FE23CEB5BD007330CF /* WRActivityIndicatorAnimationRing.swift */,
+				BB7568FF23CEB5BD007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift */,
+				BB75690023CEB5BD007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift */,
+				BB75690123CEB5BD007330CF /* WRActivityIndicatorShape.swift */,
+				BB75690223CEB5BD007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift */,
+				BB75690323CEB5BD007330CF /* WRActivityIndicatorAnimationRingSpring.swift */,
+				BB75690423CEB5BD007330CF /* WRActivityIndicatorAnimationSystem.swift */,
 			);
-			name = Common;
-			path = WRSwiftKit/Classes/Common;
+			path = Animations;
 			sourceTree = "<group>";
 		};
-		BB90755223CD9F9C00CC08AF /* Notification */ = {
+		BB75690523CEB5BD007330CF /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				BB90755323CD9F9C00CC08AF /* WRNotification.swift */,
+				BB75690623CEB5BD007330CF /* WRNotification.swift */,
 			);
 			name = Notification;
 			path = WRSwiftKit/Classes/Notification;
 			sourceTree = "<group>";
 		};
-		BB90757B23CDAD4800CC08AF /* Image */ = {
+		BB75690723CEB5BD007330CF /* Color */ = {
 			isa = PBXGroup;
 			children = (
-				BB90757C23CDAD4800CC08AF /* WRImage.swift */,
+				BB75690823CEB5BD007330CF /* WRColor.swift */,
+			);
+			name = Color;
+			path = WRSwiftKit/Classes/Color;
+			sourceTree = "<group>";
+		};
+		BB75690923CEB5BD007330CF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB75690A23CEB5BD007330CF /* WRNavigationController.swift */,
+				BB75690B23CEB5BD007330CF /* WRNavigationBar.swift */,
+				BB75690C23CEB5BD007330CF /* WRBaseViewController.swift */,
+			);
+			name = ViewController;
+			path = WRSwiftKit/Classes/ViewController;
+			sourceTree = "<group>";
+		};
+		BB75690D23CEB5BD007330CF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BB75690E23CEB5BD007330CF /* WRImage.swift */,
 			);
 			name = Image;
 			path = WRSwiftKit/Classes/Image;
+			sourceTree = "<group>";
+		};
+		BB75690F23CEB5BE007330CF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BB75691023CEB5BE007330CF /* WRTimeInterval.swift */,
+				BB75691123CEB5BE007330CF /* WRString.swift */,
+				BB75691223CEB5BE007330CF /* WRObject.swift */,
+			);
+			name = Common;
+			path = WRSwiftKit/Classes/Common;
+			sourceTree = "<group>";
+		};
+		BB75691323CEB5BE007330CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BB75691423CEB5BE007330CF /* WRView.swift */,
+				BB75691523CEB5BE007330CF /* WRControl.swift */,
+			);
+			name = View;
+			path = WRSwiftKit/Classes/View;
+			sourceTree = "<group>";
+		};
+		BB75691623CEB5BE007330CF /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				BB75691723CEB5BE007330CF /* WRPath.swift */,
+				BB75691823CEB5BE007330CF /* WRFolder.swift */,
+				BB75691923CEB5BE007330CF /* WRDevice.swift */,
+			);
+			name = Device;
+			path = WRSwiftKit/Classes/Device;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -205,10 +309,14 @@
 		CC597DBD0836195092CB41AC68CAA35F /* WRSwiftKit */ = {
 			isa = PBXGroup;
 			children = (
-				BB90753B23CD94C900CC08AF /* Common */,
-				BB90750423CD61FB00CC08AF /* Device */,
-				BB90757B23CDAD4800CC08AF /* Image */,
-				BB90755223CD9F9C00CC08AF /* Notification */,
+				BB7568FA23CEB5BD007330CF /* Activity */,
+				BB75690723CEB5BD007330CF /* Color */,
+				BB75690F23CEB5BE007330CF /* Common */,
+				BB75691623CEB5BE007330CF /* Device */,
+				BB75690D23CEB5BD007330CF /* Image */,
+				BB75690523CEB5BD007330CF /* Notification */,
+				BB75691323CEB5BE007330CF /* View */,
+				BB75690923CEB5BD007330CF /* ViewController */,
 				FE2824AF64263D5188015B194CADBB84 /* Pod */,
 				635D8E4F97BFCED85647C12261BE9138 /* Support Files */,
 			);
@@ -402,14 +510,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB90754623CD9D9000CC08AF /* WRTimeInterval.swift in Sources */,
-				BB90754023CD94C900CC08AF /* WRObject.swift in Sources */,
-				BB90752E23CD72C100CC08AF /* WRFolder.swift in Sources */,
-				BB90755423CD9F9C00CC08AF /* WRNotification.swift in Sources */,
-				BB90757D23CDAD4800CC08AF /* WRImage.swift in Sources */,
-				BB90753E23CD94C900CC08AF /* WRString.swift in Sources */,
-				BB90750623CD61FC00CC08AF /* WRDevice.swift in Sources */,
+				BB75693823CEB5BE007330CF /* WRTimeInterval.swift in Sources */,
+				BB75693C23CEB5BE007330CF /* WRObject.swift in Sources */,
+				BB75693A23CEB5BE007330CF /* WRString.swift in Sources */,
+				BB75692E23CEB5BE007330CF /* WRColor.swift in Sources */,
+				BB75691E23CEB5BE007330CF /* WRActivityIndicatorAnimationRing.swift in Sources */,
+				BB75692A23CEB5BE007330CF /* WRActivityIndicatorAnimationSystem.swift in Sources */,
+				BB75693423CEB5BE007330CF /* WRBaseViewController.swift in Sources */,
+				BB75694223CEB5BE007330CF /* WRPath.swift in Sources */,
+				BB75693623CEB5BE007330CF /* WRImage.swift in Sources */,
+				BB75692C23CEB5BE007330CF /* WRNotification.swift in Sources */,
+				BB75691C23CEB5BE007330CF /* WRActivityIndicatorView.swift in Sources */,
+				BB75692223CEB5BE007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				BB75692023CEB5BE007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				BB75694023CEB5BE007330CF /* WRControl.swift in Sources */,
+				BB75692823CEB5BE007330CF /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,
+				BB75692623CEB5BE007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				BB75693223CEB5BE007330CF /* WRNavigationBar.swift in Sources */,
+				BB75694623CEB5BE007330CF /* WRDevice.swift in Sources */,
+				BB75693023CEB5BE007330CF /* WRNavigationController.swift in Sources */,
+				BB75694423CEB5BE007330CF /* WRFolder.swift in Sources */,
+				BB75692423CEB5BE007330CF /* WRActivityIndicatorShape.swift in Sources */,
+				BB75691A23CEB5BE007330CF /* WRActivityIndicator.swift in Sources */,
+				BB75693E23CEB5BE007330CF /* WRView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,14 +541,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB90754723CD9D9000CC08AF /* WRTimeInterval.swift in Sources */,
-				BB90754123CD94C900CC08AF /* WRObject.swift in Sources */,
-				BB90752F23CD72C100CC08AF /* WRFolder.swift in Sources */,
-				BB90755523CD9F9D00CC08AF /* WRNotification.swift in Sources */,
-				BB90757E23CDAD4800CC08AF /* WRImage.swift in Sources */,
-				BB90753F23CD94C900CC08AF /* WRString.swift in Sources */,
-				BB90750723CD61FC00CC08AF /* WRDevice.swift in Sources */,
+				BB75693923CEB5BE007330CF /* WRTimeInterval.swift in Sources */,
+				BB75693D23CEB5BE007330CF /* WRObject.swift in Sources */,
+				BB75693B23CEB5BE007330CF /* WRString.swift in Sources */,
+				BB75692F23CEB5BE007330CF /* WRColor.swift in Sources */,
+				BB75691F23CEB5BE007330CF /* WRActivityIndicatorAnimationRing.swift in Sources */,
+				BB75692B23CEB5BE007330CF /* WRActivityIndicatorAnimationSystem.swift in Sources */,
+				BB75693523CEB5BE007330CF /* WRBaseViewController.swift in Sources */,
+				BB75694323CEB5BE007330CF /* WRPath.swift in Sources */,
+				BB75693723CEB5BE007330CF /* WRImage.swift in Sources */,
+				BB75692D23CEB5BE007330CF /* WRNotification.swift in Sources */,
+				BB75691D23CEB5BE007330CF /* WRActivityIndicatorView.swift in Sources */,
+				BB75692323CEB5BE007330CF /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				BB75692123CEB5BE007330CF /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				BB75694123CEB5BE007330CF /* WRControl.swift in Sources */,
+				BB75692923CEB5BE007330CF /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				F7EAF210000DBD09BFBE802D4E281480 /* WRSwiftKit-dummy.m in Sources */,
+				BB75692723CEB5BE007330CF /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				BB75693323CEB5BE007330CF /* WRNavigationBar.swift in Sources */,
+				BB75694723CEB5BE007330CF /* WRDevice.swift in Sources */,
+				BB75693123CEB5BE007330CF /* WRNavigationController.swift in Sources */,
+				BB75694523CEB5BE007330CF /* WRFolder.swift in Sources */,
+				BB75692523CEB5BE007330CF /* WRActivityIndicatorShape.swift in Sources */,
+				BB75691B23CEB5BE007330CF /* WRActivityIndicator.swift in Sources */,
+				BB75693F23CEB5BE007330CF /* WRView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -165,7 +165,7 @@ extension WRActivityIndicatorManager_Public {
 
     /**开始*/
     /**
-    此方法针对OC开放，因为type、size、padding参数在OC中不能不展示
+    因为type、size、padding参数在OC中不能不展示
     */
     /// - parameter type: 活动指示器动画类型
     /// - parameter size: 尺寸
@@ -176,7 +176,8 @@ extension WRActivityIndicatorManager_Public {
     /// - parameter backgroundColor: 背景颜色
     /// - parameter textColor: 文本颜色
     /// - parameter fadeInAnimation: 进入动画
-    @available(*, unavailable) @objc public final func startAnimating(
+    @objc public final func startAnimating(
+         //@available(*, unavailable) @objc public final func startAnimating(
          _ type: WRActivityIndicatorType,
          size: CGSize,
          padding: CGFloat,
