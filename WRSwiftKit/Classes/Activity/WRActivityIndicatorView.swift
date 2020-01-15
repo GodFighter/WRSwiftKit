@@ -8,12 +8,19 @@
 
 import UIKit
 
+/**活动指示器动画类型*/
 @objc public enum WRActivityIndicatorType: Int, CaseIterable {
+    /**系统动画*/
     case system
+    /**圆环*/
     case ring
+    /**伸缩圆环*/
     case ringSpring
+    /**追赶球*/
     case ballRotateChase
+    /**渐显渐隐球*/
     case ballSpinFadeLoader
+    /**音频播放*/
     case audioEqualizer
 
     func animation() -> WRActivityIndicatorAnimationDelegate {
@@ -38,20 +45,20 @@ public class WRActivityIndicatorView: UIView {
     static var DEFAULT_COLOR = UIColor.white
     static var DEFAULT_TEXT_COLOR = UIColor.white
     static var DEFAULT_PADDING: CGFloat = 0
-    static var DEFAULT_BLOCKER_SIZE = CGSize(width: 60, height: 60)
+    static var DEFAULT_BLOCKER_SIZE = CGSize(width: 40, height: 40)
     static var DEFAULT_BLOCKER_MESSAGE: String?
     static var DEFAULT_BLOCKER_MESSAGE_SPACING = CGFloat(8.0)
     static var DEFAULT_BLOCKER_MESSAGE_FONT = UIFont.boldSystemFont(ofSize: 20)
     static var DEFAULT_BLOCKER_BACKGROUND_COLOR = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
 
-    public static var DEFAULT_FADE_IN_ANIMATION: WRFadeInAnimation = { view in
+    @objc public static var DEFAULT_FADE_IN_ANIMATION: WRFadeInAnimation = { view in
         view.alpha = 0
         UIView.animate(withDuration: 0.25) {
             view.alpha = 1
         }
     }
 
-    public static var DEFAULT_FADE_OUT_ANIMATION: WRFadeOutAnimation = { (view, complete) in
+    @objc public static var DEFAULT_FADE_OUT_ANIMATION: WRFadeOutAnimation = { (view, complete) in
         UIView.animate(withDuration: 0.25,
                        animations: {
                         view.alpha = 0

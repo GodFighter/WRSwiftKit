@@ -16,7 +16,7 @@ private struct wr_activityIndicator_associated{
 }
 
 @objc extension UIView : WRActivityIndicatorProtocol {
-    public var indicator : WRActivityIndicatorManager {
+    @objc public var indicator : WRActivityIndicatorManager {
         let object = objc_getAssociatedObject(self, &wr_activityIndicator_associated.key)
         
         guard let activityIndicator = object as? WRActivityIndicatorManager else {
@@ -75,44 +75,10 @@ private struct wr_activityIndicator_associated{
      fileprivate var state: State = .stopped
      fileprivate var data: WRActivityData? // Shared activity data across states
      fileprivate let waitingToStartGroup = DispatchGroup()
-
-     public var isAnimating: Bool { return state == .animating || state == .waitingToStop }
           
-     @objc public final func startAnimating(
-         _ type: WRActivityIndicatorType,
-         size: CGSize,
-         padding: CGFloat,
-         message: String? = nil,
-         messageFont: UIFont? = nil,
-         color: UIColor? = nil,
-         backgroundColor: UIColor? = nil,
-         textColor: UIColor? = nil,
-         fadeInAnimation: WRFadeInAnimation? = WRActivityIndicatorView.DEFAULT_FADE_IN_ANIMATION) {
-         let activityData = WRActivityData(size: size,
-                                         message: message,
-                                         messageFont: messageFont,
-                                         type: type,
-                                         color: color,
-                                         padding: padding,
-                                         backgroundColor: backgroundColor,
-                                         textColor: textColor)
-
-         self.startAnimating(activityData, fadeInAnimation)
-     }
-
      fileprivate final func startAnimating(_ data: WRActivityData, _ fadeInAnimation: WRFadeInAnimation? = nil) {
          self.data = data
          state.startAnimating(manager: self, fadeInAnimation ?? WRActivityIndicatorView.DEFAULT_FADE_IN_ANIMATION)
-     }
-
-     @objc public final func stopAnimating(_ fadeOutAnimation: WRFadeOutAnimation? = nil) {
-         state.stopAnimating(manager: self, fadeOutAnimation ?? WRActivityIndicatorView.DEFAULT_FADE_OUT_ANIMATION)
-     }
-
-     @objc public final func setMessage(_ message: String?) {
-         waitingToStartGroup.notify(queue: DispatchQueue.main) {
-             self.messageLabel.text = message
-         }
      }
 
      // MARK: Helpers
@@ -189,6 +155,103 @@ private struct wr_activityIndicator_associated{
      }
 
 }
+
+//MARK:-
+fileprivate typealias WRActivityIndicatorManager_Public = WRActivityIndicatorManager
+extension WRActivityIndicatorManager_Public {
+    
+    /**是否正在动画中*/
+    @objc public var isAnimating: Bool { return state == .animating || state == .waitingToStop }
+
+    /**开始*/
+    /**
+    此方法针对OC开放，因为type、size、padding参数在OC中不能不展示
+    */
+    /// - parameter type: 活动指示器动画类型
+    /// - parameter size: 尺寸
+    /// - parameter padding: 内边距
+    /// - parameter message: 展示消息
+    /// - parameter messageFont: 消息字体
+    /// - parameter color: 动画颜色
+    /// - parameter backgroundColor: 背景颜色
+    /// - parameter textColor: 文本颜色
+    /// - parameter fadeInAnimation: 进入动画
+    @available(*, unavailable) @objc public final func startAnimating(
+         _ type: WRActivityIndicatorType,
+         size: CGSize,
+         padding: CGFloat,
+         message: String? = nil,
+         messageFont: UIFont? = nil,
+         color: UIColor? = nil,
+         backgroundColor: UIColor? = nil,
+         textColor: UIColor? = nil,
+         fadeInAnimation: WRFadeInAnimation? = WRActivityIndicatorView.DEFAULT_FADE_IN_ANIMATION) {
+         let activityData = WRActivityData(size: size,
+                                         message: message,
+                                         messageFont: messageFont,
+                                         type: type,
+                                         color: color,
+                                         padding: padding,
+                                         backgroundColor: backgroundColor,
+                                         textColor: textColor)
+
+         self.startAnimating(activityData, fadeInAnimation)
+     }
+    
+    /**开始*/
+    /**
+    此方法针对Swift开放
+    */
+    /// - parameter type: 活动指示器动画类型
+    /// - parameter size: 尺寸
+    /// - parameter padding: 内边距
+    /// - parameter message: 展示消息
+    /// - parameter messageFont: 消息字体
+    /// - parameter color: 动画颜色
+    /// - parameter backgroundColor: 背景颜色
+    /// - parameter textColor: 文本颜色
+    /// - parameter fadeInAnimation: 进入动画
+    public final func startAnimating(
+        _ type: WRActivityIndicatorType? = nil,
+        size: CGSize? = nil,
+        padding: CGFloat? = nil,
+        message: String? = nil,
+        messageFont: UIFont? = nil,
+        color: UIColor? = nil,
+        backgroundColor: UIColor? = nil,
+        textColor: UIColor? = nil,
+        fadeInAnimation: WRFadeInAnimation? = WRActivityIndicatorView.DEFAULT_FADE_IN_ANIMATION) {
+        let activityData = WRActivityData(size: size,
+                                        message: message,
+                                        messageFont: messageFont,
+                                        type: type,
+                                        color: color,
+                                        padding: padding,
+                                        backgroundColor: backgroundColor,
+                                        textColor: textColor)
+
+        self.startAnimating(activityData, fadeInAnimation)
+    }
+
+    /**结束动画*/
+    /**
+    动画结束后，视图会从父视图中移除
+    */
+    /// - parameter WRFadeOutAnimation: 离开动画
+    @objc public final func stopAnimating(_ fadeOutAnimation: WRFadeOutAnimation? = nil) {
+        state.stopAnimating(manager: self, fadeOutAnimation ?? WRActivityIndicatorView.DEFAULT_FADE_OUT_ANIMATION)
+    }
+
+    /**设置展示文本*/
+    /// - parameter message: 文本内容
+    @objc public final func setMessage(_ message: String?) {
+        waitingToStartGroup.notify(queue: DispatchQueue.main) {
+            self.messageLabel.text = message
+        }
+    }
+
+}
+
 
 
 //MARK:-

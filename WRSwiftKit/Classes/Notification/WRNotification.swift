@@ -7,6 +7,7 @@
 
 import UIKit
 
+/** 通知key协议 */
 @objc public protocol WRNotifyProtocol {
     
     @objc var key : String { get }

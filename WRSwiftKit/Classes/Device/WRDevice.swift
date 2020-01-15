@@ -135,6 +135,7 @@ import UIKit
             return self.checkLanguage(["zh-Hans", "zh-Hant"])
         }
 
+        /** 检查系统语言*/
         @objc public static func checkLanguage(_ languages : [String]) -> Bool {
             
             let defaults = UserDefaults.standard
@@ -169,13 +170,15 @@ import UIKit
         }
     }
 
+    //MARK: - Space
+    /** 空间 */
     @objc public enum Space : Int{
         
+        /** 空闲 */
         case free
         
+        /** 总计 */
         case total
-        
-        //MARK: - Space
                 
         public var value : Double{
             

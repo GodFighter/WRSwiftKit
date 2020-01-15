@@ -58,7 +58,10 @@ class ViewController: UIViewController {
             })
         */
         
-        self.view.indicator.startAnimating(.audioEqualizer, size: CGSize(width: 40, height: 40), padding: 0)
+        let view = UIView.init(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
+        self.view.addSubview(view)
+        
+        view.indicator.startAnimating()
     }
 
     override func didReceiveMemoryWarning() {

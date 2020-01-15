@@ -17,6 +17,9 @@ import UIKit
     public override var wr: UIColorExtension {
         return UIColorExtension(self)
     }
+    /**根据16进制创建颜色*/
+    /// - parameter fromHexString: 16进制字符串
+    /// - returns: 颜色
     @objc public static func color(fromHexString: String) -> UIColor {
         var rgbValue : UInt64 = 0
         let hex = fromHexString.replacingOccurrences(of: "#", with: "")

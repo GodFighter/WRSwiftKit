@@ -9,8 +9,10 @@ import UIKit
 
 @objc public class WRFolder: NSObject {
 
+    /** 缓存地址 */
     @objc public static var cacheUrl : URL?
 
+    /** 缓存文件夹大小 */
     @objc public static var cacheFolderSize : String {
         guard let cacheUrl = self.cacheUrl else {
             return "0 KB"
@@ -19,6 +21,7 @@ import UIKit
         return ByteCountFormatter.string(fromByteCount: folderSize, countStyle: .file)
     }
 
+    /**删除缓存文件夹*/
     @objc public static func removeCacheFolder() {
         guard let cacheUrl = self.cacheUrl else {
             return
@@ -30,6 +33,9 @@ import UIKit
         }
     }
 
+    /**文件夹大小*/
+    /// - parameter url: 文件夹地址
+    /// - returns: 文件夹大小
     @objc public static func folderSize(_ url : URL) -> Int64 {
     
         let contents: [URL]
@@ -65,6 +71,8 @@ import UIKit
         return size
     }
     
+    /**删除文件夹*/
+    /// - parameter url: 文件夹地址
     @objc public static func removeFolder(_ url : URL) {
         do {
             try FileManager.default.removeItem(atPath: url.absoluteString)
