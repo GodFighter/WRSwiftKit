@@ -8,14 +8,14 @@
 import UIKit
 
 /** 通知key协议 */
-@objc public protocol WRNotifyProtocol {
+public protocol WRNotifyProtocol {
     
-    @objc var key : String { get }
-    @objc var rawValue : String { get }
+    var key : String { get }
+    var rawValue : String { get }
     
-    @objc var name : Notification.Name    { get }
-    @objc var failed : Notification.Name  { get }
-    @objc var success : Notification.Name { get }
+    var name : Notification.Name    { get }
+    var failed : Notification.Name  { get }
+    var success : Notification.Name { get }
 }
 
 public extension WRNotifyProtocol{
