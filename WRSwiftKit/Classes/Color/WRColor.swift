@@ -34,6 +34,11 @@ import UIKit
         
         return .clear
     }
+    
+    public static var WR: UIColorExtension.Type {
+        get { return UIColorExtension.self }
+        set {}
+    }
 }
 
 @objc public class UIColorExtension : WRObjectExtension {
@@ -45,5 +50,14 @@ import UIKit
     /**随机颜色*/
     @objc public var randomColor : UIColor {
         return UIColor(red: CGFloat(arc4random_uniform(256)) / 255.0, green: CGFloat(arc4random_uniform(256)) / 255.0, blue: CGFloat(arc4random_uniform(256)) / 255.0, alpha: 1.0)
+    }
+    
+    @objc public static func Color(darkMode dark: UIColor, _ light: UIColor) -> UIColor {
+        if #available(iOS 13.0, *) {
+            return UIColor.init { (trainCollection) -> UIColor in
+                return trainCollection.userInterfaceStyle == .light ? light : dark
+            }
+        }
+        return light
     }
 }

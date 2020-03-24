@@ -9,15 +9,15 @@ import UIKit
 
 @objc public class WRDevice: NSObject {
 
-    @objc public static var isIpad : Bool {
+    @objc public static var IsIpad : Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
     
-    @objc public static var isIphone : Bool {
+    @objc public static var IsIphone : Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
 
-    @objc public static var safeAreaInset : UIEdgeInsets {
+    @objc public static var SafeAreaInset : UIEdgeInsets {
         if #available(iOS 11.0, *) {
             if (UIApplication.shared.keyWindow != nil) {
                 return (UIApplication.shared.keyWindow?.safeAreaInsets)!;
@@ -26,17 +26,17 @@ import UIKit
         return UIEdgeInsets.zero
     }
 
-    @objc public static var isAllScreen : Bool {
+    @objc public static var IsAllScreen : Bool {
         if UIApplication.shared.statusBarOrientation.isLandscape {
-            return self.safeAreaInset.left > 0.0
+            return self.SafeAreaInset.left > 0.0
         } else {
-            return self.safeAreaInset.top > 20.0
+            return self.SafeAreaInset.top > 20.0
         }
     }
     
     @objc public class Info : NSObject {
         /** 设备分辨率*/
-        @objc public static var resolution : String { //设备分辨率
+        @objc public static var Resolution : String { //设备分辨率
             
             let scale = UIScreen.main.scale
             let width = Int(UIScreen.main.bounds.width * scale)
@@ -46,7 +46,7 @@ import UIKit
         }
 
         /** 设备类型*/
-        @objc public static var model: String {
+        @objc public static var Model: String {
             
             var systemInfo = utsname()
             uname(&systemInfo)
@@ -107,36 +107,36 @@ import UIKit
         }
 
         /** 设备UUID*/
-        @objc public static var uuid : String {
+        @objc public static var UUID : String {
             return UIDevice.current.identifierForVendor!.uuidString//UIDevice.current.uniqueDeviceIdentifier()
         }
 
         /** 设备名称*/
-        @objc public static var name : String { return UIDevice.current.name }
+        @objc public static var Name : String { return UIDevice.current.name }
         
         /** 应用名称*/
-        @objc public static var appName : String { return Bundle.main.infoDictionary!["CFBundleName"] as! String }
+        @objc public static var AppName : String { return Bundle.main.infoDictionary!["CFBundleName"] as! String }
         
         /** 系统版本号*/
-        @objc public static var systemVersion : String { return UIDevice.current.systemVersion }
+        @objc public static var SystemVersion : String { return UIDevice.current.systemVersion }
         
         /** 应用 build 版本号*/
-        @objc public static var buildVersion : String { return Bundle.main.infoDictionary!["CFBundleVersion"] as! String }
+        @objc public static var BuildVersion : String { return Bundle.main.infoDictionary!["CFBundleVersion"] as! String }
         
         /** 应用版本号*/
-        @objc public static var clientVersion : String { return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String }
+        @objc public static var ClientVersion : String { return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String }
                 
     }
 
     @objc public class Language : NSObject {
 
         /** 检查系统中文*/
-        @objc public static func isChinese() -> Bool {
-            return self.checkLanguage(["zh-Hans", "zh-Hant"])
+        @objc public static func IsChinese() -> Bool {
+            return self.CheckLanguage(["zh-Hans", "zh-Hant"])
         }
 
         /** 检查系统语言*/
-        @objc public static func checkLanguage(_ languages : [String]) -> Bool {
+        @objc public static func CheckLanguage(_ languages : [String]) -> Bool {
             
             let defaults = UserDefaults.standard
             if let allLanguages : [String] = defaults.object(forKey: "AppleLanguages") as? [String]{
@@ -160,12 +160,12 @@ import UIKit
     @objc public class  Sensor: NSObject {
                     
         //屏幕亮度
-        @objc public static func setBrightness(_ brightnessValue : CGFloat){
+        @objc public static func SetBrightness(_ brightnessValue : CGFloat){
             UIScreen.main.brightness = brightnessValue
         }
         
         //感应黑屏
-        @objc public static func setProximityMonitoringEnabled(enabled : Bool){
+        @objc public static func SetProximityMonitoringEnabled(enabled : Bool){
             UIDevice.current.isProximityMonitoringEnabled = enabled
         }
     }
@@ -195,17 +195,17 @@ import UIKit
         public var gbString : String{
             
             switch self{
-            case .free: return String(format: "%.2fGB", WRDevice.doubleGbSpace(space: self.value))
-            case .total: return WRDevice.calculateDeviceSpace(spaceGb: self.value)
+            case .free: return String(format: "%.2fGB", WRDevice.DoubleGbSpace(space: self.value))
+            case .total: return WRDevice.CalculateDeviceSpace(spaceGb: self.value)
             }
         }
     }
     
-    private static func doubleGbSpace(space: Double) -> Double {
+    private static func DoubleGbSpace(space: Double) -> Double {
         return space / 1024.0 / 1024.0 / 1024.0
     }
     
-    private static func calculateDeviceSpace(spaceGb: Double) -> String {
+    private static func CalculateDeviceSpace(spaceGb: Double) -> String {
         
         if spaceGb < 8 {
             return "8GB"
@@ -230,7 +230,7 @@ import UIKit
         }
     }
     
-    @objc public static func spaceValue(_ space : Space) -> Double {
+    @objc public static func SpaceValue(_ space : Space) -> Double {
         guard let attributes = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else{
             return 0
         }
@@ -243,8 +243,8 @@ import UIKit
 
     @objc public static func gbString(_ space : Space) -> String {
         switch space{
-        case .free: return String(format: "%.2fGB", WRDevice.doubleGbSpace(space: space.value))
-        case .total: return WRDevice.calculateDeviceSpace(spaceGb: space.value)
+        case .free: return String(format: "%.2fGB", WRDevice.DoubleGbSpace(space: space.value))
+        case .total: return WRDevice.CalculateDeviceSpace(spaceGb: space.value)
         }
     }
 

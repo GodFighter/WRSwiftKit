@@ -7,9 +7,124 @@
 
 import UIKit
 
-//MARK:-
+//MARK:-  Judge
+public protocol WRStringJudge {
+
+}
+
+public extension WRStringJudge {
+    fileprivate var judge: String {
+        if self is String || self is NSString {
+            return self as! String
+        } else if let stringExtension = self as? WRStringExtension{
+            return stringExtension.value
+        } else if let nsstringExtension = self as? WRNSStringExtension{
+            return nsstringExtension.value as! String
+        }
+        return ""
+    }
+    
+    var isIP : Bool {
+        return validate(self.judge, pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
+    }
+    
+    var isUrl : Bool {
+        return validate(self.judge, pattern:  "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$")
+    }
+
+    var isEmail : Bool {
+        if self.judge.contains("@qq.com") {
+            return validate(self.judge, pattern: "^([0-9]{5,11})@qq.com")
+        }
+        return validate(self.judge, pattern: "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$")
+    }
+
+    var isPhoneNumber : Bool {
+        return validate(self.judge, pattern: "^(1)\\d{10}$")
+    }
+
+    var isCar: Bool {
+        return validate(self.judge, pattern: "^[A-Za-z]{1}[A-Za-z_0-9]{5}$")
+    }
+
+}
+
+//MARK:-  Conversion
+public protocol WRStringConversion {
+}
+
+public extension WRStringConversion {
+    fileprivate var conversion: String {
+        if self is String || self is NSString {
+            return self as! String
+        } else if let stringExtension = self as? WRStringExtension{
+            return stringExtension.value
+        } else if let nsstringExtension = self as? WRNSStringExtension{
+            return nsstringExtension.value as! String
+        }
+        return ""
+    }
+
+    var html: String? {
+        guard let data = self.conversion.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
+        guard let html = try? NSMutableAttributedString(
+            data: data,
+            options: [NSAttributedString.DocumentReadingOptionKey.documentType:
+                NSAttributedString.DocumentType.html],
+            documentAttributes: nil) else { return nil }
+        return html.string
+    }
+
+    var stripXml: String {
+        // we need to make sure "&" is escaped first. Not doing this may break escaping the other characters
+        var escaped = (self.conversion as String).replacingOccurrences(of: "&", with: "&amp;", options: .literal)
+        
+        // replace the other four special characters
+        let escapeChars = ["<" : "&lt;", ">" : "&gt;", "'" : "&apos;", "\"" : "&quot;"]
+        for (char, echar) in escapeChars {
+            escaped = escaped.replacingOccurrences(of: char, with: echar, options: .literal)
+        }
+        
+        return escaped
+    }
+
+    var stripHtml: String {
+        return self.conversion.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
+    }
+
+    var stripLineBreaks: String {
+        return self.conversion.replacingOccurrences(of: "\n", with: "", options: .regularExpression)
+    }
+}
+
+//MARK:-  Size
+public protocol WRStringSize {
+}
+
+public extension WRStringSize {
+    fileprivate var size: String {
+        if self is String || self is NSString {
+            return self as! String
+        } else if let stringExtension = self as? WRStringExtension{
+            return stringExtension.value
+        } else if let nsstringExtension = self as? WRNSStringExtension{
+            return nsstringExtension.value as! String
+        }
+        return ""
+    }
+
+    func width(_ font : UIFont) -> CGFloat {
+        return self.size.boundingRect(with: CGSize(), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).width
+    }
+
+    func height(width : CGFloat, font : UIFont) -> CGFloat {
+        return self.size.boundingRect(with: CGSize(width: width, height: 0), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).height
+    }
+
+}
+//MARK:- WRStringProtocol
 public protocol WRStringProtocol{
-    var wr: WRStringExtension { get }
+
 }
 
 extension String : WRStringProtocol {
@@ -31,7 +146,8 @@ fileprivate func validate(_ text: String, pattern: String) -> Bool {
 }
 
 //MARK:-
-public struct WRStringExtension{
+public struct WRStringExtension: WRStringJudge, WRStringConversion, WRStringSize
+{
     fileprivate let value: String
 
     fileprivate init(_ value: String){
@@ -66,73 +182,11 @@ public struct WRStringExtension{
     public func appendingPathExtension(_ pathExtension: String) -> String {
         return (self.value as NSString).appendingPathExtension(pathExtension) ?? self.value + "." + pathExtension
     }
-    
-    //MARK:  Regular
-    public var isIP : Bool {
-        return validate(self.value, pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
-    }
-    public var isUrl : Bool {
-        return validate(self.value, pattern:  "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$")
-    }
-    public var isEmail : Bool {
-        if self.value.contains("@qq.com") {
-            return validate(self.value, pattern: "^([0-9]{5,11})@qq.com")
-        }
-        return validate(self.value, pattern: "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$")
-    }
-    public var isPhone : Bool {
-        return validate(self.value, pattern: "^(1)\\d{10}$")
-    }
-    public var isCar: Bool {
-        return validate(self.value, pattern: "^[A-Za-z]{1}[A-Za-z_0-9]{5}$")
-    }
-
-    //MARK:  Conversion
-    public var htmlString : String? {
-        guard let data = self.value.data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
-        guard let html = try? NSMutableAttributedString(
-            data: data,
-            options: [NSAttributedString.DocumentReadingOptionKey.documentType:
-                NSAttributedString.DocumentType.html],
-            documentAttributes: nil) else { return nil }
-        return html.string
-    }
-    
-    public var stripXml: String {
-        // we need to make sure "&" is escaped first. Not doing this may break escaping the other characters
-        var escaped = self.value.replacingOccurrences(of: "&", with: "&amp;", options: .literal)
-        
-        // replace the other four special characters
-        let escapeChars = ["<" : "&lt;", ">" : "&gt;", "'" : "&apos;", "\"" : "&quot;"]
-        for (char, echar) in escapeChars {
-            escaped = escaped.replacingOccurrences(of: char, with: echar, options: .literal)
-        }
-        
-        return escaped
-    }
-
-    public var stripHtml: String {
-        return self.value.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
-    }
-
-    public var stripLineBreaks: String {
-        return self.value.replacingOccurrences(of: "\n", with: "", options: .regularExpression)
-    }
-
-    //MARK:  Size
-    public func width(_ font : UIFont) -> CGFloat {
-        return self.value.boundingRect(with: CGSize(), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).width
-    }
-
-    public func height(width : CGFloat, font : UIFont) -> CGFloat {
-        return self.value.boundingRect(with: CGSize(width: width, height: 0), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).height
-    }
 }
 
 
 //MARK:-
 @objc public protocol WRNSStringProtocol{
-    var wr: WRNSStringExtension { get }
 }
 
  @objc extension NSString : WRNSStringProtocol {
@@ -142,87 +196,10 @@ public struct WRStringExtension{
 }
 
 //MARK:-
-@objc public class WRNSStringExtension : WRObjectExtension{
-    
+@objc public class WRNSStringExtension : WRObjectExtension, WRStringJudge, WRStringConversion, WRStringSize
+{
     internal init(_ value: NSString){
         super.init(value)
         self.value = value
     }
-    
-    fileprivate var string : NSString {
-        if let string = self.value as? NSString {
-            return string
-        }
-        return ""
-    }
-
-    @objc public func appendingPathComponent(_ pathComponent: String) -> NSString {
-        return self.string.appendingPathComponent(pathComponent) as NSString
-    }
-
-    @objc public  func appendingPathExtension(_ pathExtension: String) -> NSString {
-        return self.string.appendingPathExtension(pathExtension) as NSString? ?? (self.string as String) + "." + pathExtension as NSString
-    }
-
-    //MARK:  Regular
-    @objc public  var isIP : Bool {
-        return validate(self.string as String, pattern: "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")
-    }
-    @objc public  var isUrl : Bool {
-        return validate(self.string as String, pattern:  "^(https?:\\/\\/)?([\\da-z\\.-]+)\\.([a-z\\.]{2,6})([\\/\\w \\.-]*)*\\/?$")
-    }
-    @objc public  var isEmail : Bool {
-        if self.string.range(of: "@qq.com").length > 0 {
-            return validate(self.string as String, pattern: "^([0-9]{5,11})@qq.com")
-        }
-        return validate(self.string as String, pattern: "^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$")
-    }
-    @objc public  var isPhone : Bool {
-        return validate(self.string as String, pattern: "^(1)\\d{10}$")
-    }
-    @objc public  var isCar: Bool {
-        return validate(self.string as String, pattern: "^[A-Za-z]{1}[A-Za-z_0-9]{5}$")
-    }
-
-    //MARK:  Conversion
-    @objc public  var htmlString : NSString? {
-        guard let data = (self.string as String).data(using: String.Encoding.utf16, allowLossyConversion: false) else { return nil }
-        guard let html = try? NSMutableAttributedString(
-            data: data,
-            options: [NSAttributedString.DocumentReadingOptionKey.documentType:
-                NSAttributedString.DocumentType.html],
-            documentAttributes: nil) else { return nil }
-        return html.string as NSString
-    }
-    
-    @objc public  var stripXml: NSString {
-        // we need to make sure "&" is escaped first. Not doing this may break escaping the other characters
-        var escaped = (self.string as String).replacingOccurrences(of: "&", with: "&amp;", options: .literal)
-        
-        // replace the other four special characters
-        let escapeChars = ["<" : "&lt;", ">" : "&gt;", "'" : "&apos;", "\"" : "&quot;"]
-        for (char, echar) in escapeChars {
-            escaped = escaped.replacingOccurrences(of: char, with: echar, options: .literal)
-        }
-        
-        return escaped as NSString
-    }
-
-    @objc public  var stripHtml: NSString {
-        return (self.string as String).replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression) as NSString
-    }
-
-    @objc public  var stripLineBreaks: NSString {
-        return (self.string as String).replacingOccurrences(of: "\n", with: "", options: .regularExpression) as NSString
-    }
-
-    //MARK:  Size
-    @objc public  func width(_ font : UIFont) -> CGFloat {
-        return (self.string as String).boundingRect(with: CGSize(), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).width
-    }
-
-    @objc public  func height(width : CGFloat, font : UIFont) -> CGFloat {
-        return (self.string as String).boundingRect(with: CGSize(width: width, height: 0), options: [.usesFontLeading, .usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil).height
-    }
-
 }

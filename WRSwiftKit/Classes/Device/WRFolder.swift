@@ -10,33 +10,29 @@ import UIKit
 @objc public class WRFolder: NSObject {
 
     /** 缓存地址 */
-    @objc public static var cacheUrl : URL?
+    @objc public static var CacheUrl : URL?
 
     /** 缓存文件夹大小 */
-    @objc public static var cacheFolderSize : String {
-        guard let cacheUrl = self.cacheUrl else {
+    @objc public static var CacheFolderSize : String {
+        guard let cacheUrl = self.CacheUrl else {
             return "0 KB"
         }
-        let folderSize = self.folderSize(cacheUrl)
+        let folderSize = self.FolderSize(cacheUrl)
         return ByteCountFormatter.string(fromByteCount: folderSize, countStyle: .file)
     }
 
     /**删除缓存文件夹*/
-    @objc public static func removeCacheFolder() {
-        guard let cacheUrl = self.cacheUrl else {
+    @objc public static func RemoveCacheFolder() throws {
+        guard let cacheUrl = self.CacheUrl else {
             return
         }
-        do {
-            try FileManager.default.removeItem(atPath: cacheUrl.absoluteString)
-        } catch {
-            debugPrint("\(error)")
-        }
+        try FileManager.default.removeItem(atPath: cacheUrl.absoluteString)
     }
 
     /**文件夹大小*/
     /// - parameter url: 文件夹地址
     /// - returns: 文件夹大小
-    @objc public static func folderSize(_ url : URL) -> Int64 {
+    @objc public static func FolderSize(_ url : URL) -> Int64 {
     
         let contents: [URL]
         do {
@@ -56,7 +52,7 @@ import UIKit
             }
 
             if isDirectoryResourceValue.isDirectory == true {
-                size += WRFolder.folderSize(url)
+                size += WRFolder.FolderSize(url)
             } else {
                 let fileSizeResourceValue: URLResourceValues
                 do {
@@ -73,12 +69,8 @@ import UIKit
     
     /**删除文件夹*/
     /// - parameter url: 文件夹地址
-    @objc public static func removeFolder(_ url : URL) {
-        do {
-            try FileManager.default.removeItem(atPath: url.absoluteString)
-        } catch {
-            debugPrint("\(error)")
-        }
+    @objc public static func RemoveFolder(_ url : URL) throws {
+        try FileManager.default.removeItem(atPath: url.absoluteString)
     }
 
 }

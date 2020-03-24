@@ -49,7 +49,8 @@ import UIKit
     }
     
     @objc public func setNaviShadowColor(_ shadowColor: UIColor){
-        self.navigationController?.navigationBar.shadowImage = UIImage.color(shadowColor, size: CGSize(width: UIScreen.main.bounds.width, height: 1))    }
+        self.navigationController?.navigationBar.shadowImage = UIImage.WR.Color(shadowColor, CGSize(width: UIScreen.main.bounds.width, height: 1))
+    }
     
     @objc public func setNaviBarTitleColor(_ tintColor: UIColor, titleColor: UIColor, shadowColor: UIColor? = nil){
         self.setNaviBarColor(tintColor)
@@ -125,7 +126,7 @@ import UIKit
 
         @objc public static var barTintImage : UIImage? = {                                //背景图片
             let colors : [UIColor] = [UIColor.color(fromHexString: "#333333"), UIColor.color(fromHexString: "#111111")]
-            return UIImage.color(colors: colors, size: CGSize(width: UIScreen.main.bounds.width, height: 64), locations: [0.0 , 1.0], start: CGPoint(x:0.5, y: 0.0), end: CGPoint(x:1.0, y: 1.0))
+            return UIImage.WR.Color(colors, CGSize(width: UIScreen.main.bounds.width, height: 64), [0.0 , 1.0], CGPoint(x:0.5, y: 0.0), CGPoint(x:1.0, y: 1.0))
             }()
         
         @objc public static var backTitleAttributes : [NSAttributedString.Key : Any] = {    //返回字体
@@ -134,7 +135,7 @@ import UIKit
 
         @objc public static func customBarTintImage(_ beginColor : UIColor, endColor : UIColor) -> () {
             let colors : [UIColor] = [beginColor, endColor]
-            WRConfigStyle.NavigationBar.barTintImage = UIImage.color(colors: colors, size: CGSize(width: UIScreen.main.bounds.width, height: 64), locations: [0.0 , 1.0], start: CGPoint(x:0.5, y: 0.0), end: CGPoint(x:1.0, y: 1.0))
+            WRConfigStyle.NavigationBar.barTintImage = UIImage.WR.Color(colors, CGSize(width: UIScreen.main.bounds.width, height: 64), [0.0 , 1.0], CGPoint(x:0.5, y: 0.0), CGPoint(x:1.0, y: 1.0))
         }
 
         @objc public static func customBarTintImage(_ image : UIImage?) -> () {
@@ -186,7 +187,7 @@ import UIKit
             (navigationBar as? WRNavigationBar)?.backgroundImageView.alpha = 1.0
             (navigationBar as? WRNavigationBar)?.backgroundImageView.image = WRConfigStyle.NavigationBar.barTintImage
             
-            navigationBar?.shadowImage = UIImage.color(WRConfigStyle.NavigationBar.shadowColor, size: CGSize(width: UIScreen.main.bounds.width, height: 1))
+            navigationBar?.shadowImage = UIImage.WR.Color(WRConfigStyle.NavigationBar.shadowColor, CGSize(width: UIScreen.main.bounds.width, height: 1))
             
             navigationBar?.backIndicatorImage = WRConfigStyle.NavigationBar.backImage
             

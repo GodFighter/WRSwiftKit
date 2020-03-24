@@ -35,7 +35,7 @@ public struct WRTimeIntervalExtension{
         formatter.allowedUnits = unit
         formatter.zeroFormattingBehavior = .pad
         if self.value.isNaN {
-            return ""
+            return "--:--"
         }
         return formatter.string(from: self.value)!
     }

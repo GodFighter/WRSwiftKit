@@ -8,7 +8,6 @@
 import UIKit
 
 @objc public protocol WRViewProtocol{
-    var wr: WRViewExtension { get }
 }
 
 @objc extension UIView : WRViewProtocol {

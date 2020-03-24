@@ -151,6 +151,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = SFDXNN46LA;
 						LastSwiftMigration = 1100;
 					};
 				};
@@ -369,6 +370,7 @@
 			baseConfigurationReference = A7C38805B7EBC7867A4A4A85 /* Pods-WRSwiftKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SFDXNN46LA;
 				INFOPLIST_FILE = WRSwiftKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -384,6 +386,7 @@
 			baseConfigurationReference = 7DCD5EAB55B6E0D75E7CBA3E /* Pods-WRSwiftKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SFDXNN46LA;
 				INFOPLIST_FILE = WRSwiftKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

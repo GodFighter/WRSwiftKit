@@ -62,11 +62,35 @@ class ViewController: UIViewController {
         self.view.addSubview(view)
         
         view.indicator.startAnimating()
+        
+//        self.initColor()
+//        self.initString()
+        self.initImage()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func initColor() {
+        let color = UIColor.WR.Color(darkMode: .black, .white);
+        self.view.backgroundColor = color
+    }
+    
+    func initString() {
+        let ip: String = "192.168.2.2"
+        print(ip.wr.isIP)
+       
+    }
+    
+    func initImage() {
+        var image = UIImage(named: "wuren")
+        image = UIImage.WR.Cutting(image!, CGRect(x: 100, y: 100, width: 200, height: 200))
+
+        
+        //        image.Si
+//        image?.wr.s
     }
 
 }
