@@ -7,6 +7,26 @@
 
 import UIKit
 
-class WRReloadEnable: NSObject {
+@objc public protocol WRReloadEnable {
+    func reloadData() -> Void
+    func wr_reloadData(_ completion: @escaping () -> Void ) -> Void
+}
 
+@objc extension UITableView: WRReloadEnable {
+    @objc public func wr_reloadData(_ completion: @escaping () -> Void) {
+        UIView.animate(withDuration: 0, animations: {
+            self.reloadData()
+        }) { _ in
+            completion()
+        }
+    }
+}
+@objc extension UICollectionView: WRReloadEnable {
+    @objc public func wr_reloadData(_ completion: @escaping () -> Void) {
+        UIView.animate(withDuration: 0, animations: {
+            self.reloadData()
+        }) { _ in
+            completion()
+        }
+    }
 }
