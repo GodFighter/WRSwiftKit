@@ -7,52 +7,87 @@
 
 import UIKit
 
+//MARK:-  Initializers
+public extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int, _ wr_alpha: CGFloat = 1) {
+        let safeRed = max(min(255, red), 0)
+        let safeGreen = max(min(255, green), 0)
+        let safeBlue = max(min(255, blue), 0)
+        let safeAlpha = max(min(1.0, wr_alpha), 0.0)
+
+        self.init(red: CGFloat(safeRed) / 255.0, green: CGFloat(safeGreen) / 255.0, blue: CGFloat(safeBlue) / 255.0, alpha: safeAlpha)
+    }
+
+    convenience init(hex:Int, _ wr_alpha: CGFloat = 1) {
+        self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff, wr_alpha)
+    }
+
+    convenience init?(hexString: String, _ wr_alpha: CGFloat = 1) {
+        var string = ""
+        if hexString.lowercased().hasPrefix("0x") {
+            string =  hexString.replacingOccurrences(of: "0x", with: "")
+        } else if hexString.hasPrefix("#") {
+            string = hexString.replacingOccurrences(of: "#", with: "")
+        } else {
+            string = hexString
+        }
+        if string.count == 3 { // convert hex to 6 digit format if in short format
+            var str = ""
+            string.forEach { str.append(String(repeating: String($0), count: 2)) }
+            string = str
+        }
+        guard let hexValue = Int(string, radix: 16) else { return nil }
+        self.init(hex: hexValue, wr_alpha)
+    }
+}
+
+//MARK:-
 @objc public protocol UIColorProtocol{
-    var wr: UIColorExtension { get }
-    
-    @objc static func color(fromHexString: String) -> UIColor
 }
 
 @objc extension UIColor : UIColorProtocol {
     public override var wr: UIColorExtension {
         return UIColorExtension(self)
     }
-    /**根据16进制创建颜色*/
-    /// - parameter fromHexString: 16进制字符串
-    /// - returns: 颜色
-    @objc public static func color(fromHexString: String) -> UIColor {
-        var rgbValue : UInt64 = 0
-        let hex = fromHexString.replacingOccurrences(of: "#", with: "")
-
-        if Scanner(string:hex).scanHexInt64(&rgbValue) {
-            let redValue = CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0
-            let greenValue = CGFloat((rgbValue & 0xFF00) >> 8) / 255.0
-            let blueValue = CGFloat(rgbValue & 0xFF) / 255.0
-            
-            return UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
-        }
-        
-        return .clear
-    }
-    
     public static var WR: UIColorExtension.Type {
-        get { return UIColorExtension.self }
-        set {}
+        return UIColorExtension.self
     }
 }
 
+//MARK:-
 @objc public class UIColorExtension : WRObjectExtension {
     init(_ value: UIColor){
         super.init(value)
         self.value = value
     }
     
+    fileprivate var _color: UIColor {
+        guard let color = self.value as? UIColor else {
+            return .clear
+        }
+        return color
+    }
+        
+    fileprivate var _components: [CGFloat] {
+        let comps = _color.cgColor.components!
+        if comps.count == 4 { return comps }
+        return [comps[0], comps[0], comps[0], comps[1]]
+    }
+}
+
+//MARK:-  Static
+fileprivate typealias UIColorExtension_Static = UIColorExtension
+public extension UIColorExtension_Static {
     /**随机颜色*/
-    @objc public var randomColor : UIColor {
-        return UIColor(red: CGFloat(arc4random_uniform(256)) / 255.0, green: CGFloat(arc4random_uniform(256)) / 255.0, blue: CGFloat(arc4random_uniform(256)) / 255.0, alpha: 1.0)
+    @objc static var RandomColor : UIColor {
+        return UIColor(red: Int.random(in: 0...255), green: Int.random(in: 0...255), blue: Int.random(in: 0...255))
     }
     
-    @objc public static func Color(darkMode dark: UIColor, _ light: UIColor) -> UIColor {
+    /**暗黑模式颜色*/
+    /**
+    iOS13.0一下的，显示light颜色
+    */
+    @objc static func Color(darkMode dark: UIColor, _ light: UIColor) -> UIColor {
         if #available(iOS 13.0, *) {
             return UIColor.init { (trainCollection) -> UIColor in
                 return trainCollection.userInterfaceStyle == .light ? light : dark
@@ -60,4 +95,41 @@ import UIKit
         }
         return light
     }
+
+}
+//MARK:-  Property
+fileprivate typealias UIColorExtension_Public = UIColorExtension
+public extension UIColorExtension_Public {
+
+    var floatComponents: (red: CGFloat, green: CGFloat, blue: CGFloat) {
+        let red = _components[0]
+        let green = _components[1]
+        let blue = _components[2]
+        return (red: red, green: green, blue: blue)
+    }
+    
+    var rgbComponents: (red: Int, green: Int, blue: Int) {
+        return (red: Int(floatComponents.red * 255.0), green: Int(floatComponents.green * 255.0), blue: Int(floatComponents.blue * 255.0))
+    }
+
+    @objc var hex: UInt {
+        var colorAsUInt32: UInt32 = 0
+        colorAsUInt32 += UInt32(_components[0] * 255.0) << 16
+        colorAsUInt32 += UInt32(_components[1] * 255.0) << 8
+        colorAsUInt32 += UInt32(_components[2] * 255.0)
+        return UInt(colorAsUInt32)
+    }
+
+    @objc var hexString: String {
+        let components: [Int] = _components.map { Int($0 * 255.0) }
+        return String(format: "#%02X%02X%02X", components[0], components[1], components[2])
+    }
+
+    @objc var shortHexString: String? {
+        let string = hexString.replacingOccurrences(of: "#", with: "")
+        let chrs = Array(string)
+        guard chrs[0] == chrs[1], chrs[2] == chrs[3], chrs[4] == chrs[5] else { return nil }
+        return "#\(chrs[0])\(chrs[2])\(chrs[4])"
+    }
+
 }
