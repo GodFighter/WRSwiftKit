@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 public struct WRDoubleExtension
 {
@@ -27,11 +28,11 @@ fileprivate typealias WRDoubleExtension_Public = WRDoubleExtension
 public extension WRDoubleExtension_Public {
     
     var ceil: Double {
-        return Double(ceilf(float))
+        return Foundation.ceil(_double)
     }
     
     var floor: Double {
-        return Double(floorf(float))
+        return  Foundation.floor(_double)
     }
     
     var int: Int {

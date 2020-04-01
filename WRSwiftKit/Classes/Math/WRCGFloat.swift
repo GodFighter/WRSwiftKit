@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 //MARK:- WRCGFloatProtocol
 public protocol WRCGFloatProtocol{
@@ -32,11 +33,11 @@ fileprivate typealias WRCGFloatExtension_Public = WRCGFloatExtension
 public extension WRCGFloatExtension_Public {
     
     var ceil: CGFloat {
-        return CGFloat(ceilf(float))
+        return Foundation.ceil(self.value)
     }
     
     var floor: CGFloat {
-        return  CGFloat(floorf(float))
+        return  Foundation.floor(self.value)
     }
     
     var int: Int {
