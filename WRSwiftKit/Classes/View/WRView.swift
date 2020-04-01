@@ -23,14 +23,19 @@ import UIKit
         self.value = value
     }
     
+    var _view: UIView? {
+        return self.value as? UIView
+    }
+    
+    
     /**拆切任意圆角*/
     /// - parameter corners: 圆角位置
     /// - parameter cornerRadius: 圆角半径
     @objc public func clipCorner(_ corners: UIRectCorner, cornerRadius: CGSize) {
-        if let view = self.value as? UIView {
-            let maskBezier = UIBezierPath.init(roundedRect: CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height), byRoundingCorners: corners, cornerRadii: cornerRadius)
+        if let view = _view {
+            let maskBezier = UIBezierPath.init(roundedRect: view.bounds, byRoundingCorners: corners, cornerRadii: cornerRadius)
             let maskLayer = CAShapeLayer.init()
-            maskLayer.frame = CGRect.init(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+            maskLayer.frame = view.bounds
             maskLayer.path = maskBezier.cgPath
             view.layer.mask = maskLayer
         }
