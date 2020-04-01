@@ -57,6 +57,14 @@
 		5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79BD5EB3D9E1228291F139C8945C32D /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
+		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
+		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
+		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
+		BB7C2D8524343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
+		BB7C2D8624343876008B1DFC /* WRFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8024343876008B1DFC /* WRFloat.swift */; };
+		BB7C2D8724343876008B1DFC /* WRFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8024343876008B1DFC /* WRFloat.swift */; };
+		BB7C2D8824343876008B1DFC /* WRDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8124343876008B1DFC /* WRDouble.swift */; };
+		BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8124343876008B1DFC /* WRDouble.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +124,10 @@
 		AA459AD3278226854C12B4DF0E8EBF6E /* WRSwiftKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WRSwiftKit.xcconfig; sourceTree = "<group>"; };
 		AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		AE7DD37D02D226D7275CA66FABF4DB16 /* Pods-WRSwiftKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
+		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
+		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
+		BB7C2D8124343876008B1DFC /* WRDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDouble.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +167,7 @@
 				5688D09023CDD5D800D96354 /* Common */,
 				5688D09623CDD5D800D96354 /* Device */,
 				5688D09A23CDD5D800D96354 /* Image */,
+				BB7C2D7D24343876008B1DFC /* Math */,
 				5688D09423CDD5D800D96354 /* Notification */,
 				5688D0B023CDDDA100D96354 /* View */,
 				5688D0B723CDECC700D96354 /* ViewController */,
@@ -316,6 +329,18 @@
 				D279D2B988EEBA6EBA86F8D16D38BDCF /* Pods-WRSwiftKit_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BB7C2D7D24343876008B1DFC /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */,
+				BB7C2D7F24343876008B1DFC /* WRInt.swift */,
+				BB7C2D8024343876008B1DFC /* WRFloat.swift */,
+				BB7C2D8124343876008B1DFC /* WRDouble.swift */,
+			);
+			name = Math;
+			path = WRSwiftKit/Classes/Math;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -488,6 +513,7 @@
 				5688D0B623CDDED900D96354 /* WRControl.swift in Sources */,
 				5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
+				BB7C2D8524343876008B1DFC /* WRInt.swift in Sources */,
 				5688D0D123CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
 				5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
@@ -500,10 +526,13 @@
 				5688D0CF23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
 				5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */,
+				BB7C2D8724343876008B1DFC /* WRFloat.swift in Sources */,
 				5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09F23CDD5D800D96354 /* WRString.swift in Sources */,
 				5688D0D923CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
+				BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */,
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
 				41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */,
@@ -519,6 +548,7 @@
 				5688D0B523CDDED900D96354 /* WRControl.swift in Sources */,
 				5688D0BC23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
+				BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */,
 				5688D0D023CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
 				5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
@@ -531,10 +561,13 @@
 				5688D0CE23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,
 				5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
+				BB7C2D8824343876008B1DFC /* WRDouble.swift in Sources */,
+				BB7C2D8624343876008B1DFC /* WRFloat.swift in Sources */,
 				5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D0DA23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09E23CDD5D800D96354 /* WRString.swift in Sources */,
 				5688D0D823CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
+				BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */,
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,

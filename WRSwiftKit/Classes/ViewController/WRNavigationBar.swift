@@ -92,7 +92,7 @@ import UIKit
     @discardableResult
     @objc public func setNaviLeftItem(_ title : String, attributes: [NSAttributedString.Key : Any]? = nil, target: Any?, selector: Selector?) -> UIBarButtonItem{
         let barButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)
-        barButtonItem.tintColor = UIColor.color(fromHexString: "333333")
+        barButtonItem.tintColor = UIColor(hex: 0x333333)
         barButtonItem.setTitleTextAttributes(attributes, for: .normal)
         self.navigationItem.leftBarButtonItem = barButtonItem
         return barButtonItem
@@ -101,7 +101,7 @@ import UIKit
     @discardableResult
     @objc public func setNaviRightItem(_ title : String, attributes: [NSAttributedString.Key : Any]? = nil, target: Any?, selector: Selector?) -> UIBarButtonItem{
         let barButtonItem = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)
-        barButtonItem.tintColor = UIColor.color(fromHexString: "333333")
+        barButtonItem.tintColor = UIColor(hex: 0x333333)
         barButtonItem.setTitleTextAttributes(attributes, for: .normal)
         self.navigationItem.rightBarButtonItem = barButtonItem
         return barButtonItem
@@ -125,7 +125,7 @@ import UIKit
         @objc public static var backColor : UIColor = .white                               //返回颜色
 
         @objc public static var barTintImage : UIImage? = {                                //背景图片
-            let colors : [UIColor] = [UIColor.color(fromHexString: "#333333"), UIColor.color(fromHexString: "#111111")]
+            let colors : [UIColor] = [UIColor(hex: 0x333333), UIColor(hex: 0x111111)]
             return UIImage.WR.Color(colors, CGSize(width: UIScreen.main.bounds.width, height: 64), [0.0 , 1.0], CGPoint(x:0.5, y: 0.0), CGPoint(x:1.0, y: 1.0))
             }()
         

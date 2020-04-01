@@ -64,8 +64,8 @@ class ViewController: UIViewController {
         view.indicator.startAnimating()
         
 //        self.initColor()
-//        self.initString()
-        self.initImage()
+        self.initString()
+//        self.initImage()
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,12 +76,23 @@ class ViewController: UIViewController {
     func initColor() {
         let color = UIColor.WR.Color(darkMode: .black, .white);
         self.view.backgroundColor = color
+        
+        let color2 = UIColor(hexString: "DDF")
+        view.backgroundColor = color2
+        
+        let randomColor = UIColor.WR.RandomColor
+        view.backgroundColor = randomColor
     }
     
     func initString() {
         let ip: String = "192.168.2.2"
         print(ip.wr.isIP)
-       
+        
+        let http = "http://www.baidu.com"
+        print(http.wr.isUrl)
+               
+        let float: CGFloat = 3.24
+        print("\(float.wr.string(5))")
     }
     
     func initImage() {
