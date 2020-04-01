@@ -14,7 +14,6 @@ private struct wr_control_associated{
 }
 
 @objc public protocol WRControlProtocol{
-    @objc func event(_ event: UIControl.Event, handler: @escaping wr_control_handler) -> UIControl?
 }
 
 @objc extension UIControl : WRControlProtocol {
@@ -44,10 +43,6 @@ private struct wr_control_associated{
 
         return self
     }
-}
-
-@objc public class WRControlExtension : WRViewExtension {
-
 }
 
 //MARK: -
