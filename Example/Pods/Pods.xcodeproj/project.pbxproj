@@ -67,6 +67,8 @@
 		BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8124343876008B1DFC /* WRDouble.swift */; };
 		BB7C2D8B243476DB008B1DFC /* WRReloadEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8A243476DB008B1DFC /* WRReloadEnable.swift */; };
 		BB7C2D8C243476DB008B1DFC /* WRReloadEnable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8A243476DB008B1DFC /* WRReloadEnable.swift */; };
+		BB7C2D8E24348487008B1DFC /* WRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8D24348487008B1DFC /* WRButton.swift */; };
+		BB7C2D8F24348487008B1DFC /* WRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D8D24348487008B1DFC /* WRButton.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -131,6 +133,7 @@
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
 		BB7C2D8124343876008B1DFC /* WRDouble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDouble.swift; sourceTree = "<group>"; };
 		BB7C2D8A243476DB008B1DFC /* WRReloadEnable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRReloadEnable.swift; sourceTree = "<group>"; };
+		BB7C2D8D24348487008B1DFC /* WRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRButton.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +249,7 @@
 				5688D0B123CDDDAE00D96354 /* WRView.swift */,
 				5688D0B423CDDED900D96354 /* WRControl.swift */,
 				BB7C2D8A243476DB008B1DFC /* WRReloadEnable.swift */,
+				BB7C2D8D24348487008B1DFC /* WRButton.swift */,
 			);
 			name = View;
 			path = WRSwiftKit/Classes/View;
@@ -529,6 +533,7 @@
 				5688D0A123CDD5D800D96354 /* WRObject.swift in Sources */,
 				5688D0CF23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
+				BB7C2D8F24348487008B1DFC /* WRButton.swift in Sources */,
 				5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8C243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
 				BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */,
@@ -565,6 +570,7 @@
 				5688D0A023CDD5D800D96354 /* WRObject.swift in Sources */,
 				5688D0CE23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,
+				BB7C2D8E24348487008B1DFC /* WRButton.swift in Sources */,
 				5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8B243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
 				BB7C2D8824343876008B1DFC /* WRDouble.swift in Sources */,
