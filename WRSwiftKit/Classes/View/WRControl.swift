@@ -35,7 +35,7 @@ private struct wr_control_associated{
         if value == nil {
             value = Set<WRControlWrapper>()
         }
-        let wrapper = WRControlWrapper.init(event, handler: handler)
+        let wrapper = WRControlWrapper.init(self, event, handler: handler)
         value!.insert(wrapper)
         events![key] = value
         objc_setAssociatedObject(self, &wr_control_associated.handlerKey, events, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -49,14 +49,16 @@ private struct wr_control_associated{
 @objc fileprivate class WRControlWrapper : NSObject {
     var controlEvents : UIControl.Event
     var handler : wr_control_handler
-    
-    init(_ controlEvents: UIControl.Event, handler: @escaping wr_control_handler) {
+    var sender : UIControl
+
+    init(_ sender: UIControl, _ controlEvents: UIControl.Event, handler: @escaping wr_control_handler) {
+        self.sender = sender
         self.controlEvents = controlEvents
         self.handler = handler
     }
     
     @objc func invoke(_ sender : UIControl) {
-        self.handler(sender, self.controlEvents)
+        self.handler(self.sender, self.controlEvents)
     }
 }
 
