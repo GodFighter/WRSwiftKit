@@ -83,7 +83,7 @@ public class WRActivityIndicatorView: UIView {
         isHidden = true
     }
 
-    init(frame: CGRect, type: WRActivityIndicatorType? = nil, color: UIColor? = nil, padding: CGFloat? = nil) {
+    public init(frame: CGRect, type: WRActivityIndicatorType? = nil, color: UIColor? = nil, padding: CGFloat? = nil) {
         self.type = type ?? WRActivityIndicatorView.DEFAULT_TYPE
         self.color = color ?? WRActivityIndicatorView.DEFAULT_COLOR
         self.padding = padding ?? WRActivityIndicatorView.DEFAULT_PADDING
@@ -104,7 +104,7 @@ public class WRActivityIndicatorView: UIView {
         }
     }
 
-    final func startAnimating() {
+    public final func startAnimating() {
         guard !isAnimating else {
             return
         }
@@ -114,7 +114,7 @@ public class WRActivityIndicatorView: UIView {
         setupAnimation()
     }
 
-    final func stopAnimating() {
+    public final func stopAnimating() {
         guard isAnimating else {
             return
         }
