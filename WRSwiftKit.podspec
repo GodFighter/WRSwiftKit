@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '1.1.2'
+  s.version          = '1.1.3'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -54,6 +54,10 @@ Pod::Spec.new do |s|
     s.subspec 'Color' do |color|
         color.source_files = 'WRSwiftKit/Classes/Color/*.swift'
         color.dependency 'WRSwiftKit/Common'
+    end
+    
+    s.subspec 'Collection' do |ss|
+        ss.source_files = 'WRSwiftKit/Classes/Collection/*.swift'
     end
 
     s.subspec 'View' do |view|

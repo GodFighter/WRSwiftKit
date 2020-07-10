@@ -64,8 +64,9 @@ class ViewController: UIViewController {
         view.indicator.startAnimating()
         
 //        self.initColor()
-        self.initString()
+//        self.initString()
 //        self.initImage()
+        initCollection()
     }
 
     override func didReceiveMemoryWarning() {
@@ -102,6 +103,22 @@ class ViewController: UIViewController {
         
         //        image.Si
 //        image?.wr.s
+    }
+    
+    func initCollection() {
+//        var dictionary: Dictionary<String, String> = ["123":"456"]
+////        dictionary.wr_exchange(fromKey: "123", toKey: "789")
+//
+//        dictionary = dictionary.wr.exchange(fromKey: "123", toKey: "789")
+//
+//        print(dictionary)
+        
+//        let dict = [1 : "a", 2 : "b", 3 : "c", 4 : "d", 5 : "e"]
+        let dict = ["1" : "a", "2" : "b", "3" : "c", "4" : "d", "5" : "e"]
+        let newDict = dict.wr.jsonStirng
+        print(newDict as Any)
+        
+
     }
 
 }
