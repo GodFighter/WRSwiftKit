@@ -63,6 +63,12 @@ open class WRPermission: NSObject {
     /**麦克风权限实例*/
     public static let Microphone = WRPermissionMicrophone(type: .microphone)
     #endif
+    
+    #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
+    /** 语音录制权限实例 */
+    public static let speechRecognizer = WRPermissionSpeech(type: .speechRecognizer)
+    #endif
+
 
     internal init(type: WRPermissionType) {
         self.type = type

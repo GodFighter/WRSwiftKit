@@ -139,7 +139,10 @@ class ViewController: UIViewController {
         //        print(WRPermission.Photos.request({ (status) in
 //            print(status)
 //        }))
-        WRPermission.Microphone.request { (status) in
+//        WRPermission.Microphone.request { (status) in
+//            print(status)
+//        }
+        WRPermission.speechRecognizer.request { (status) in
             print(status)
         }
     }

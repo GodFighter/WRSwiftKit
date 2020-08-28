@@ -65,6 +65,8 @@
 		BB4A193B24F792B300C85B03 /* WRPermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193924F792B300C85B03 /* WRPermissionType.swift */; };
 		BB4A193F24F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */; };
 		BB4A194024F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */; };
+		BB4F0BCC24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */; };
+		BB4F0BCD24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */; };
 		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
@@ -148,6 +150,7 @@
 		BB4A193624F7918C00C85B03 /* WRPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermission.swift; sourceTree = "<group>"; };
 		BB4A193924F792B300C85B03 /* WRPermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionType.swift; sourceTree = "<group>"; };
 		BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionPhoto.swift; sourceTree = "<group>"; };
+		BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionSpeech.swift; sourceTree = "<group>"; };
 		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
 		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
@@ -393,6 +396,7 @@
 				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
 				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
 				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
+				BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -604,6 +608,7 @@
 				BB7C2D8724343876008B1DFC /* WRFloat.swift in Sources */,
 				BB117B8B24B84A2E00457B71 /* WRDictionary.swift in Sources */,
 				5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */,
+				BB4F0BCD24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */,
 				5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09F23CDD5D800D96354 /* WRString.swift in Sources */,
 				BBA103F724F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */,
@@ -649,6 +654,7 @@
 				BB7C2D8624343876008B1DFC /* WRFloat.swift in Sources */,
 				BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */,
 				5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */,
+				BB4F0BCC24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */,
 				5688D0DA23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09E23CDD5D800D96354 /* WRString.swift in Sources */,
 				BBA103F624F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */,

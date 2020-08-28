@@ -19,6 +19,16 @@ public enum WRPermissionType {
     case camera
     #endif
 
+    #if PERMISSION_MICROPHONE
+     /**麦克风*/
+    case microphone
+    #endif
+
+    #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
+    /**语音录制*/
+    case speechRecognizer
+    #endif
+
     #if PERMISSION_CONTACTS
     case contacts
     #endif
@@ -30,10 +40,6 @@ public enum WRPermissionType {
 
     #if PERMISSION_NOTIFICATIONS
     case notifications(UNAuthorizationOptions)
-    #endif
-
-    #if PERMISSION_MICROPHONE
-    case microphone
     #endif
 
     #if PERMISSION_REMINDERS
@@ -50,10 +56,6 @@ public enum WRPermissionType {
 
     #if PERMISSION_MOTION
     case motion
-    #endif
-
-    #if PERMISSION_SPEECH_RECOGNIZER
-    @available(iOS 10.0, *) case speechRecognizer
     #endif
 
     #if PERMISSION_MEDIA_LIBRARY
