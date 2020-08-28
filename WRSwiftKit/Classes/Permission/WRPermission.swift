@@ -53,7 +53,9 @@ open class WRPermission: NSObject {
         return .notDetermined
     }
     
-    open var infoKey = ""
+    open var infoKey: String {
+        return ""
+    }
     
     open func request(_ callback: @escaping Callback) {
         

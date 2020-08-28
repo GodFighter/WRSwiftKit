@@ -8,6 +8,7 @@
 #if PERMISSION_PHOTOS
 
 import Photos
+import Foundation
 
 public class WRPermissionPhoto: WRPermission {
     
@@ -15,7 +16,9 @@ public class WRPermissionPhoto: WRPermission {
         super.init(type: type)
     }
 
-    public override var infoKey = "NSPhotoLibraryUsageDescription"
+    public override var infoKey: String {
+        return "NSPhotoLibraryUsageDescription"
+    }
     
     public override var status: WRPermissionStatus {
         let status = PHPhotoLibrary.authorizationStatus()
