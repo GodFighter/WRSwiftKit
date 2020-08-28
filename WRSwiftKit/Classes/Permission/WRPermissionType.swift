@@ -8,6 +8,14 @@
 import UIKit
 
 public enum WRPermissionType {
+    #if PERMISSION_PHOTOS
+    case photos
+    #endif
+
+    #if PERMISSION_CAMERA
+    case camera
+    #endif
+
     #if PERMISSION_CONTACTS
     case contacts
     #endif
@@ -23,14 +31,6 @@ public enum WRPermissionType {
 
     #if PERMISSION_MICROPHONE
     case microphone
-    #endif
-
-    #if PERMISSION_CAMERA
-    case camera
-    #endif
-
-    #if PERMISSION_PHOTOS
-    case photos
     #endif
 
     #if PERMISSION_REMINDERS
@@ -67,6 +67,14 @@ public enum WRPermissionType {
 extension WRPermissionType: CustomStringConvertible {
     public var description: String {
         switch self {
+        #if PERMISSION_PHOTOS
+        case .photos: return "Photos"
+        #endif
+
+        #if PERMISSION_CAMERA
+        case .camera: return "Camera"
+        #endif
+
         #if PERMISSION_CONTACTS
         case .contacts: return "Contacts"
         #endif
@@ -82,14 +90,6 @@ extension WRPermissionType: CustomStringConvertible {
 
         #if PERMISSION_MICROPHONE
         case .microphone: return "Microphone"
-        #endif
-
-        #if PERMISSION_CAMERA
-        case .camera: return "Camera"
-        #endif
-
-        #if PERMISSION_PHOTOS
-        case .photos: return "Photos"
         #endif
 
         #if PERMISSION_REMINDERS

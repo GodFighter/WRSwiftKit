@@ -130,10 +130,13 @@ class ViewController: UIViewController {
     func initPermission() {
 
         
-        WRPermission.Photos.request { (status) in
+//        WRPermission.Photos.request { (status) in
+//            print(status)
+//        }
+        WRPermission.Camera.request({ (status) in
             print(status)
-        }
-//        print(WRPermission.Photos.request({ (status) in
+        })
+        //        print(WRPermission.Photos.request({ (status) in
 //            print(status)
 //        }))
     }

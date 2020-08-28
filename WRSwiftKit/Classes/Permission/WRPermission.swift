@@ -45,6 +45,10 @@ open class WRPermission: NSObject {
     public static let Photos = WRPermissionPhoto(type: .photos)
     #endif
     
+    #if PERMISSION_CAMERA
+    public static let Camera = WRPermissionCamera(type: .camera)
+    #endif
+
     internal init(type: WRPermissionType) {
         self.type = type
     }

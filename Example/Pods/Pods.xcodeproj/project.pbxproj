@@ -81,6 +81,8 @@
 		BB7C2D92243488F1008B1DFC /* WRTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D90243488F1008B1DFC /* WRTextField.swift */; };
 		BB7C2D9424348B52008B1DFC /* WRScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D9324348B52008B1DFC /* WRScrollView.swift */; };
 		BB7C2D9524348B52008B1DFC /* WRScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D9324348B52008B1DFC /* WRScrollView.swift */; };
+		BBA103F324F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */; };
+		BBA103F424F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -152,6 +154,7 @@
 		BB7C2D8D24348487008B1DFC /* WRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRButton.swift; sourceTree = "<group>"; };
 		BB7C2D90243488F1008B1DFC /* WRTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTextField.swift; sourceTree = "<group>"; };
 		BB7C2D9324348B52008B1DFC /* WRScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRScrollView.swift; sourceTree = "<group>"; };
+		BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionCamera.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -385,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
+				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -576,6 +580,7 @@
 				BB4A194024F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */,
 				5688D0D123CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
+				BBA103F424F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */,
 				5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
 				BB4A193824F7918C00C85B03 /* WRPermission.swift in Sources */,
 				BB7C2D92243488F1008B1DFC /* WRTextField.swift in Sources */,
@@ -619,6 +624,7 @@
 				BB4A193F24F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */,
 				5688D0D023CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
+				BBA103F324F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */,
 				5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
 				BB4A193724F7918C00C85B03 /* WRPermission.swift in Sources */,
 				BB7C2D91243488F1008B1DFC /* WRTextField.swift in Sources */,
