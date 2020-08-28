@@ -41,5 +41,7 @@
 	<string>需要访问相机</string>
 	<key>NSContactsUsageDescription</key>
 	<string>需要访问通讯录</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>需要访问媒体库</string>
 </dict>
 </plist>

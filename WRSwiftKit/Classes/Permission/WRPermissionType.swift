@@ -35,9 +35,16 @@ public enum WRPermissionType {
     #endif
 
     #if PERMISSION_NOTIFICATIONS
+    /**通知*/
     @available(iOS 10.0, *)
     case notifications(UNAuthorizationOptions)
     #endif
+
+    #if PERMISSION_MEDIA_LIBRARY
+    /**媒体库*/
+    @available(iOS 9.3, *) case mediaLibrary
+    #endif
+
 
     #if PERMISSION_LOCATION
     case locationAlways
@@ -59,10 +66,6 @@ public enum WRPermissionType {
 
     #if PERMISSION_MOTION
     case motion
-    #endif
-
-    #if PERMISSION_MEDIA_LIBRARY
-    @available(iOS 9.3, *) case mediaLibrary
     #endif
 
     #if PERMISSION_SIRI

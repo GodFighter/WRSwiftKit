@@ -90,9 +90,15 @@ open class WRPermission: NSObject {
         _Notifications = permission
         return permission
     }
+    #endif
+
+    #if PERMISSION_MEDIA_LIBRARY
+    /** 媒体库权限实例 */
+    @available(iOS 9.3, *)
+    public static let MediaLibrary = WRPermissionMediaLibrary(type: .mediaLibrary)
+    #endif
 
     
-    #endif
     
     
     internal init(type: WRPermissionType) {

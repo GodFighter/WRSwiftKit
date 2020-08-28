@@ -149,12 +149,15 @@ class ViewController: UIViewController {
 //            print(status)
 //        }
         
-        if #available(iOS 10.0, *) {
-            print(WRPermission.Notifications.status)
-            WRPermission.Notifications(options: [.badge]).request { (status) in
-                print(status)
-            }
-            
+//        if #available(iOS 10.0, *) {
+//            print(WRPermission.Notifications.status)
+//            WRPermission.Notifications(options: [.badge]).request { (status) in
+//                print(status)
+//            }
+//
+//        }
+        WRPermission.MediaLibrary.request { (status) in
+            print(status)
         }
     }
 
