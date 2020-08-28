@@ -8,6 +8,7 @@
 
 import UIKit
 import WRSwiftKit
+import Photos
 
 class ViewController: UIViewController {
 
@@ -58,16 +59,21 @@ class ViewController: UIViewController {
             })
         */
         
+        /*
         let view = UIView.init(frame: CGRect(x: 100, y: 100, width: 50, height: 50))
         self.view.addSubview(view)
         
         view.indicator.startAnimating()
-        
+        */
 //        self.initColor()
 //        self.initString()
 //        self.initImage()
+        /*
         initCollection()
-    }
+        */
+        
+        initPermission()
+ }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -119,6 +125,17 @@ class ViewController: UIViewController {
         print(newDict as Any)
         
 
+    }
+    
+    func initPermission() {
+
+        
+        WRPermission.Photos.request { (status) in
+            print(status)
+        }
+//        print(WRPermission.Photos.request({ (status) in
+//            print(status)
+//        }))
     }
 
 }

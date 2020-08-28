@@ -59,6 +59,12 @@
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
 		BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117B8924B84A2E00457B71 /* WRDictionary.swift */; };
 		BB117B8B24B84A2E00457B71 /* WRDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117B8924B84A2E00457B71 /* WRDictionary.swift */; };
+		BB4A193724F7918C00C85B03 /* WRPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193624F7918C00C85B03 /* WRPermission.swift */; };
+		BB4A193824F7918C00C85B03 /* WRPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193624F7918C00C85B03 /* WRPermission.swift */; };
+		BB4A193A24F792B300C85B03 /* WRPermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193924F792B300C85B03 /* WRPermissionType.swift */; };
+		BB4A193B24F792B300C85B03 /* WRPermissionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193924F792B300C85B03 /* WRPermissionType.swift */; };
+		BB4A193F24F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */; };
+		BB4A194024F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */; };
 		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
@@ -135,6 +141,9 @@
 		AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		AE7DD37D02D226D7275CA66FABF4DB16 /* Pods-WRSwiftKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BB117B8924B84A2E00457B71 /* WRDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDictionary.swift; sourceTree = "<group>"; };
+		BB4A193624F7918C00C85B03 /* WRPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermission.swift; sourceTree = "<group>"; };
+		BB4A193924F792B300C85B03 /* WRPermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionType.swift; sourceTree = "<group>"; };
+		BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionPhoto.swift; sourceTree = "<group>"; };
 		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
 		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
@@ -185,6 +194,7 @@
 				5688D09A23CDD5D800D96354 /* Image */,
 				BB7C2D7D24343876008B1DFC /* Math */,
 				5688D09423CDD5D800D96354 /* Notification */,
+				BB4A193524F7916100C85B03 /* Permission */,
 				5688D0B023CDDDA100D96354 /* View */,
 				5688D0B723CDECC700D96354 /* ViewController */,
 				143AF687555BC3D1EE0BE10DCD3FF52A /* Pod */,
@@ -358,6 +368,25 @@
 			);
 			name = Collection;
 			path = WRSwiftKit/Classes/Collection;
+			sourceTree = "<group>";
+		};
+		BB4A193524F7916100C85B03 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				BB4A193924F792B300C85B03 /* WRPermissionType.swift */,
+				BB4A193624F7918C00C85B03 /* WRPermission.swift */,
+				BB4A193D24F794B600C85B03 /* Types */,
+			);
+			name = Permission;
+			path = WRSwiftKit/Classes/Permission;
+			sourceTree = "<group>";
+		};
+		BB4A193D24F794B600C85B03 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 		BB7C2D7D24343876008B1DFC /* Math */ = {
@@ -544,9 +573,11 @@
 				5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
 				BB7C2D8524343876008B1DFC /* WRInt.swift in Sources */,
+				BB4A194024F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */,
 				5688D0D123CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
 				5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
+				BB4A193824F7918C00C85B03 /* WRPermission.swift in Sources */,
 				BB7C2D92243488F1008B1DFC /* WRTextField.swift in Sources */,
 				5688D0B323CDDDAE00D96354 /* WRView.swift in Sources */,
 				5688D0D723CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */,
@@ -557,6 +588,7 @@
 				5688D0CF23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
 				BB7C2D8F24348487008B1DFC /* WRButton.swift in Sources */,
+				BB4A193B24F792B300C85B03 /* WRPermissionType.swift in Sources */,
 				5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8C243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
 				BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */,
@@ -584,9 +616,11 @@
 				5688D0BC23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
 				BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */,
+				BB4A193F24F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */,
 				5688D0D023CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
 				5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
+				BB4A193724F7918C00C85B03 /* WRPermission.swift in Sources */,
 				BB7C2D91243488F1008B1DFC /* WRTextField.swift in Sources */,
 				5688D0B223CDDDAE00D96354 /* WRView.swift in Sources */,
 				5688D0D623CE044B00D96354 /* WRActivityIndicatorAnimationBallRotateChase.swift in Sources */,
@@ -597,6 +631,7 @@
 				5688D0CE23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,
 				BB7C2D8E24348487008B1DFC /* WRButton.swift in Sources */,
+				BB4A193A24F792B300C85B03 /* WRPermissionType.swift in Sources */,
 				5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8B243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
 				BB7C2D8824343876008B1DFC /* WRDouble.swift in Sources */,
