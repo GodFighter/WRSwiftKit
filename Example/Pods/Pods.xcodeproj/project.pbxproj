@@ -83,6 +83,8 @@
 		BB7C2D9524348B52008B1DFC /* WRScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D9324348B52008B1DFC /* WRScrollView.swift */; };
 		BBA103F324F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */; };
 		BBA103F424F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */; };
+		BBA103F624F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */; };
+		BBA103F724F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +157,7 @@
 		BB7C2D90243488F1008B1DFC /* WRTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTextField.swift; sourceTree = "<group>"; };
 		BB7C2D9324348B52008B1DFC /* WRScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRScrollView.swift; sourceTree = "<group>"; };
 		BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionCamera.swift; sourceTree = "<group>"; };
+		BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionMicrophone.swift; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -389,6 +392,7 @@
 			children = (
 				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
 				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
+				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -602,6 +606,7 @@
 				5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09F23CDD5D800D96354 /* WRString.swift in Sources */,
+				BBA103F724F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */,
 				5688D0D923CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */,
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
@@ -646,6 +651,7 @@
 				5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D0DA23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
 				5688D09E23CDD5D800D96354 /* WRString.swift in Sources */,
+				BBA103F624F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */,
 				5688D0D823CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */,
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
