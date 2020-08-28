@@ -66,9 +66,13 @@ open class WRPermission: NSObject {
     
     #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
     /** 语音录制权限实例 */
-    public static let speechRecognizer = WRPermissionSpeech(type: .speechRecognizer)
+    public static let SpeechRecognizer = WRPermissionSpeech(type: .speechRecognizer)
     #endif
 
+    #if PERMISSION_CONTACTS && canImport(Contacts)
+    /** 通讯录权限实例 */
+    public static let Contacts = WRPermissionContacts(type: .contacts)
+    #endif
 
     internal init(type: WRPermissionType) {
         self.type = type

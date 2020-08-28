@@ -39,7 +39,7 @@
 	<string>需要访问相册</string>
 	<key>NSCameraUsageDescription</key>
 	<string>需要访问相机</string>
-	<key>NSSpeechRecognitionUsageDescription</key>
-	<string>需要访问语音录制</string>
+	<key>NSContactsUsageDescription</key>
+	<string>需要访问通讯录</string>
 </dict>
 </plist>

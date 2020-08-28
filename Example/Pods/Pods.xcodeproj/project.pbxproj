@@ -67,6 +67,8 @@
 		BB4A194024F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */; };
 		BB4F0BCC24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */; };
 		BB4F0BCD24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */; };
+		BB4F0BCF24F8E96700B5CA2B /* WRPermissionContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */; };
+		BB4F0BD024F8E96700B5CA2B /* WRPermissionContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */; };
 		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
@@ -151,6 +153,7 @@
 		BB4A193924F792B300C85B03 /* WRPermissionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionType.swift; sourceTree = "<group>"; };
 		BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionPhoto.swift; sourceTree = "<group>"; };
 		BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionSpeech.swift; sourceTree = "<group>"; };
+		BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionContacts.swift; sourceTree = "<group>"; };
 		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
 		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
@@ -397,6 +400,7 @@
 				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
 				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
 				BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */,
+				BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -585,6 +589,7 @@
 				5688D0BD23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0C023CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
 				BB7C2D8524343876008B1DFC /* WRInt.swift in Sources */,
+				BB4F0BD024F8E96700B5CA2B /* WRPermissionContacts.swift in Sources */,
 				BB4A194024F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */,
 				5688D0D123CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
@@ -631,6 +636,7 @@
 				5688D0BC23CDFB1000D96354 /* WRNavigationController.swift in Sources */,
 				5688D0BF23CDFBD000D96354 /* WRBaseViewController.swift in Sources */,
 				BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */,
+				BB4F0BCF24F8E96700B5CA2B /* WRPermissionContacts.swift in Sources */,
 				BB4A193F24F794DD00C85B03 /* WRPermissionPhoto.swift in Sources */,
 				5688D0D023CE044B00D96354 /* WRActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,

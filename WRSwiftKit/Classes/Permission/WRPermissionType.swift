@@ -29,7 +29,8 @@ public enum WRPermissionType {
     case speechRecognizer
     #endif
 
-    #if PERMISSION_CONTACTS
+    #if PERMISSION_CONTACTS && canImport(Contacts)
+    /**通讯录*/
     case contacts
     #endif
 
@@ -113,7 +114,7 @@ extension WRPermissionType: CustomStringConvertible {
         case .motion: return "Motion"
         #endif
 
-        #if PERMISSION_SPEECH_RECOGNIZER
+        #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
         case .speechRecognizer: return "Speech Recognizer"
         #endif
 

@@ -142,7 +142,10 @@ class ViewController: UIViewController {
 //        WRPermission.Microphone.request { (status) in
 //            print(status)
 //        }
-        WRPermission.speechRecognizer.request { (status) in
+//        WRPermission.SpeechRecognizer.request { (status) in
+//            print(status)
+//        }
+        WRPermission.Contacts.request { (status) in
             print(status)
         }
     }

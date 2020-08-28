@@ -1,28 +1,28 @@
 //
-//  WRPermissionSpeech.swift
+//  WRPermissionContacts.swift
 //  Pods
 //
 //  Created by 项辉 on 2020/8/28.
 //
 
-#if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
-import Speech
+#if PERMISSION_CONTACTS && canImport(Contacts)
+import Contacts
 
-/** 语音录制权限 */
-public class WRPermissionSpeech: WRPermission {
+/** 通讯录权限 */
+public class WRPermissionContacts: WRPermission {
 
     override init(type: WRPermissionType) {
         super.init(type: type)
     }
 
     public override var infoKey: String {
-        return "NSSpeechRecognitionUsageDescription"
+        return "NSContactsUsageDescription"
     }
 
     public override var status: WRPermissionStatus {
-        guard #available(iOS 10.0, *) else { fatalError() }
+        guard #available(iOS 9.0, *) else { fatalError() }
 
-        let status = SFSpeechRecognizer.authorizationStatus()
+        let status = CNContactStore.authorizationStatus(for: .contacts)
 
         switch status {
         case .authorized:          return .authorized
@@ -33,19 +33,14 @@ public class WRPermissionSpeech: WRPermission {
     }
     
     public override func request(_ callback: @escaping Callback) {
-        guard #available(iOS 10.0, *) else { fatalError() }
-
-        guard let _ = Bundle.main.object(forInfoDictionaryKey: WRPermission.Microphone.infoKey) else {
-            debugPrint("WARNING: \(WRPermission.Microphone.infoKey) not found in Info.plist")
-            return
-        }
+        guard #available(iOS 9.0, *) else { fatalError() }
 
         guard let _ = Bundle.main.object(forInfoDictionaryKey: infoKey) else {
             debugPrint("WARNING: \(infoKey) not found in Info.plist")
             return
         }
-        
-        SFSpeechRecognizer.requestAuthorization { _ in
+
+        CNContactStore().requestAccess(for: .contacts) { _, _ in
             callback(self.status)
         }
     }
