@@ -145,8 +145,16 @@ class ViewController: UIViewController {
 //        WRPermission.SpeechRecognizer.request { (status) in
 //            print(status)
 //        }
-        WRPermission.Contacts.request { (status) in
-            print(status)
+//        WRPermission.Contacts.request { (status) in
+//            print(status)
+//        }
+        
+        if #available(iOS 10.0, *) {
+            print(WRPermission.Notifications.status)
+            WRPermission.Notifications(options: [.badge]).request { (status) in
+                print(status)
+            }
+            
         }
     }
 

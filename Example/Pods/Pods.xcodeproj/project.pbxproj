@@ -69,6 +69,8 @@
 		BB4F0BCD24F8E4FB00B5CA2B /* WRPermissionSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */; };
 		BB4F0BCF24F8E96700B5CA2B /* WRPermissionContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */; };
 		BB4F0BD024F8E96700B5CA2B /* WRPermissionContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */; };
+		BB4F0BD224F8F01300B5CA2B /* WRPermissionNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */; };
+		BB4F0BD324F8F01300B5CA2B /* WRPermissionNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */; };
 		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
@@ -154,6 +156,7 @@
 		BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionPhoto.swift; sourceTree = "<group>"; };
 		BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionSpeech.swift; sourceTree = "<group>"; };
 		BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionContacts.swift; sourceTree = "<group>"; };
+		BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionNotifications.swift; sourceTree = "<group>"; };
 		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
 		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
@@ -401,6 +404,7 @@
 				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
 				BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */,
 				BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */,
+				BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -609,6 +613,7 @@
 				BB4A193B24F792B300C85B03 /* WRPermissionType.swift in Sources */,
 				5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8C243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
+				BB4F0BD324F8F01300B5CA2B /* WRPermissionNotifications.swift in Sources */,
 				BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */,
 				BB7C2D8724343876008B1DFC /* WRFloat.swift in Sources */,
 				BB117B8B24B84A2E00457B71 /* WRDictionary.swift in Sources */,
@@ -656,6 +661,7 @@
 				BB4A193A24F792B300C85B03 /* WRPermissionType.swift in Sources */,
 				5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8B243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
+				BB4F0BD224F8F01300B5CA2B /* WRPermissionNotifications.swift in Sources */,
 				BB7C2D8824343876008B1DFC /* WRDouble.swift in Sources */,
 				BB7C2D8624343876008B1DFC /* WRFloat.swift in Sources */,
 				BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */,

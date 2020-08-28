@@ -74,6 +74,27 @@ open class WRPermission: NSObject {
     public static let Contacts = WRPermissionContacts(type: .contacts)
     #endif
 
+    #if PERMISSION_NOTIFICATIONS
+    /** 通知权限实例 */
+    @available(iOS 10.0, *)
+    public static let Notifications: WRPermissionNotifications = {
+        let options: UNAuthorizationOptions = [.badge, .sound, .alert]
+        return WRPermissionNotifications(type: .notifications(options))
+    }()
+    
+    private static var _Notifications: WRPermissionNotifications?
+    /** 通知权限方法 */
+    @available(iOS 10.0, *)
+    public static func Notifications(options: UNAuthorizationOptions) -> WRPermissionNotifications {
+        let permission = WRPermissionNotifications(type: .notifications(options))
+        _Notifications = permission
+        return permission
+    }
+
+    
+    #endif
+    
+    
     internal init(type: WRPermissionType) {
         self.type = type
     }

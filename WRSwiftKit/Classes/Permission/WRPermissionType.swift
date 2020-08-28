@@ -34,14 +34,16 @@ public enum WRPermissionType {
     case contacts
     #endif
 
+    #if PERMISSION_NOTIFICATIONS
+    @available(iOS 10.0, *)
+    case notifications(UNAuthorizationOptions)
+    #endif
+
     #if PERMISSION_LOCATION
     case locationAlways
     case locationWhenInUse
     #endif
 
-    #if PERMISSION_NOTIFICATIONS
-    case notifications(UNAuthorizationOptions)
-    #endif
 
     #if PERMISSION_REMINDERS
     case reminders
