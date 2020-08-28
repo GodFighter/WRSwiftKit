@@ -9,6 +9,7 @@
 
 import AVFoundation
 
+/** 相机权限 */
 public class WRPermissionCamera: WRPermission {
 
     override init(type: WRPermissionType) {

@@ -7,12 +7,15 @@
 
 import UIKit
 
+/**权限类型*/
 public enum WRPermissionType {
     #if PERMISSION_PHOTOS
+    /**相册*/
     case photos
     #endif
 
     #if PERMISSION_CAMERA
+    /**相机*/
     case camera
     #endif
 

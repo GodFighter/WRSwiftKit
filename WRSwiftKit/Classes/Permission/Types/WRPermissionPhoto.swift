@@ -10,6 +10,7 @@
 import Photos
 import Foundation
 
+/** 相册权限 */
 public class WRPermissionPhoto: WRPermission {
     
     override init(type: WRPermissionType) {
