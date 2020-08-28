@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '1.1.4'
+  s.version          = '1.1.6'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'Permission' do |permission|
-      permission.source_files = 'WRSwiftKit/Permission/**/*.swift'
+      permission.source_files = 'WRSwiftKit/Classes/Permission/**/*.swift'
     end
 
     s.subspec 'Photos' do |photo|
