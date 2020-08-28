@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '1.1.8'
+  s.version          = '1.1.9'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -83,7 +83,6 @@ Pod::Spec.new do |s|
       permission.source_files = 'WRSwiftKit/Classes/Permission/**/*.swift'
       
       permission.subspec 'Photos' do |photo|
-        photo.dependency 'WRSwiftKit/Permission'
         photo.pod_target_xcconfig = { 'SWIFT_ACTIVE_COMPILATION_CONDITIONS'  => 'PERMISSION_PHOTOS' }
       end
 
