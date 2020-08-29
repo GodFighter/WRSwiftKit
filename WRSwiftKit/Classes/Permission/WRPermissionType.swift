@@ -71,8 +71,8 @@ public enum WRPermissionType {
     case motion
     #endif
 
-    #if PERMISSION_SIRI
-    @available(iOS 10.0, *) case siri
+    #if PERMISSION_SIRI && canImport(Intents)
+    case siri
     #endif
 
     case never
@@ -126,7 +126,7 @@ extension WRPermissionType: CustomStringConvertible {
         case .speechRecognizer: return "Speech Recognizer"
         #endif
 
-        #if PERMISSION_SIRI
+        #if PERMISSION_SIRI && canImport(Intents)
         case .siri: return "SiriKit"
         #endif
 

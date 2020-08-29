@@ -173,11 +173,13 @@ class ViewController: UIViewController {
 //        WRPermission.Motion.request { (status) in
 //            print(status)
 //        }
-        print(WRPermission.Reminders.status)
-        WRPermission.Reminders.request { (status) in
+//        print(WRPermission.Reminders.status)
+//        WRPermission.Reminders.request { (status) in
+//            print(status)
+//        }
+        WRPermission.Siri.request { (status) in
             print(status)
         }
-
     }
 
 }

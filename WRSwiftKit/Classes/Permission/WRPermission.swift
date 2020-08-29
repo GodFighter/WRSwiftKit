@@ -126,6 +126,10 @@ open class WRPermission: NSObject {
     public static let Reminders = WRPermissionReminders(type: .reminders)
     #endif
 
+    #if PERMISSION_SIRI && canImport(Intents)
+    public static let Siri = WRPermissionSiri(type: .siri)
+    #endif
+
     #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
     /** 语音录制权限实例 */
     public static let SpeechRecognizer = WRPermissionSpeech(type: .speechRecognizer)
