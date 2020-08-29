@@ -163,7 +163,10 @@ class ViewController: UIViewController {
 //        WRPermission.Bluetooth.request { (status) in
 //            print(status)
 //        }
-        WRPermission.Events.request { (status) in
+//        WRPermission.Events.request { (status) in
+//            print(status)
+//        }
+        WRPermission.LocationWhenInUse.request { (status) in
             print(status)
         }
     }

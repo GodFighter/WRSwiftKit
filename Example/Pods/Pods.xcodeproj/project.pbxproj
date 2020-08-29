@@ -57,6 +57,8 @@
 		5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CC23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift */; };
 		5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */; };
 		5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */; };
+		569ED85724FA357C009CC313 /* WRPermissionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85624FA357C009CC313 /* WRPermissionLocation.swift */; };
+		569ED85824FA357C009CC313 /* WRPermissionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85624FA357C009CC313 /* WRPermissionLocation.swift */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79BD5EB3D9E1228291F139C8945C32D /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
 		BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117B8924B84A2E00457B71 /* WRDictionary.swift */; };
@@ -145,6 +147,7 @@
 		5688D0CB23CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationRingSpring.swift; sourceTree = "<group>"; };
 		5688D0CC23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorAnimationSystem.swift; sourceTree = "<group>"; };
 		5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorView.swift; sourceTree = "<group>"; };
+		569ED85624FA357C009CC313 /* WRPermissionLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionLocation.swift; sourceTree = "<group>"; };
 		68A99592FEB011570DE69C6F1B1D77C9 /* Pods-WRSwiftKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-Info.plist"; sourceTree = "<group>"; };
 		6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
 		72932F8DB002D3EEC93F7F21E4A907EE /* WRSwiftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WRSwiftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,6 +415,7 @@
 				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
 				BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */,
 				560383C624FA2ED6003C7169 /* WRPermissionEvents.swift */,
+				569ED85624FA357C009CC313 /* WRPermissionLocation.swift */,
 				BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */,
 				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
 				BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */,
@@ -611,6 +615,7 @@
 				5688D0AB23CDD5D800D96354 /* WRImage.swift in Sources */,
 				BBA103F424F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */,
 				5688D0DD23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
+				569ED85824FA357C009CC313 /* WRPermissionLocation.swift in Sources */,
 				BB4A193824F7918C00C85B03 /* WRPermission.swift in Sources */,
 				BB7C2D92243488F1008B1DFC /* WRTextField.swift in Sources */,
 				5688D0B323CDDDAE00D96354 /* WRView.swift in Sources */,
@@ -662,6 +667,7 @@
 				5688D0AA23CDD5D800D96354 /* WRImage.swift in Sources */,
 				BBA103F324F8A34F0014D4E8 /* WRPermissionCamera.swift in Sources */,
 				5688D0DC23CE044B00D96354 /* WRActivityIndicatorView.swift in Sources */,
+				569ED85724FA357C009CC313 /* WRPermissionLocation.swift in Sources */,
 				BB4A193724F7918C00C85B03 /* WRPermission.swift in Sources */,
 				BB7C2D91243488F1008B1DFC /* WRTextField.swift in Sources */,
 				5688D0B223CDDDAE00D96354 /* WRView.swift in Sources */,

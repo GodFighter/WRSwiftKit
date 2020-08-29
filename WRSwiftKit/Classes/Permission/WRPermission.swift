@@ -45,6 +45,7 @@ open class WRPermission: NSObject {
     
     /**回调方法*/
     public typealias Callback = (WRPermissionStatus) -> Void
+    internal var callback: Callback?
 
     /**权限类型*/
     public var type: WRPermissionType
@@ -67,6 +68,18 @@ open class WRPermission: NSObject {
     #if PERMISSION_EVENTS
     /** 日历权限实例 */
     public static let Events = WRPermissionEvents(type: .events)
+    #endif
+
+    #if PERMISSION_LOCATION
+    /** 位置权限实例 */
+    /**
+     始终
+    */
+    public static let LocationAlways = WRPermissionLocationAlways(type: .locationAlways)
+    /**
+     使用时
+    */
+    public static let LocationWhenInUse = WRPermissionLocationWhenInUse(type: .locationWhenInUse)
     #endif
 
     #if PERMISSION_MEDIA_LIBRARY

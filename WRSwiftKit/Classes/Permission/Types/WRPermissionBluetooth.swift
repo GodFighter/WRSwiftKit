@@ -20,8 +20,6 @@ public class WRPermissionBluetooth: WRPermission {
         super.init(type: type)
     }
     
-    var callback: Callback?
-
     var requestedBluetooth: Bool {
         get {
             return UserDefaults.standard.object(forKey: "wrpermission.requestedBluetooth") as? Bool ?? false
