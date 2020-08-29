@@ -93,6 +93,11 @@ open class WRPermission: NSObject {
     public static let Microphone = WRPermissionMicrophone(type: .microphone)
     #endif
     
+    #if PERMISSION_MOTION
+    /**移动数据权限*/
+    public static let Motion = WRPermissionMotion(type: .motion)
+    #endif
+
     #if PERMISSION_NOTIFICATIONS
     /** 通知权限实例 */
     @available(iOS 10.0, *)

@@ -166,7 +166,11 @@ class ViewController: UIViewController {
 //        WRPermission.Events.request { (status) in
 //            print(status)
 //        }
-        WRPermission.LocationWhenInUse.request { (status) in
+//        WRPermission.LocationWhenInUse.request { (status) in
+//            print(status)
+//        }
+        print(WRPermission.Motion.status)
+        WRPermission.Motion.request { (status) in
             print(status)
         }
     }
