@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1073B13D8ACAE92BF9D30AB8F41400ED /* Pods-WRSwiftKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */; };
+		560383C724FA2ED6003C7169 /* WRPermissionEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560383C624FA2ED6003C7169 /* WRPermissionEvents.swift */; };
+		560383C824FA2ED6003C7169 /* WRPermissionEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560383C624FA2ED6003C7169 /* WRPermissionEvents.swift */; };
 		5688D09C23CDD5D800D96354 /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09123CDD5D800D96354 /* WRTimeInterval.swift */; };
 		5688D09D23CDD5D800D96354 /* WRTimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09123CDD5D800D96354 /* WRTimeInterval.swift */; };
 		5688D09E23CDD5D800D96354 /* WRString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5688D09223CDD5D800D96354 /* WRString.swift */; };
@@ -119,6 +121,7 @@
 		335B7E46827A3B8F7E055AEB3449C6D6 /* Pods-WRSwiftKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WRSwiftKit_Example-dummy.m"; sourceTree = "<group>"; };
 		49B8F3D4B316E239059C08AE1F2C8F72 /* WRSwiftKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WRSwiftKit-Info.plist"; sourceTree = "<group>"; };
+		560383C624FA2ED6003C7169 /* WRPermissionEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionEvents.swift; sourceTree = "<group>"; };
 		5688D09123CDD5D800D96354 /* WRTimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRTimeInterval.swift; sourceTree = "<group>"; };
 		5688D09223CDD5D800D96354 /* WRString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRString.swift; sourceTree = "<group>"; };
 		5688D09323CDD5D800D96354 /* WRObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRObject.swift; sourceTree = "<group>"; };
@@ -405,14 +408,15 @@
 		BB4A193D24F794B600C85B03 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
-				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
-				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
-				BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */,
-				BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */,
-				BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */,
-				BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */,
 				BB4F0BD724F8FB3D00B5CA2B /* WRPermissionBluetooth.swift */,
+				BBA103F224F8A34F0014D4E8 /* WRPermissionCamera.swift */,
+				BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */,
+				560383C624FA2ED6003C7169 /* WRPermissionEvents.swift */,
+				BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */,
+				BBA103F524F8DFB60014D4E8 /* WRPermissionMicrophone.swift */,
+				BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */,
+				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
+				BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -633,6 +637,7 @@
 				BBA103F724F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */,
 				5688D0D923CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */,
+				560383C824FA2ED6003C7169 /* WRPermissionEvents.swift in Sources */,
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
 				41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */,
@@ -683,6 +688,7 @@
 				BBA103F624F8DFB60014D4E8 /* WRPermissionMicrophone.swift in Sources */,
 				5688D0D823CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */,
+				560383C724FA2ED6003C7169 /* WRPermissionEvents.swift in Sources */,
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,

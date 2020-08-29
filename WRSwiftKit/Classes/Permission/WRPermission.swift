@@ -64,6 +64,11 @@ open class WRPermission: NSObject {
     public static let Contacts = WRPermissionContacts(type: .contacts)
     #endif
 
+    #if PERMISSION_EVENTS
+    /** 日历权限实例 */
+    public static let Events = WRPermissionEvents(type: .events)
+    #endif
+
     #if PERMISSION_MEDIA_LIBRARY
     /** 媒体库权限实例 */
     @available(iOS 9.3, *)

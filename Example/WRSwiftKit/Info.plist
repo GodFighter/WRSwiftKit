@@ -45,5 +45,7 @@
 	<string>需要访问媒体库</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>需要访问蓝牙</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>需要访问日历</string>
 </dict>
 </plist>

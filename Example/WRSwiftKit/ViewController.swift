@@ -159,8 +159,11 @@ class ViewController: UIViewController {
 //        WRPermission.MediaLibrary.request { (status) in
 //            print(status)
 //        }
-        debugPrint(WRPermission.Bluetooth.status)
-        WRPermission.Bluetooth.request { (status) in
+//        debugPrint(WRPermission.Bluetooth.status)
+//        WRPermission.Bluetooth.request { (status) in
+//            print(status)
+//        }
+        WRPermission.Events.request { (status) in
             print(status)
         }
     }

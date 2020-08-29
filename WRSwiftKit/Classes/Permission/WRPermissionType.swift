@@ -25,6 +25,11 @@ public enum WRPermissionType {
     case contacts
     #endif
 
+    #if PERMISSION_EVENTS
+    /**日历*/
+    case events
+    #endif
+
     #if PERMISSION_MEDIA_LIBRARY
     /**媒体库*/
     @available(iOS 9.3, *) case mediaLibrary
@@ -62,10 +67,6 @@ public enum WRPermissionType {
     case reminders
     #endif
 
-    #if PERMISSION_EVENTS
-    case events
-    #endif
-
     #if PERMISSION_MOTION
     case motion
     #endif
@@ -80,8 +81,8 @@ public enum WRPermissionType {
 extension WRPermissionType: CustomStringConvertible {
     public var description: String {
         switch self {
-        #if PERMISSION_PHOTOS
-        case .photos: return "Photos"
+        #if PERMISSION_BLUETOOTH
+        case .bluetooth: return "Bluetooth"
         #endif
 
         #if PERMISSION_CAMERA
@@ -90,6 +91,14 @@ extension WRPermissionType: CustomStringConvertible {
 
         #if PERMISSION_CONTACTS
         case .contacts: return "Contacts"
+        #endif
+
+        #if PERMISSION_EVENTS
+        case .events: return "Events"
+        #endif
+
+        #if PERMISSION_MEDIA_LIBRARY
+        case .mediaLibrary: return "Media Library"
         #endif
 
         #if PERMISSION_LOCATION
@@ -109,14 +118,6 @@ extension WRPermissionType: CustomStringConvertible {
         case .reminders: return "Reminders"
         #endif
 
-        #if PERMISSION_EVENTS
-        case .events: return "Events"
-        #endif
-
-        #if PERMISSION_BLUETOOTH
-        case .bluetooth: return "Bluetooth"
-        #endif
-
         #if PERMISSION_MOTION
         case .motion: return "Motion"
         #endif
@@ -129,8 +130,8 @@ extension WRPermissionType: CustomStringConvertible {
         case .siri: return "SiriKit"
         #endif
 
-        #if PERMISSION_MEDIA_LIBRARY
-        case .mediaLibrary: return "Media Library"
+        #if PERMISSION_PHOTOS
+        case .photos: return "Photos"
         #endif
 
         case .never: fatalError()
