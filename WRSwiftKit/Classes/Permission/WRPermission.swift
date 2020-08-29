@@ -121,6 +121,11 @@ open class WRPermission: NSObject {
     public static let Photos = WRPermissionPhoto(type: .photos)
     #endif
     
+    #if PERMISSION_REMINDERS
+    /**记事本权限实例*/
+    public static let Reminders = WRPermissionReminders(type: .reminders)
+    #endif
+
     #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
     /** 语音录制权限实例 */
     public static let SpeechRecognizer = WRPermissionSpeech(type: .speechRecognizer)

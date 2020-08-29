@@ -61,6 +61,8 @@
 		569ED85824FA357C009CC313 /* WRPermissionLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85624FA357C009CC313 /* WRPermissionLocation.swift */; };
 		569ED85A24FA3BBD009CC313 /* WRPermissionMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85924FA3BBD009CC313 /* WRPermissionMotion.swift */; };
 		569ED85B24FA3BBD009CC313 /* WRPermissionMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85924FA3BBD009CC313 /* WRPermissionMotion.swift */; };
+		569ED85D24FA3E7F009CC313 /* WRPermissionReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85C24FA3E7F009CC313 /* WRPermissionReminders.swift */; };
+		569ED85E24FA3E7F009CC313 /* WRPermissionReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569ED85C24FA3E7F009CC313 /* WRPermissionReminders.swift */; };
 		6AD2D4AE9B8B9558C8C7DD3EB89BDA67 /* WRSwiftKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F79BD5EB3D9E1228291F139C8945C32D /* WRSwiftKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
 		BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117B8924B84A2E00457B71 /* WRDictionary.swift */; };
@@ -151,6 +153,7 @@
 		5688D0CD23CE044B00D96354 /* WRActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRActivityIndicatorView.swift; sourceTree = "<group>"; };
 		569ED85624FA357C009CC313 /* WRPermissionLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionLocation.swift; sourceTree = "<group>"; };
 		569ED85924FA3BBD009CC313 /* WRPermissionMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionMotion.swift; sourceTree = "<group>"; };
+		569ED85C24FA3E7F009CC313 /* WRPermissionReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionReminders.swift; sourceTree = "<group>"; };
 		68A99592FEB011570DE69C6F1B1D77C9 /* Pods-WRSwiftKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WRSwiftKit_Example-Info.plist"; sourceTree = "<group>"; };
 		6F8AF04BB70EAD4B66159BDC00A64860 /* WRSwiftKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WRSwiftKit-dummy.m"; sourceTree = "<group>"; };
 		72932F8DB002D3EEC93F7F21E4A907EE /* WRSwiftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WRSwiftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -424,6 +427,7 @@
 				569ED85924FA3BBD009CC313 /* WRPermissionMotion.swift */,
 				BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */,
 				BB4A193E24F794DD00C85B03 /* WRPermissionPhoto.swift */,
+				569ED85C24FA3E7F009CC313 /* WRPermissionReminders.swift */,
 				BB4F0BCB24F8E4FB00B5CA2B /* WRPermissionSpeech.swift */,
 			);
 			path = Types;
@@ -648,6 +652,7 @@
 				5688D0D923CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */,
 				560383C824FA2ED6003C7169 /* WRPermissionEvents.swift in Sources */,
+				569ED85E24FA3E7F009CC313 /* WRPermissionReminders.swift in Sources */,
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
 				41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */,
@@ -701,6 +706,7 @@
 				5688D0D823CE044B00D96354 /* WRActivityIndicatorAnimationRingSpring.swift in Sources */,
 				BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */,
 				560383C724FA2ED6003C7169 /* WRPermissionEvents.swift in Sources */,
+				569ED85D24FA3E7F009CC313 /* WRPermissionReminders.swift in Sources */,
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,

@@ -51,5 +51,7 @@
 	<string>需要使用时访问位置</string>
 	<key>NSMotionUsageDescription</key>
 	<string>需要访问移动数据</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>需要访问记事本</string>
 </dict>
 </plist>
