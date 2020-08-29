@@ -35,8 +35,8 @@ public class WRPermissionSpeech: WRPermission {
     public override func request(_ callback: @escaping Callback) {
         guard #available(iOS 10.0, *) else { fatalError() }
 
-        guard let _ = Bundle.main.object(forInfoDictionaryKey: WRPermission.Microphone.infoKey) else {
-            debugPrint("WARNING: \(WRPermission.Microphone.infoKey) not found in Info.plist")
+        guard let _ = Bundle.main.object(forInfoDictionaryKey: "NSMicrophoneUsageDescription") else {
+            debugPrint("WARNING: \("NSMicrophoneUsageDescription") not found in Info.plist")
             return
         }
 
