@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '1.2.2'
+  s.version          = '1.2.3'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -81,6 +81,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Permission' do |permission|
       permission.source_files = 'WRSwiftKit/Classes/Permission/**/*.swift'
+      permission.pod_target_xcconfig = { 'SWIFT_ACTIVE_COMPILATION_CONDITIONS'  => '' }
     end
 
     # 添加相关权限的宏，避免引入不必要的权限导致上线被拒绝
