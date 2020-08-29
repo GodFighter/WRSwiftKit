@@ -43,5 +43,7 @@
 	<string>需要访问通讯录</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>需要访问媒体库</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>需要访问蓝牙</string>
 </dict>
 </plist>

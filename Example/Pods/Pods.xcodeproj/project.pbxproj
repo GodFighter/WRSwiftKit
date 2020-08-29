@@ -73,6 +73,8 @@
 		BB4F0BD324F8F01300B5CA2B /* WRPermissionNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */; };
 		BB4F0BD524F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */; };
 		BB4F0BD624F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */; };
+		BB4F0BD824F8FB3D00B5CA2B /* WRPermissionBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD724F8FB3D00B5CA2B /* WRPermissionBluetooth.swift */; };
+		BB4F0BD924F8FB3D00B5CA2B /* WRPermissionBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F0BD724F8FB3D00B5CA2B /* WRPermissionBluetooth.swift */; };
 		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
@@ -160,6 +162,7 @@
 		BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionContacts.swift; sourceTree = "<group>"; };
 		BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionNotifications.swift; sourceTree = "<group>"; };
 		BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionMediaLibrary.swift; sourceTree = "<group>"; };
+		BB4F0BD724F8FB3D00B5CA2B /* WRPermissionBluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRPermissionBluetooth.swift; sourceTree = "<group>"; };
 		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
 		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
@@ -409,6 +412,7 @@
 				BB4F0BCE24F8E96700B5CA2B /* WRPermissionContacts.swift */,
 				BB4F0BD124F8F01300B5CA2B /* WRPermissionNotifications.swift */,
 				BB4F0BD424F8F7F500B5CA2B /* WRPermissionMediaLibrary.swift */,
+				BB4F0BD724F8FB3D00B5CA2B /* WRPermissionBluetooth.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -610,6 +614,7 @@
 				5688D09D23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
 				5688D0C423CDFE4F00D96354 /* WRActivityIndicator.swift in Sources */,
 				5688D0D523CE044B00D96354 /* WRActivityIndicatorShape.swift in Sources */,
+				BB4F0BD924F8FB3D00B5CA2B /* WRPermissionBluetooth.swift in Sources */,
 				5688D0A123CDD5D800D96354 /* WRObject.swift in Sources */,
 				5688D0CF23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A923CDD5D800D96354 /* WRDevice.swift in Sources */,
@@ -659,6 +664,7 @@
 				5688D09C23CDD5D800D96354 /* WRTimeInterval.swift in Sources */,
 				5688D0C323CDFE4F00D96354 /* WRActivityIndicator.swift in Sources */,
 				5688D0D423CE044B00D96354 /* WRActivityIndicatorShape.swift in Sources */,
+				BB4F0BD824F8FB3D00B5CA2B /* WRPermissionBluetooth.swift in Sources */,
 				5688D0A023CDD5D800D96354 /* WRObject.swift in Sources */,
 				5688D0CE23CE044B00D96354 /* WRActivityIndicatorAnimationRing.swift in Sources */,
 				5688D0A823CDD5D800D96354 /* WRDevice.swift in Sources */,

@@ -49,24 +49,14 @@ open class WRPermission: NSObject {
     /**权限类型*/
     public var type: WRPermissionType
 
-    #if PERMISSION_PHOTOS
-    /**图片权限实例*/
-    public static let Photos = WRPermissionPhoto(type: .photos)
+    #if PERMISSION_BLUETOOTH
+    /**蓝牙权限实例*/
+    public static let Bluetooth = WRPermissionBluetooth(type: .bluetooth)
     #endif
-    
+
     #if PERMISSION_CAMERA
     /**相机权限实例*/
     public static let Camera = WRPermissionCamera(type: .camera)
-    #endif
-
-    #if PERMISSION_MICROPHONE
-    /**麦克风权限实例*/
-    public static let Microphone = WRPermissionMicrophone(type: .microphone)
-    #endif
-    
-    #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
-    /** 语音录制权限实例 */
-    public static let SpeechRecognizer = WRPermissionSpeech(type: .speechRecognizer)
     #endif
 
     #if PERMISSION_CONTACTS && canImport(Contacts)
@@ -74,6 +64,17 @@ open class WRPermission: NSObject {
     public static let Contacts = WRPermissionContacts(type: .contacts)
     #endif
 
+    #if PERMISSION_MEDIA_LIBRARY
+    /** 媒体库权限实例 */
+    @available(iOS 9.3, *)
+    public static let MediaLibrary = WRPermissionMediaLibrary(type: .mediaLibrary)
+    #endif
+
+    #if PERMISSION_MICROPHONE
+    /**麦克风权限实例*/
+    public static let Microphone = WRPermissionMicrophone(type: .microphone)
+    #endif
+    
     #if PERMISSION_NOTIFICATIONS
     /** 通知权限实例 */
     @available(iOS 10.0, *)
@@ -92,14 +93,16 @@ open class WRPermission: NSObject {
     }
     #endif
 
-    #if PERMISSION_MEDIA_LIBRARY
-    /** 媒体库权限实例 */
-    @available(iOS 9.3, *)
-    public static let MediaLibrary = WRPermissionMediaLibrary(type: .mediaLibrary)
+    #if PERMISSION_PHOTOS
+    /**图片权限实例*/
+    public static let Photos = WRPermissionPhoto(type: .photos)
+    #endif
+    
+    #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
+    /** 语音录制权限实例 */
+    public static let SpeechRecognizer = WRPermissionSpeech(type: .speechRecognizer)
     #endif
 
-    
-    
     
     internal init(type: WRPermissionType) {
         self.type = type

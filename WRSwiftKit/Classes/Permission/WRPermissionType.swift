@@ -9,9 +9,10 @@ import UIKit
 
 /**权限类型*/
 public enum WRPermissionType {
-    #if PERMISSION_PHOTOS
-    /**相册*/
-    case photos
+
+    #if PERMISSION_BLUETOOTH
+    /**蓝牙*/
+    case bluetooth
     #endif
 
     #if PERMISSION_CAMERA
@@ -19,19 +20,19 @@ public enum WRPermissionType {
     case camera
     #endif
 
-    #if PERMISSION_MICROPHONE
-     /**麦克风*/
-    case microphone
-    #endif
-
-    #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
-    /**语音录制*/
-    case speechRecognizer
-    #endif
-
     #if PERMISSION_CONTACTS && canImport(Contacts)
     /**通讯录*/
     case contacts
+    #endif
+
+    #if PERMISSION_MEDIA_LIBRARY
+    /**媒体库*/
+    @available(iOS 9.3, *) case mediaLibrary
+    #endif
+
+    #if PERMISSION_MICROPHONE
+     /**麦克风*/
+    case microphone
     #endif
 
     #if PERMISSION_NOTIFICATIONS
@@ -40,9 +41,14 @@ public enum WRPermissionType {
     case notifications(UNAuthorizationOptions)
     #endif
 
-    #if PERMISSION_MEDIA_LIBRARY
-    /**媒体库*/
-    @available(iOS 9.3, *) case mediaLibrary
+    #if PERMISSION_PHOTOS
+    /**相册*/
+    case photos
+    #endif
+
+    #if PERMISSION_SPEECH_RECOGNIZER && canImport(Speech)
+    /**语音录制*/
+    case speechRecognizer
     #endif
 
 
@@ -58,10 +64,6 @@ public enum WRPermissionType {
 
     #if PERMISSION_EVENTS
     case events
-    #endif
-
-    #if PERMISSION_BLUETOOTH
-    case bluetooth
     #endif
 
     #if PERMISSION_MOTION
