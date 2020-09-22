@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         initCollection()
         */
         
-        initPermission()
+        initString()
  }
 
     override func didReceiveMemoryWarning() {
@@ -92,12 +92,17 @@ class ViewController: UIViewController {
     }
     
     func initString() {
-        let ip: String = "192.168.2.2"
+        let ip: String = "192.1368.2.2"
         print(ip.wr.isIP)
         
-        let http = "http://www.baidu.com"
-        print(http.wr.isUrl)
-               
+        let http = "https%3A%2F%2Fwww.baidu.com"
+        print(http.wr.urlDecoded)
+                
+        print("hello word".wr.words)
+              
+        let value = "1"
+        print(value.wr.toBool)
+
         let float: CGFloat = 3.24
         print("\(float.wr.string(5))")
     }
@@ -127,60 +132,6 @@ class ViewController: UIViewController {
 
     }
     
-    func initPermission() {
-
-        
-//        WRPermission.Photos.request { (status) in
-//            print(status)
-//        }
-//        WRPermission.Camera.request({ (status) in
-//            print(status)
-//        })
-        //        print(WRPermission.Photos.request({ (status) in
-//            print(status)
-//        }))
-//        WRPermission.Microphone.request { (status) in
-//            print(status)
-//        }
-//        WRPermission.SpeechRecognizer.request { (status) in
-//            print(status)
-//        }
-//        WRPermission.Contacts.request { (status) in
-//            print(status)
-//        }
-        
-//        if #available(iOS 10.0, *) {
-//            print(WRPermission.Notifications.status)
-//            WRPermission.Notifications(options: [.badge]).request { (status) in
-//                print(status)
-//            }
-//
-//        }
-//        WRPermission.MediaLibrary.request { (status) in
-//            print(status)
-//        }
-//        debugPrint(WRPermission.Bluetooth.status)
-//        WRPermission.Bluetooth.request { (status) in
-//            print(status)
-//        }
-//        WRPermission.Events.request { (status) in
-//            print(status)
-//        }
-//        WRPermission.LocationWhenInUse.request { (status) in
-//            print(status)
-//        }
-//        print(WRPermission.Motion.status)
-//        WRPermission.Motion.request { (status) in
-//            print(status)
-//        }
-//        print(WRPermission.Reminders.status)
-//        WRPermission.Reminders.request { (status) in
-//            print(status)
-//        }
-        WRPermission.Siri.request { (status) in
-            print(status)
-        }
-    }
 
 }
 

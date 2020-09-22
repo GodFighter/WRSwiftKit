@@ -59,6 +59,8 @@
 		9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44A5839B0F300BE8FCC5A67AF3993E87 /* Pods-WRSwiftKit_Example-dummy.m */; };
 		BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117B8924B84A2E00457B71 /* WRDictionary.swift */; };
 		BB117B8B24B84A2E00457B71 /* WRDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117B8924B84A2E00457B71 /* WRDictionary.swift */; };
+		BB588B3B2519E1450027DB61 /* WRString+Separate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588B3A2519E1450027DB61 /* WRString+Separate.swift */; };
+		BB588B3C2519E1450027DB61 /* WRString+Separate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB588B3A2519E1450027DB61 /* WRString+Separate.swift */; };
 		BB7C2D8224343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8324343876008B1DFC /* WRCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */; };
 		BB7C2D8424343876008B1DFC /* WRInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D7F24343876008B1DFC /* WRInt.swift */; };
@@ -75,6 +77,10 @@
 		BB7C2D92243488F1008B1DFC /* WRTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D90243488F1008B1DFC /* WRTextField.swift */; };
 		BB7C2D9424348B52008B1DFC /* WRScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D9324348B52008B1DFC /* WRScrollView.swift */; };
 		BB7C2D9524348B52008B1DFC /* WRScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7C2D9324348B52008B1DFC /* WRScrollView.swift */; };
+		BB84C6982519CD0D00D67BA8 /* WRStirng+Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84C6972519CD0D00D67BA8 /* WRStirng+Judge.swift */; };
+		BB84C6992519CD0D00D67BA8 /* WRStirng+Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84C6972519CD0D00D67BA8 /* WRStirng+Judge.swift */; };
+		BB84C69C2519D08000D67BA8 /* WRString+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84C69B2519D08000D67BA8 /* WRString+Conversion.swift */; };
+		BB84C69D2519D08000D67BA8 /* WRString+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84C69B2519D08000D67BA8 /* WRString+Conversion.swift */; };
 		DBA4D70F44AE8C922774974F78279CAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		FB33D46A8C7189DF8B95C9E1DAD1ABDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -135,6 +141,7 @@
 		AD3E6927805D8E4D4602CCE11A79B6DB /* Pods-WRSwiftKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WRSwiftKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		AE7DD37D02D226D7275CA66FABF4DB16 /* Pods-WRSwiftKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BB117B8924B84A2E00457B71 /* WRDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRDictionary.swift; sourceTree = "<group>"; };
+		BB588B3A2519E1450027DB61 /* WRString+Separate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WRString+Separate.swift"; sourceTree = "<group>"; };
 		BB7C2D7E24343876008B1DFC /* WRCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRCGFloat.swift; sourceTree = "<group>"; };
 		BB7C2D7F24343876008B1DFC /* WRInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRInt.swift; sourceTree = "<group>"; };
 		BB7C2D8024343876008B1DFC /* WRFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WRFloat.swift; sourceTree = "<group>"; };
@@ -143,6 +150,8 @@
 		BB7C2D8D24348487008B1DFC /* WRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRButton.swift; sourceTree = "<group>"; };
 		BB7C2D90243488F1008B1DFC /* WRTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRTextField.swift; sourceTree = "<group>"; };
 		BB7C2D9324348B52008B1DFC /* WRScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WRScrollView.swift; sourceTree = "<group>"; };
+		BB84C6972519CD0D00D67BA8 /* WRStirng+Judge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WRStirng+Judge.swift"; sourceTree = "<group>"; };
+		BB84C69B2519D08000D67BA8 /* WRString+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WRString+Conversion.swift"; sourceTree = "<group>"; };
 		C7FD0FC21D9B170E9636EF74B3C9669B /* Pods_WRSwiftKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WRSwiftKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8764AB54E198723F81A01FF881788CA /* Pods-WRSwiftKit_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WRSwiftKit_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CFBEDD4520689CDF88C1E6E7D20AE2C0 /* Pods-WRSwiftKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WRSwiftKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +194,7 @@
 				5688D09A23CDD5D800D96354 /* Image */,
 				BB7C2D7D24343876008B1DFC /* Math */,
 				5688D09423CDD5D800D96354 /* Notification */,
+				BB84C69A2519D02F00D67BA8 /* String */,
 				5688D0B023CDDDA100D96354 /* View */,
 				5688D0B723CDECC700D96354 /* ViewController */,
 				143AF687555BC3D1EE0BE10DCD3FF52A /* Pod */,
@@ -208,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				5688D09123CDD5D800D96354 /* WRTimeInterval.swift */,
-				5688D09223CDD5D800D96354 /* WRString.swift */,
 				5688D09323CDD5D800D96354 /* WRObject.swift */,
 			);
 			name = Common;
@@ -370,6 +379,17 @@
 			);
 			name = Math;
 			path = WRSwiftKit/Classes/Math;
+			sourceTree = "<group>";
+		};
+		BB84C69A2519D02F00D67BA8 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				5688D09223CDD5D800D96354 /* WRString.swift */,
+				BB84C6972519CD0D00D67BA8 /* WRStirng+Judge.swift */,
+				BB84C69B2519D08000D67BA8 /* WRString+Conversion.swift */,
+				BB588B3A2519E1450027DB61 /* WRString+Separate.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -559,8 +579,10 @@
 				BB7C2D8F24348487008B1DFC /* WRButton.swift in Sources */,
 				5688D0D323CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8C243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
+				BB84C69D2519D08000D67BA8 /* WRString+Conversion.swift in Sources */,
 				BB7C2D8924343876008B1DFC /* WRDouble.swift in Sources */,
 				BB7C2D8724343876008B1DFC /* WRFloat.swift in Sources */,
+				BB84C6992519CD0D00D67BA8 /* WRStirng+Judge.swift in Sources */,
 				BB117B8B24B84A2E00457B71 /* WRDictionary.swift in Sources */,
 				5688D0AF23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D0DB23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
@@ -570,6 +592,7 @@
 				5688D0A523CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A723CDD5D800D96354 /* WRFolder.swift in Sources */,
 				41CFB25B0CA0C7D71F4AD62ECC472113 /* WRSwiftKit-dummy.m in Sources */,
+				BB588B3C2519E1450027DB61 /* WRString+Separate.swift in Sources */,
 				5688D0A323CDD5D800D96354 /* WRNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,8 +622,10 @@
 				BB7C2D8E24348487008B1DFC /* WRButton.swift in Sources */,
 				5688D0D223CE044B00D96354 /* WRActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				BB7C2D8B243476DB008B1DFC /* WRReloadEnable.swift in Sources */,
+				BB84C69C2519D08000D67BA8 /* WRString+Conversion.swift in Sources */,
 				BB7C2D8824343876008B1DFC /* WRDouble.swift in Sources */,
 				BB7C2D8624343876008B1DFC /* WRFloat.swift in Sources */,
+				BB84C6982519CD0D00D67BA8 /* WRStirng+Judge.swift in Sources */,
 				BB117B8A24B84A2E00457B71 /* WRDictionary.swift in Sources */,
 				5688D0AE23CDDB6E00D96354 /* WRColor.swift in Sources */,
 				5688D0DA23CE044B00D96354 /* WRActivityIndicatorAnimationSystem.swift in Sources */,
@@ -610,6 +635,7 @@
 				5688D0A423CDD5D800D96354 /* WRPath.swift in Sources */,
 				5688D0A623CDD5D800D96354 /* WRFolder.swift in Sources */,
 				9C3B4B62F37F73367F0DDAFCB74CD973 /* Pods-WRSwiftKit_Example-dummy.m in Sources */,
+				BB588B3B2519E1450027DB61 /* WRString+Separate.swift in Sources */,
 				5688D0A223CDD5D800D96354 /* WRNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
