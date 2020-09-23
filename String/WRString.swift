@@ -14,10 +14,8 @@ fileprivate extension WRStringSize {
     var _size: String {
         if self is String || self is NSString {
             return self as! String
-        } else if let stringExtension = self as? WRStringExtension{
-            return stringExtension.value
-//        } else if let nsstringExtension = self as? WRNSStringExtension{
-//            return nsstringExtension.value as! String
+        } else if let `self` = self as? WRStringExtension{
+            return self.value
         }
         return ""
     }
@@ -37,17 +35,14 @@ public extension WRStringSize_Public {
 
 
 //MARK:-  Operation
-public protocol WRStringOperation {
-}
+public protocol WRStringOperation { }
 
 fileprivate extension WRStringOperation {
     var _operation: String {
         if self is String || self is NSString {
             return self as! String
-        } else if let stringExtension = self as? WRStringExtension{
-            return stringExtension.value
-//        } else if let nsstringExtension = self as? WRNSStringExtension{
-//            return nsstringExtension.value as! String
+            } else if let `self` = self as? WRStringExtension{
+            return self.value
         }
         return ""
     }
@@ -65,9 +60,7 @@ public extension WRStringOperation_Public {
 
 }
 //MARK:- WRStringProtocol
-public protocol WRStringProtocol{
-
-}
+public protocol WRStringProtocol { }
 
 extension String : WRStringProtocol {
     public var wr: WRStringExtension {
@@ -121,31 +114,3 @@ public extension WRStringExtension_Public {
         return nsString.appendingPathExtension(pathExtension) ?? self.value + "." + pathExtension
     }
 }
-
-//MARK:- WRNSStringProtocol
-//@objc public protocol WRNSStringProtocol{
-//}
-//
-// @objc extension NSString : WRNSStringProtocol {
-//    @objc public override var wr: WRNSStringExtension {
-//        return WRNSStringExtension(self)
-//    }
-//
-//}
-//
-////MARK:- WRNSStringExtension
-//@objc public class WRNSStringExtension : WRObjectExtension, WRStringJudge, WRStringConversion, WRStringSize, WRStringSplit, WRStringOperation
-//{
-//    internal init(_ value: NSString){
-//        super.init(value)
-//        self.value = value
-//    }
-//
-//    fileprivate var _string: NSString {
-//        guard let string = self.value as? NSString else {
-//            return ""
-//        }
-//        return string
-//    }
-//
-//}

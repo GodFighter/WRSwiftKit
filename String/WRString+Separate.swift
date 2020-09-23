@@ -26,7 +26,7 @@ public extension WRStringSeparate_Public {
     /// 分割成不同的单词
     ///
     ///     "hello word".wr.words
-    ///     // Prints ["asdsds", "dfsdf"]
+    ///     // Prints ["hello", "word"]
     ///
     var words: [String] {
         let chararacterSet = CharacterSet.whitespacesAndNewlines.union(.punctuationCharacters)
