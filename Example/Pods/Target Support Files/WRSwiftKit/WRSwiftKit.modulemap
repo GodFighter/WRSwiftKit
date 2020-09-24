@@ -1,6 +1,0 @@
-framework module WRSwiftKit {
-  umbrella header "WRSwiftKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
