@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         /*
         WRFolder.cacheUrl = Bundle.main.bundleURL
         print("\(WRFolder.folderSize(WRFolder.cacheUrl!))")
@@ -72,8 +72,10 @@ class ViewController: UIViewController {
         initCollection()
         */
         
-        initString()
- }
+//        initString()
+        
+
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,7 +83,7 @@ class ViewController: UIViewController {
     }
     
     func initColor() {
-        let color = UIColor.WR.Color(darkMode: .black, .white);
+        let color = UIColor.WR.Color(darkColor: .black, lightColor: .white);
         self.view.backgroundColor = color
         
         let color2 = UIColor(hexString: "DDF")
@@ -105,6 +107,10 @@ class ViewController: UIViewController {
 
         let float: CGFloat = 3.24
         print("\(float.wr.string(5))")
+        
+        let chinese = "高"
+        print(chinese.wr.spellStripDiacritics)
+        
     }
     
     func initImage() {

@@ -109,4 +109,14 @@ public extension WRStringJudge_Public {
     var isMongolian: Bool {
         return !_judge.isEmpty && (Int(_judge.unicodeScalars.first?.value ?? 0) >= 0x1800 && Int(_judge.unicodeScalars.first?.value ?? 0) <= 0x18AF)
     }
+    
+    /// 是否为汉字
+    ///
+    ///     let chinese = "我"
+    ///     // Prints: true
+    ///
+    var isChinese: Bool {
+        return !_judge.isEmpty && (Int(_judge.unicodeScalars.first?.value ?? 0) >= 0x4e00 && Int(_judge.unicodeScalars.first?.value ?? 0) <= 0x9fff)
+    }
+
 }

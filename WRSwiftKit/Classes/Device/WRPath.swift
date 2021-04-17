@@ -13,7 +13,7 @@ import UIKit
     @objc public static let LibCache = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first!
     @objc public static let Document = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
 
-    fileprivate var databasePath = WRPath.Document + "/\(WRDevice.Info.AppName).db"
+    fileprivate var databasePath = WRPath.Document + "/\(WRDevice.Shared.appName ?? "db").db"
     
     fileprivate static let Path : WRPath = WRPath()
     

@@ -9,6 +9,17 @@ import UIKit
 
 //MARK:-  Initializers
 public extension UIColor {
+    
+    /// 整型初始化
+    ///
+    /// 0 ～ 255的整形值
+    ///
+    /// - parameter red: 红
+    /// - parameter green: 绿
+    /// - parameter blue: 蓝
+    /// - parameter blue: 蓝
+    /// - parameter wr_alpha: 透明度
+    ///
     convenience init(red: Int, green: Int, blue: Int, _ wr_alpha: CGFloat = 1) {
         let safeRed = max(min(255, red), 0)
         let safeGreen = max(min(255, green), 0)
@@ -18,12 +29,21 @@ public extension UIColor {
         self.init(red: CGFloat(safeRed) / 255.0, green: CGFloat(safeGreen) / 255.0, blue: CGFloat(safeBlue) / 255.0, alpha: safeAlpha)
     }
 
+    /// 16进制数初始化
+    ///
+    /// - parameter hex: 16进制数
+    /// - parameter wr_alpha: 透明度
     convenience init(hex:Int, _ wr_alpha: CGFloat = 1) {
         self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff, wr_alpha)
     }
 
+    /// 16进制字符串初始化
+    /// - Parameters:
+    ///   - hexString: 16进制字符串
+    ///   - wr_alpha: 透明度
     convenience init?(hexString: String, _ wr_alpha: CGFloat = 1) {
         var string = ""
+        
         if hexString.lowercased().hasPrefix("0x") {
             string =  hexString.replacingOccurrences(of: "0x", with: "")
         } else if hexString.hasPrefix("#") {
@@ -54,27 +74,6 @@ public extension UIColor {
     }
 }
 
-//MARK:-
-@objc public class UIColorExtension : WRObjectExtension {
-    init(_ value: UIColor){
-        super.init(value)
-        self.value = value
-    }
-    
-    fileprivate var _color: UIColor {
-        guard let color = self.value as? UIColor else {
-            return .clear
-        }
-        return color
-    }
-        
-    fileprivate var _components: [CGFloat] {
-        let comps = _color.cgColor.components!
-        if comps.count == 4 { return comps }
-        return [comps[0], comps[0], comps[0], comps[1]]
-    }
-}
-
 //MARK:-  Static
 fileprivate typealias UIColorExtension_Static = UIColorExtension
 public extension UIColorExtension_Static {
@@ -85,15 +84,27 @@ public extension UIColorExtension_Static {
     
     /**暗黑模式颜色*/
     /**
-    iOS13.0一下的，显示light颜色
+    iOS13.0以下的，显示light颜色
     */
-    @objc static func Color(darkMode dark: UIColor, _ light: UIColor) -> UIColor {
+    
+    @objc static func Color(darkColor dark: UIColor, lightColor light: UIColor) -> UIColor {
         if #available(iOS 13.0, *) {
             return UIColor.init { (trainCollection) -> UIColor in
                 return trainCollection.userInterfaceStyle == .light ? light : dark
             }
         }
         return light
+    }
+    
+    /// 颜色初始化
+    ///
+    /// 暗黑颜色非必需
+    /// - parameter light: 正常模式颜色
+    /// - parameter dark: 暗黑模式颜色
+    /// - returns: 颜色
+
+    @objc static func Color(color light: UIColor, dark: UIColor? = nil) -> UIColor {
+        return Color(darkColor: dark == nil ? light : dark!, lightColor: light)
     }
 
 }
@@ -133,3 +144,25 @@ public extension UIColorExtension_Public {
     }
 
 }
+
+//MARK:-
+@objc public class UIColorExtension : WRObjectExtension {
+    init(_ value: UIColor){
+        super.init(value)
+        self.value = value
+    }
+    
+    fileprivate var _color: UIColor {
+        guard let color = self.value as? UIColor else {
+            return .clear
+        }
+        return color
+    }
+        
+    fileprivate var _components: [CGFloat] {
+        let comps = _color.cgColor.components!
+        if comps.count == 4 { return comps }
+        return [comps[0], comps[0], comps[0], comps[1]]
+    }
+}
+

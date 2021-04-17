@@ -148,12 +148,14 @@ public extension WRStringConversion_Public {
 
     /// 剥离空格和回车
     var stripSpacesAndNewLines: String {
-        return _conversion.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "")
+        return _conversion.wr.stripSpaces.replacingOccurrences(of: "\n", with: "")
     }
 
     /// 剥离空格
     var stripSpaces: String {
-        return _conversion.replacingOccurrences(of: " ", with: "")
+        let space = " "
+        let space1 = " "
+        return _conversion.replacingOccurrences(of: space, with: "").replacingOccurrences(of: space1, with: "")
     }
 
     /// 剥离回车

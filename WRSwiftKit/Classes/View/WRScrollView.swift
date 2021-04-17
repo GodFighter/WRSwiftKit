@@ -25,7 +25,7 @@ extension UIScrollView {
     }
 }
 
-@objc public extension WRScrollViewExtension {
+public extension WRScrollViewExtension {
     
     var snapshot: UIImage? {
         guard let scrollView = _scrollView else { return nil }

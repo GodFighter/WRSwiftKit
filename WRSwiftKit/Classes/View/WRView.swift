@@ -40,5 +40,33 @@ import UIKit
             view.layer.mask = maskLayer
         }
     }
+    
+    /// 截图
+    /// - Returns: 视图的图片
+    @objc public func snapshot() -> UIImage? {
+        guard let view = _view else {
+            return nil
+        }
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        view.layer.render(in: context)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+    
+    /// 快速截图
+    /// - Returns: 视图的图片
+    @objc public func fastSnapshot() -> UIImage? {
+        guard let view = _view else {
+            return nil
+        }
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: false)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
 
 }

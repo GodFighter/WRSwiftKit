@@ -32,7 +32,49 @@ public extension WRStringSize_Public {
     }
 }
 
+//MARK:-  Chinese
+public protocol WRStringChinese { }
 
+fileprivate extension WRStringChinese {
+    var _chinese: String {
+        if self is String || self is NSString {
+            return self as! String
+        } else if let `self` = self as? WRStringExtension{
+            return self.value
+        }
+        return ""
+    }
+}
+
+fileprivate typealias WRStringChinese_Public = WRStringChinese
+public extension WRStringChinese_Public {
+    /// 汉字的拼音
+    ///
+    ///     let chinese = "我"
+    ///     print(chinese.wr.spell)
+    ///     // Prints: wǒ
+    var spell: String {
+        let mutableString = NSMutableString(string: _chinese)
+        //把汉字转为拼音
+        CFStringTransform(mutableString, nil, kCFStringTransformToLatin, false)
+        let string = String(mutableString)
+        return string.replacingOccurrences(of: " ", with: "")
+    }
+    
+    /// 剥离音标的拼音
+    ///
+    ///     let chinese = "我"
+    ///     print(chinese.wr.spellStripDiacritics)
+    ///     // Prints: wo
+    var spellStripDiacritics: String {
+        let mutableString = NSMutableString(string: spell)
+        //去掉拼音的音标
+        CFStringTransform(mutableString, nil, kCFStringTransformStripDiacritics, false)
+        let string = String(mutableString)
+        return string.replacingOccurrences(of: " ", with: "")
+    }
+
+}
 
 //MARK:-  Operation
 public protocol WRStringOperation { }
@@ -70,7 +112,7 @@ extension String : WRStringProtocol {
 
 
 //MARK:- WRStringExtension
-public struct WRStringExtension: WRStringJudge, WRStringConversion, WRStringSize, WRStringSeparate, WRStringOperation
+public struct WRStringExtension: WRStringJudge, WRStringConversion, WRStringSize, WRStringChinese, WRStringSeparate, WRStringOperation
 {
     internal let value: String
 
