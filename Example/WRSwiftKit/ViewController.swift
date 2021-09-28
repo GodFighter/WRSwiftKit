@@ -74,7 +74,6 @@ class ViewController: UIViewController {
         
 //        initString()
         
-
     }
 
     override func didReceiveMemoryWarning() {

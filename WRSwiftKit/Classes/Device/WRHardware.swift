@@ -61,17 +61,22 @@ public enum WRHardware {
         case iPhone12Pro    = "iPhone 12 Pro"
         case iPhone12ProMax = "iPhone 12 Pro Max"
         
+        case iPhone13Mini   = "iPhone 13 mini"
+        case iPhone13       = "iPhone 13"
+        case iPhone13Pro    = "iPhone 13 Pro"
+        case iPhone13ProMax = "iPhone 13 Pro Max"
+
         var size: CGSize {
             switch self {
             case .iPhone2G, .iPhone3G, .iPhone3GS, .iPhone4, .iPhone4S:    return CGSize(width: 320, height: 480)
             case .iPhone5, .iPhone5c, .iPhone5s, .iPhoneSE1:               return CGSize(width: 320, height: 568)
             case .iPhone6, .iPhone6s, .iPhone7, .iPhone8, .iPhoneSE2:      return CGSize(width: 375, height: 667)
             case .iPhone6Plus, .iPhone6sPlus, .iPhone7Plus, .iPhone8Plus:  return CGSize(width: 414, height:736)
-            case .iPhoneX, .iPhoneXS, .iPhone11Pro:                        return CGSize(width: 375, height: 812)
+            case .iPhoneX, .iPhoneXS, .iPhone11Pro, .iPhone13Mini:         return CGSize(width: 375, height: 812)
             case .iPhone11, .iPhoneXR, .iPhone11ProMax, .iPhoneXSMax:      return CGSize(width: 414, height: 896)
             case .iPhone12Mini:                                            return CGSize(width: 360, height: 780)
-            case .iPhone12, .iPhone12Pro:                                  return CGSize(width: 390, height: 844)
-            case .iPhone12ProMax:                                          return CGSize(width: 428, height: 926)
+            case .iPhone12, .iPhone12Pro, .iPhone13, .iPhone13Pro:         return CGSize(width: 390, height: 844)
+            case .iPhone12ProMax, .iPhone13ProMax:                         return CGSize(width: 428, height: 926)
             default: return .zero
             }
         }
@@ -117,7 +122,8 @@ public enum WRHardware {
         case iPad6 = "iPad 6"
         case iPad7 = "iPad 7"
         case iPad8 = "iPad 8"
-        
+        case iPad9 = "iPad 9"
+
         case iPadAir_1 = "iPad Air 1"
         case iPadAir_2 = "iPad Air 2"
         case iPadAir_3 = "iPad Air 3"
@@ -128,30 +134,38 @@ public enum WRHardware {
         case iPadMini_3 = "iPad mini 3"
         case iPadMini_4 = "iPad mini 4"
         case iPadMini_5 = "iPad mini 5"
+        case iPadMini_6 = "iPad mini 6"
 
         case iPadPro_129_1 = "iPad Pro 12.9 1"
         case iPadPro_129_2 = "iPad Pro 12.9 2"
         case iPadPro_129_3 = "iPad Pro 12.9 3"
         case iPadPro_129_4 = "iPad Pro 12.9 4"
+        case iPadPro_129_5 = "iPad Pro 12.9 5"
         case iPadPro_097_1 = "iPad Pro 9.7 1"
         case iPadPro_105_1 = "iPad Pro 10.5 1"
         case iPadPro_110_1 = "iPad Pro 11.0 1"
         case iPadPro_110_2 = "iPad Pro 11.0 2"
-        
+        case iPadPro_110_3 = "iPad Pro 11.0 3"
+
         var size: CGSize {
             switch self {
             case .iPad1, .iPad2, .iPad3, .iPad4, .iPad5, .iPad6,
                  .iPadAir_1, .iPadAir_2,
                  .iPadMini_1, .iPadMini_2, .iPadMini_3, .iPadMini_4, .iPadMini_5,
                  .iPadPro_097_1:                                                    return CGSize(width: 768, height: 1024)
-            case .iPad7, .iPad8:                                                    return CGSize(width: 810, height: 1080)
+            case .iPad7, .iPad8, .iPad9:                                            return CGSize(width: 810, height: 1080)
             case .iPadAir_3,
                  .iPadPro_105_1:                                                    return CGSize(width: 834, height: 1112)
             case .iPadAir_4:                                                        return CGSize(width: 820, height: 1180)
 
-            case .iPadPro_129_1, .iPadPro_129_2, .iPadPro_129_3, .iPadPro_129_4:    return CGSize(width: 1024, height: 1366)
-            case .iPadPro_110_1, .iPadPro_110_2:                                    return CGSize(width: 834, height: 1194)
+            case .iPadPro_129_1,
+                    .iPadPro_129_2,
+                    .iPadPro_129_3,
+                    .iPadPro_129_4,
+                    .iPadPro_129_5:                                                 return CGSize(width: 1024, height: 1366)
+            case .iPadPro_110_1, .iPadPro_110_2, .iPadPro_110_3:                    return CGSize(width: 834, height: 1194)
 
+            case .iPadMini_6:                                                        return CGSize(width: 744, height: 1133);
             default: return .zero
             }
         }
@@ -230,7 +244,8 @@ public enum WRHardware {
         case AppleTV_3
         case AppleTV_4
 
-        case AppleTV4K
+        case AppleTV4K_1
+        case AppleTV4K_2
     }
     case AppleTV(AppleTVs)
 

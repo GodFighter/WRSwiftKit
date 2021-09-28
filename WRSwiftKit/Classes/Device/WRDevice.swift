@@ -10,7 +10,7 @@ import UIKit
 
 @objc public class WRDevice: NSObject {
     
-    @objc static let Shared: WRDevice = {
+    @objc public static let Shared: WRDevice = {
         let shared = WRDevice()
         return shared
     }()
@@ -130,6 +130,11 @@ public extension Info {
         case "iPhone13,2":                          return .iPhone(.iPhone12)
         case "iPhone13,3":                          return .iPhone(.iPhone12Pro)
         case "iPhone13,4":                          return .iPhone(.iPhone12ProMax)
+
+        case "iPhone14,2":                          return .iPhone(.iPhone13Pro)
+        case "iPhone14,3":                          return .iPhone(.iPhone13ProMax)
+        case "iPhone14,4":                          return .iPhone(.iPhone13Mini)
+        case "iPhone14,5":                          return .iPhone(.iPhone13)
         /**iPad*/
         case "iPad1,1":                                   return .iPad(.iPad1)
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":  return .iPad(.iPad2)
@@ -139,26 +144,30 @@ public extension Info {
         case "iPad7,5", "iPad7,6":                        return .iPad(.iPad6)
         case "iPad7,11", "iPad7,12":                      return .iPad(.iPad7)
         case "iPad11,6", "iPad11,7":                      return .iPad(.iPad8)
-            
+        case "iPad12,1", "iPad12,2":                      return .iPad(.iPad9)
+
         case "iPad2,5", "iPad2,6", "iPad2,7":   return .iPad(.iPadMini_1)
         case "iPad4,4", "iPad4,5", "iPad4,6":   return .iPad(.iPadMini_2)
         case "iPad4,7", "iPad4,8", "iPad4,9":   return .iPad(.iPadMini_3)
         case "iPad5,1", "iPad5,2":              return .iPad(.iPadMini_4)
         case "iPad11,1", "iPad11,2":            return .iPad(.iPadMini_5)
+        case "iPad114,1", "iPad114,2":          return .iPad(.iPadMini_6)
 
         case "iPad4,1", "iPad4,2", "iPad4,3":   return .iPad(.iPadAir_1)
         case "iPad5,3", "iPad5,4":              return .iPad(.iPadAir_2)
         case "iPad11,3", "iPad11,4":            return .iPad(.iPadAir_3)
         case "iPad13,1", "iPad13,2":            return .iPad(.iPadAir_4)
 
-        case "iPad6,3", "iPad6,4":                          return .iPad(.iPadPro_097_1)
-        case "iPad6,7", "iPad6,8":                          return .iPad(.iPadPro_129_1)
-        case "iPad7,1", "iPad7,2":                          return .iPad(.iPadPro_129_2)
-        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":    return .iPad(.iPadPro_129_3)
-        case "iPad8,11", "iPad8,12":                        return .iPad(.iPadPro_129_4)
-        case "iPad7,3", "iPad7,4":                          return .iPad(.iPadPro_105_1)
-        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":    return .iPad(.iPadPro_110_1)
-        case "iPad8,9", "iPad8,10":                         return .iPad(.iPadPro_110_2)
+        case "iPad6,3", "iPad6,4":                              return .iPad(.iPadPro_097_1)
+        case "iPad6,7", "iPad6,8":                              return .iPad(.iPadPro_129_1)
+        case "iPad7,1", "iPad7,2":                              return .iPad(.iPadPro_129_2)
+        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":        return .iPad(.iPadPro_129_3)
+        case "iPad8,11", "iPad8,12":                            return .iPad(.iPadPro_129_4)
+        case "iPad13,8", "iPad13,9", "iPad13,10", "iPad13,11":  return .iPad(.iPadPro_129_5)
+        case "iPad7,3", "iPad7,4":                              return .iPad(.iPadPro_105_1)
+        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":        return .iPad(.iPadPro_110_1)
+        case "iPad8,9", "iPad8,10":                             return .iPad(.iPadPro_110_2)
+        case "iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7":    return .iPad(.iPadPro_110_3)
 
         /**iPod Touch*/
         case "iPod1,1": return .iPodTouch(.iPodTouch1)
@@ -184,7 +193,8 @@ public extension Info {
         case "AppleTV2,1":                  return .AppleTV(.AppleTV_2)
         case "AppleTV3,1", "AppleTV3,2":    return .AppleTV(.AppleTV_3)
         case "AppleTV5,3":                  return .AppleTV(.AppleTV_4)
-        case "AppleTV6,2":                  return .AppleTV(.AppleTV4K)
+        case "AppleTV6,2":                  return .AppleTV(.AppleTV4K_1)
+        case "AppleTV11,1":                 return .AppleTV(.AppleTV4K_2)
 
         default: return .unknown
         }
