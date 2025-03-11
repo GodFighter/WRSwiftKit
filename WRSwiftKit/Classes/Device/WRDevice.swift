@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import CoreTelephony
+import SystemConfiguration.CaptiveNetwork
 
 @objc public class WRDevice: NSObject {
     
@@ -32,6 +33,25 @@ public extension Judge {
             return safeAreaInset.left > 0.0
         } else {
             return safeAreaInset.bottom > 20.0
+        }
+    }
+
+    var isSimulator: Bool {
+#if targetEnvironment(simulator)
+        return true
+#else
+        return false
+#endif
+    }
+    
+    var isBroken: Bool {
+        let testFilePath = "/private/jailbreak_test.txt"
+        do {
+            try "test".write(toFile: testFilePath, atomically: true, encoding: .utf8)
+            try FileManager.default.removeItem(atPath: testFilePath)
+            return true  // 写入成功，可能是越狱设备
+        } catch {
+            return false // 写入失败，正常设备
         }
     }
 
@@ -80,6 +100,43 @@ public extension Info {
         return Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
 
+    /** 时区*/
+    var timeZone: String? {
+        let totalSeconds = TimeZone.current.secondsFromGMT()
+        let symbol = totalSeconds >= 0 ? "+" : "-"
+        let absoluteSeconds = abs(totalSeconds)
+        let hours = absoluteSeconds / 3600
+        let minutes = (absoluteSeconds % 3600) / 60
+        
+        if hours == 0 && minutes == 0 {
+            return nil
+        } else {
+            var timeZoneString = "GMT\(symbol)\(hours)"
+            if minutes != 0 {
+                timeZoneString += String(format: ":%02d", minutes)
+            }
+            return timeZoneString
+        }
+    }
+    
+    /** 电量百分比*/
+    var batteryPercentage: Int {
+        UIDevice.current.isBatteryMonitoringEnabled = true
+        return Int(abs(UIDevice.current.batteryLevel) * 100)
+    }
+
+    /** 是否充电*/
+    var batteryCharging: Bool {
+        switch UIDevice.current.batteryState {
+        case .charging, .full:
+            return true
+        case .unplugged, .unknown:
+            return false
+        @unknown default:
+            return false
+        }
+    }
+    
     /** 设备id*/
     var identifier: String {
         var systemInfo = utsname()
@@ -102,30 +159,41 @@ public extension Info {
         switch identifier {
         /**iPhone*/
         case "iPhone1,1":                           return .iPhone(.iPhone2G)
+            
         case "iPhone1,2":                           return .iPhone(.iPhone3G)
         case "iPhone2,1":                           return .iPhone(.iPhone3GS)
+            
         case "iPhone3,1", "iPhone3,2", "iPhone3,3": return .iPhone(.iPhone4)
         case "iPhone4,1":                           return .iPhone(.iPhone4S)
+            
         case "iPhone5,1", "iPhone5,2":              return .iPhone(.iPhone5)
         case "iPhone5,3", "iPhone5,4":              return .iPhone(.iPhone5c)
         case "iPhone6,1", "iPhone6,2":              return .iPhone(.iPhone5s)
+            
         case "iPhone7,2":                           return .iPhone(.iPhone6)
         case "iPhone7,1":                           return .iPhone(.iPhone6Plus)
         case "iPhone8,1":                           return .iPhone(.iPhone6s)
         case "iPhone8,2":                           return .iPhone(.iPhone6sPlus)
+            
         case "iPhone8,4":                           return .iPhone(.iPhoneSE1)
+        case "iPhone12,8":                          return .iPhone(.iPhoneSE2)
+        case "iPhone14,6":                          return .iPhone(.iPhoneSE3)
+
         case "iPhone9,1", "iPhone9,3":              return .iPhone(.iPhone7)
         case "iPhone9,2", "iPhone9,4":              return .iPhone(.iPhone7Plus)
+            
         case "iPhone10,1", "iPhone10,4":            return .iPhone(.iPhone8)
         case "iPhone10,2", "iPhone10,5":            return .iPhone(.iPhone8Plus)
+            
         case "iPhone10,3", "iPhone10,6":            return .iPhone(.iPhoneX)
         case "iPhone11,8":                          return .iPhone(.iPhoneXR)
         case "iPhone11,2":                          return .iPhone(.iPhoneXS)
         case "iPhone11,6", "iPhone11,4":            return .iPhone(.iPhoneXSMax)
+            
         case "iPhone12,1":                          return .iPhone(.iPhone11)
         case "iPhone12,3":                          return .iPhone(.iPhone11Pro)
         case "iPhone12,5":                          return .iPhone(.iPhone11ProMax)
-        case "iPhone12,8":                          return .iPhone(.iPhoneSE2)
+            
         case "iPhone13,1":                          return .iPhone(.iPhone12Mini)
         case "iPhone13,2":                          return .iPhone(.iPhone12)
         case "iPhone13,3":                          return .iPhone(.iPhone12Pro)
@@ -135,7 +203,24 @@ public extension Info {
         case "iPhone14,3":                          return .iPhone(.iPhone13ProMax)
         case "iPhone14,4":                          return .iPhone(.iPhone13Mini)
         case "iPhone14,5":                          return .iPhone(.iPhone13)
-        /**iPad*/
+            
+        case "iPhone14,7":                          return .iPhone(.iPhone14)
+        case "iPhone14,8":                          return .iPhone(.iPhone14Plus)
+        case "iPhone15,2":                          return .iPhone(.iPhone14Pro)
+        case "iPhone15,3":                          return .iPhone(.iPhone14ProMax)
+
+        case "iPhone15,4":                          return .iPhone(.iPhone15)
+        case "iPhone15,5":                          return .iPhone(.iPhone15Plus)
+        case "iPhone16,1":                          return .iPhone(.iPhone15Pro)
+        case "iPhone16,2":                          return .iPhone(.iPhone15ProMax)
+
+        case "iPhone17,3":                          return .iPhone(.iPhone16)
+        case "iPhone17,4":                          return .iPhone(.iPhone16Plus)
+        case "iPhone17,1":                          return .iPhone(.iPhone16Pro)
+        case "iPhone17,2":                          return .iPhone(.iPhone16ProMax)
+        case "iPhone17,5":                          return .iPhone(.iPhone16e)
+
+            /**iPad*/
         case "iPad1,1":                                   return .iPad(.iPad1)
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":  return .iPad(.iPad2)
         case "iPad3,1", "iPad3,2", "iPad3,3":             return .iPad(.iPad3)
@@ -145,18 +230,26 @@ public extension Info {
         case "iPad7,11", "iPad7,12":                      return .iPad(.iPad7)
         case "iPad11,6", "iPad11,7":                      return .iPad(.iPad8)
         case "iPad12,1", "iPad12,2":                      return .iPad(.iPad9)
+        case "iPad13,18", "iPad13,19":                    return .iPad(.iPad10)
+        case "iPad15,7", "iPad15,8":                      return .iPad(.iPad_a16)
 
         case "iPad2,5", "iPad2,6", "iPad2,7":   return .iPad(.iPadMini_1)
         case "iPad4,4", "iPad4,5", "iPad4,6":   return .iPad(.iPadMini_2)
         case "iPad4,7", "iPad4,8", "iPad4,9":   return .iPad(.iPadMini_3)
         case "iPad5,1", "iPad5,2":              return .iPad(.iPadMini_4)
         case "iPad11,1", "iPad11,2":            return .iPad(.iPadMini_5)
-        case "iPad114,1", "iPad114,2":          return .iPad(.iPadMini_6)
+        case "iPad14,1", "iPad14,2":            return .iPad(.iPadMini_6)
+        case "iPad16,1", "iPad16,2":            return .iPad(.iPadMini_a17_pro)
 
         case "iPad4,1", "iPad4,2", "iPad4,3":   return .iPad(.iPadAir_1)
         case "iPad5,3", "iPad5,4":              return .iPad(.iPadAir_2)
         case "iPad11,3", "iPad11,4":            return .iPad(.iPadAir_3)
         case "iPad13,1", "iPad13,2":            return .iPad(.iPadAir_4)
+        case "iPad13,16", "iPad13,17":          return .iPad(.iPadAir_5)
+        case "iPad14,8", "iPad14,9":            return .iPad(.iPadAir_11_m2)
+        case "iPad14,10", "iPad14,11":          return .iPad(.iPadAir_13_m2)
+        case "iPad15,3", "iPad15,4":            return .iPad(.iPadAir_11_m3)
+        case "iPad15,5", "iPad15,6":            return .iPad(.iPadAir_13_m3)
 
         case "iPad6,3", "iPad6,4":                              return .iPad(.iPadPro_097_1)
         case "iPad6,7", "iPad6,8":                              return .iPad(.iPadPro_129_1)
@@ -168,6 +261,10 @@ public extension Info {
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":        return .iPad(.iPadPro_110_1)
         case "iPad8,9", "iPad8,10":                             return .iPad(.iPadPro_110_2)
         case "iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7":    return .iPad(.iPadPro_110_3)
+//        case "unknown":    return .iPad(.iPadPro_110_4)
+//        case "unknown":    return .iPad(.iPadPro_129_6)
+        case "iPad16,3", "iPad16,4":                            return .iPad(.iPadPro_110_m4)
+        case "iPad16,5", "iPad16,6":                            return .iPad(.iPadPro_130_m4)
 
         /**iPod Touch*/
         case "iPod1,1": return .iPodTouch(.iPodTouch1)
@@ -187,14 +284,22 @@ public extension Info {
         case "Watch5,1", "Watch5,2", "Watch5,3", "Watch5,4":    return .AppleWatch(.AppleWatchSeries_5)
         case "Watch6,1", "Watch6,2", "Watch6,3", "Watch6,4":    return .AppleWatch(.AppleWatchSeries_6)
         case "Watch5,9", "Watch5,10", "Watch5,11", "Watch5,12": return .AppleWatch(.AppleWatchSE)
+        case "Watch6,6", "Watch6,7", "Watch6,8", "Watch6,9":    return .AppleWatch(.AppleWatchSeries_7)
+        case "Watch6,10", "Watch6,11", "Watch6,12", "Watch6,13": return .AppleWatch(.AppleWatchSE)
+        case "Watch6,16", "Watch6,17":                          return .AppleWatch(.AppleWatchSeries_8)
+        case "Watch6,18":                                       return .AppleWatch(.AppleWatchUltra_1)
+        case "Watch7,1", "Watch7,2", "Watch7,3", "Watch7,4":    return .AppleWatch(.AppleWatchSeries_9)
+        case "Watch7,5":                                        return .AppleWatch(.AppleWatchUltra_2)
+        case "Watch7,8", "Watch7,9", "Watch7,10", "Watch7,11":  return .AppleWatch(.AppleWatchSeries_10)
 
         /**Apple TV*/
         case "AppleTV1,1":                  return .AppleTV(.AppleTV_1)
         case "AppleTV2,1":                  return .AppleTV(.AppleTV_2)
         case "AppleTV3,1", "AppleTV3,2":    return .AppleTV(.AppleTV_3)
-        case "AppleTV5,3":                  return .AppleTV(.AppleTV_4)
+        case "AppleTV5,3":                  return .AppleTV(.AppleTV_HD)
         case "AppleTV6,2":                  return .AppleTV(.AppleTV4K_1)
         case "AppleTV11,1":                 return .AppleTV(.AppleTV4K_2)
+        case "AppleTV14,1":                 return .AppleTV(.AppleTV4K_3)
 
         default: return .unknown
         }
@@ -234,96 +339,225 @@ public extension Language {
     }
 }
 
-//MARK: -
-fileprivate typealias Space = WRDevice
-public extension Space {
-    enum Space {
+//MARK: - 存储
+fileprivate typealias Storage = WRDevice
+public extension Storage {
+    enum Storage {
         /** 空闲 */
         case free
-        
         /** 总计 */
         case total
-                
-        public var value : Double{
-            
-            guard let attributes = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else{
-                return 0
-            }
-            
-            switch self{
-            case .free: return Double((attributes[FileAttributeKey.systemFreeSize] as? NSNumber)?.uint64Value ?? 0)
-            case .total: return attributes[FileAttributeKey.systemSize] as? Double ?? 0
-            }
-        }
-        
-        public var gbString : String{
-            
-            switch self{
-            case .free: return String(format: "%.2fGB", WRDevice.DoubleGbSpace(space: self.value))
-            case .total: return WRDevice.CalculateDeviceSpace(spaceGb: self.value)
-            }
-        }
     }
-    
-    private static func DoubleGbSpace(space: Double) -> Double {
-        return space / 1024.0 / 1024.0 / 1024.0
-    }
-    
-    private static func CalculateDeviceSpace(spaceGb: Double) -> String {
-        
-        if spaceGb < 8 {
-            return "8GB"
-        }
-        else if spaceGb > 8 && spaceGb < 16 {
-            return "16GB"
-        }
-        else if spaceGb > 16 && spaceGb < 32 {
-            return "32GB"
-        }
-        else if spaceGb > 32 && spaceGb < 64 {
-            return "64GB"
-        }
-        else if spaceGb > 64 && spaceGb < 128 {
-            return "128GB"
-        }
-        else if spaceGb > 128 && spaceGb < 256 {
-            return "256GB"
-        }
-        else{
-            return "512GB"
-        }
-    }
-    
-    func spaceValue(_ space : Space) -> Double {
-        guard let attributes = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else{
+}
+
+public extension WRDevice.Storage {
+    var value : Double {
+        guard let attributes  = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else{
             return 0
         }
-
-        switch space{
+        
+        switch self{
         case .free: return Double((attributes[FileAttributeKey.systemFreeSize] as? NSNumber)?.uint64Value ?? 0)
         case .total: return attributes[FileAttributeKey.systemSize] as? Double ?? 0
         }
     }
-
-    func gbString(_ space : Space) -> String {
-        switch space{
-        case .free: return String(format: "%.2fGB", WRDevice.DoubleGbSpace(space: space.value))
-        case .total: return WRDevice.CalculateDeviceSpace(spaceGb: space.value)
+    
+    var description : String {
+        switch self{
+        case .free: return WRFolder.Target(size: Float(self.value), range: 2)
+        case .total: return WRFolder.Target(ceil: Float(self.value))
         }
     }
+}
 
+//MARK: - 内存
+fileprivate typealias Memory = WRDevice
+public extension Memory {
+    enum Memory {
+        /** 空闲 */
+        case free
+        /** 总计 */
+        case total
+    }
+}
+
+public extension WRDevice.Memory {
+    var value : Int {
+        guard let _ = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) else {
+            return 0
+        }
+        
+        switch self {
+        case .free:
+            var count = mach_msg_type_number_t(MemoryLayout<vm_statistics_data_t>.size)/4
+            var vmStats = vm_statistics_data_t()
+            let result = withUnsafeMutablePointer(to: &vmStats) {
+                $0.withMemoryRebound(to: integer_t.self, capacity: 1) { ptr in
+                    host_statistics(mach_host_self(), HOST_VM_INFO, ptr, &count)
+                }
+            }
+            guard result == KERN_SUCCESS else { return 0 }
+            let freeCount = Int(vmStats.free_count) &+ Int(vmStats.inactive_count)
+            return freeCount * Int(vm_page_size)
+        case .total:
+            return Int(ProcessInfo.processInfo.physicalMemory)
+        }
+    }
+    
+    var description: String {
+        switch self{
+        case .free: return WRFolder.Target(size: Float(self.value), range: 2)
+        case .total: return WRFolder.Target(ceil: Float(self.value)) 
+        }
+    }
 }
 
 //MARK: -
 fileprivate typealias Sensor = WRDevice
 public extension Sensor {
     //屏幕亮度
-    func setBrightness(_ brightnessValue : CGFloat){
+    func setBrightness(_ brightnessValue : CGFloat) {
         UIScreen.main.brightness = brightnessValue
     }
     
     //感应黑屏
-    func setProximityMonitoringEnabled(enabled : Bool){
+    func setProximityMonitoringEnabled(enabled : Bool) {
         UIDevice.current.isProximityMonitoringEnabled = enabled
     }
+}
+
+//MARK: -
+fileprivate typealias Wifi = WRDevice
+public extension Wifi {
+    /** wifi 信息*/
+    var wifi: (ssid: String?, bssid: String?) {
+        if let interfaces: NSArray = CNCopySupportedInterfaces() {
+            for interface in interfaces {
+                let interfaceName = interface as! String
+                if let dict = CNCopyCurrentNetworkInfo(interfaceName as CFString) as NSDictionary? {
+                    return (dict[kCNNetworkInfoKeySSID as String] as? String,
+                            dict[kCNNetworkInfoKeyBSSID as String] as? String)
+                }
+            }
+        }
+        return (nil, nil)
+    }
+    
+    /** ip信息*/
+    var ip: String? {
+        var address: String?
+        var ifaddr: UnsafeMutablePointer<ifaddrs>?
+        if getifaddrs(&ifaddr) == 0 {
+            var ptr = ifaddr
+            while ptr != nil {
+                let flags = Int32(ptr!.pointee.ifa_flags)
+                let family = ptr!.pointee.ifa_addr.pointee.sa_family
+                
+                if family == AF_INET && (flags & (IFF_UP | IFF_RUNNING)) != 0 {
+                    var addr = ptr!.pointee.ifa_addr.pointee
+                    var addrString = [CChar](repeating: 0, count: Int(NI_MAXHOST))
+                    if getnameinfo(&addr, socklen_t(addr.sa_len), &addrString, socklen_t(addrString.count), nil, 0, NI_NUMERICHOST) == 0 {
+                        address = String(cString: addrString)
+                    }
+                }
+                ptr = ptr!.pointee.ifa_next
+             }
+            freeifaddrs(ifaddr)
+        }
+        return address
+    }
+    
+    /** 是否使用代理*/
+    var usedProxy: Bool {
+        guard let proxy = CFNetworkCopySystemProxySettings()?.takeUnretainedValue() else {
+            return false
+        }
+        guard let info = proxy as? [String : Any] else {
+            return false
+        }
+        guard let HTTPProxy = info["HTTPProxy"] as? String else {
+            return false
+        }
+        if HTTPProxy.count > 0 {
+            return true
+        }
+        
+        return false
+    }
+    
+    /** 是否使用VPN*/
+    var usedVPN: Bool {
+        guard let settings = CFNetworkCopySystemProxySettings() else {
+            return false
+        }
+
+        guard let info = settings.takeRetainedValue() as? [String : Any] else {
+            return false
+        }
+        guard let keys = info["__SCOPED__"] as? [String : Any] else {
+            return false
+        }
+        
+        let regex = ["tap", "tun", "ppp", "ipsec", "ipsec0"]
+        
+        var result: Bool = false
+        for key in keys.keys {
+            regex.forEach { (value) in
+                if key.contains(value) {
+                    result = true
+                }
+            }
+        }
+        return result
+    }
+    
+    /** 是否破解*/
+    var isJailBroken: Bool {
+        let testFilePath = "/private/jailbreak_test.txt"
+        do {
+            try "test".write(toFile: testFilePath, atomically: true, encoding: .utf8)
+            try FileManager.default.removeItem(atPath: testFilePath)
+            return true  // 写入成功，可能是越狱设备
+        } catch {
+            return false // 写入失败，正常设备
+        }
+    }
+    
+    /** 运营商*/
+    var cellularProviders: String? {
+        guard #available(iOS 12.0, *) else {
+            return nil
+        }
+        let networkInfo = CTTelephonyNetworkInfo()
+        guard let providers = networkInfo.serviceSubscriberCellularProviders,
+              let carrier = providers.values.first(where: { $0.carrierName != nil }) else {
+            return nil
+        }
+        return carrier.carrierName
+    }
+    
+    /** 网络类型*/
+    var networkKind: String? {
+        let networkInfo = CTTelephonyNetworkInfo()
+        guard #available(iOS 12.0, *) else {
+            return nil
+        }
+        guard let technology = networkInfo.serviceCurrentRadioAccessTechnology?.values.first else {
+            return nil
+        }
+
+        if #available(iOS 14.1, *) {
+            if technology == CTRadioAccessTechnologyNR || technology == CTRadioAccessTechnologyNRNSA {
+                return "5G"
+            }
+        }
+
+        switch technology {
+        case CTRadioAccessTechnologyGPRS: return "2G"
+        case CTRadioAccessTechnologyEdge: return "2G"
+        case CTRadioAccessTechnologyLTE: return "4G"
+        default: return nil
+        }
+   }
+    
 }

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WRSwiftKit'
-  s.version          = '1.3.1'
+  s.version          = '1.3.2'
   s.summary          = '常用 Swift 工具类定义.'
 
 # This description is used to generate tags and improve search results.
@@ -46,10 +46,10 @@ Pod::Spec.new do |s|
         ss.source_files = 'WRSwiftKit/Classes/Notification/*.swift'
     end
   
-  s.subspec 'String' do |string|
-    string.source_files = 'WRSwiftKit/Classes/String/*.swift'
-    string.dependency 'WRSwiftKit/Common'
-  end
+    s.subspec 'String' do |string|
+        string.source_files = 'WRSwiftKit/Classes/String/*.swift'
+        string.dependency 'WRSwiftKit/Common'
+    end
 
     s.subspec 'Image' do |image|
         image.source_files = 'WRSwiftKit/Classes/Image/*.swift'

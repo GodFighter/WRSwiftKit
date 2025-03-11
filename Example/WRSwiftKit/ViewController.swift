@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(WRDevice.Storage.total.description)
+        print(123)
         /*
         WRFolder.cacheUrl = Bundle.main.bundleURL
         print("\(WRFolder.folderSize(WRFolder.cacheUrl!))")

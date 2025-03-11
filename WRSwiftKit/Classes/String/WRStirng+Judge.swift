@@ -107,7 +107,7 @@ public extension WRStringJudge_Public {
     ///     // Prints: true
     ///
     var isMongolian: Bool {
-        return !_judge.isEmpty && (Int(_judge.unicodeScalars.first?.value ?? 0) >= 0x1800 && Int(_judge.unicodeScalars.first?.value ?? 0) <= 0x18AF)
+        return !_judge.isEmpty && (Int(_judge.unicodeScalars.first?.value ?? 0) >= 0x1800 && Int(_judge.unicodeScalars.first?.value ?? 0) <= 0x18FF) || (Int(_judge.unicodeScalars.first?.value ?? 0) == 0x202F)
     }
     
     /// 是否为汉字
