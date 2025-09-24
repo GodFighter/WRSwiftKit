@@ -20,72 +20,72 @@ internal enum WRHardware {
     init(_ identifier: String) {
         switch identifier {
         /**iPhone*/
-        case "iPhone1,1":                           self = .iPhone(.iPhone2G)
+        case "iPhone1,1":                           self = .iPhone(.iPhone2G) //1
             
-        case "iPhone1,2":                           self = .iPhone(.iPhone3G)
-        case "iPhone2,1":                           self = .iPhone(.iPhone3GS)
+        case "iPhone1,2":                           self = .iPhone(.iPhone3G) //2
+        case "iPhone2,1":                           self = .iPhone(.iPhone3GS) //3
             
-        case "iPhone3,1", "iPhone3,2", "iPhone3,3": self = .iPhone(.iPhone4)
-        case "iPhone4,1":                           self = .iPhone(.iPhone4S)
+        case "iPhone3,1", "iPhone3,2", "iPhone3,3": self = .iPhone(.iPhone4)//4
+        case "iPhone4,1":                           self = .iPhone(.iPhone4S)//5
             
-        case "iPhone5,1", "iPhone5,2":              self = .iPhone(.iPhone5)
-        case "iPhone5,3", "iPhone5,4":              self = .iPhone(.iPhone5c)
-        case "iPhone6,1", "iPhone6,2":              self = .iPhone(.iPhone5s)
+        case "iPhone5,1", "iPhone5,2":              self = .iPhone(.iPhone5)//6
+        case "iPhone5,3", "iPhone5,4":              self = .iPhone(.iPhone5c)//7
+        case "iPhone6,1", "iPhone6,2":              self = .iPhone(.iPhone5s)//8
             
-        case "iPhone7,2":                           self = .iPhone(.iPhone6)
-        case "iPhone7,1":                           self = .iPhone(.iPhone6Plus)
-        case "iPhone8,1":                           self = .iPhone(.iPhone6s)
-        case "iPhone8,2":                           self = .iPhone(.iPhone6sPlus)
+        case "iPhone7,2":                           self = .iPhone(.iPhone6)//9
+        case "iPhone7,1":                           self = .iPhone(.iPhone6Plus)//10
+        case "iPhone8,1":                           self = .iPhone(.iPhone6s)//11
+        case "iPhone8,2":                           self = .iPhone(.iPhone6sPlus)//12
             
-        case "iPhone8,4":                           self = .iPhone(.iPhoneSE1)
-        case "iPhone12,8":                          self = .iPhone(.iPhoneSE2)
-        case "iPhone14,6":                          self = .iPhone(.iPhoneSE3)
+        case "iPhone8,4":                           self = .iPhone(.iPhoneSE1)//13
+        case "iPhone12,8":                          self = .iPhone(.iPhoneSE2)//14
+        case "iPhone14,6":                          self = .iPhone(.iPhoneSE3)//15
 
-        case "iPhone9,1", "iPhone9,3":              self = .iPhone(.iPhone7)
-        case "iPhone9,2", "iPhone9,4":              self = .iPhone(.iPhone7Plus)
+        case "iPhone9,1", "iPhone9,3":              self = .iPhone(.iPhone7)//16
+        case "iPhone9,2", "iPhone9,4":              self = .iPhone(.iPhone7Plus)//17
             
-        case "iPhone10,1", "iPhone10,4":            self = .iPhone(.iPhone8)
-        case "iPhone10,2", "iPhone10,5":            self = .iPhone(.iPhone8Plus)
+        case "iPhone10,1", "iPhone10,4":            self = .iPhone(.iPhone8)//18
+        case "iPhone10,2", "iPhone10,5":            self = .iPhone(.iPhone8Plus)//19
             
-        case "iPhone10,3", "iPhone10,6":            self = .iPhone(.iPhoneX)
-        case "iPhone11,8":                          self = .iPhone(.iPhoneXR)
-        case "iPhone11,2":                          self = .iPhone(.iPhoneXS)
-        case "iPhone11,6", "iPhone11,4":            self = .iPhone(.iPhoneXSMax)
+        case "iPhone10,3", "iPhone10,6":            self = .iPhone(.iPhoneX)//20
+        case "iPhone11,8":                          self = .iPhone(.iPhoneXR)//21
+        case "iPhone11,2":                          self = .iPhone(.iPhoneXS)//22
+        case "iPhone11,6", "iPhone11,4":            self = .iPhone(.iPhoneXSMax)//23
             
-        case "iPhone12,1":                          self = .iPhone(.iPhone11)
-        case "iPhone12,3":                          self = .iPhone(.iPhone11Pro)
-        case "iPhone12,5":                          self = .iPhone(.iPhone11ProMax)
+        case "iPhone12,1":                          self = .iPhone(.iPhone11)//24
+        case "iPhone12,3":                          self = .iPhone(.iPhone11Pro)//25
+        case "iPhone12,5":                          self = .iPhone(.iPhone11ProMax)//26
             
-        case "iPhone13,1":                          self = .iPhone(.iPhone12Mini)
-        case "iPhone13,2":                          self = .iPhone(.iPhone12)
-        case "iPhone13,3":                          self = .iPhone(.iPhone12Pro)
-        case "iPhone13,4":                          self = .iPhone(.iPhone12ProMax)
+        case "iPhone13,1":                          self = .iPhone(.iPhone12Mini)//27
+        case "iPhone13,2":                          self = .iPhone(.iPhone12)//28
+        case "iPhone13,3":                          self = .iPhone(.iPhone12Pro)//29
+        case "iPhone13,4":                          self = .iPhone(.iPhone12ProMax)//30
 
-        case "iPhone14,2":                          self = .iPhone(.iPhone13Pro)
-        case "iPhone14,3":                          self = .iPhone(.iPhone13ProMax)
-        case "iPhone14,4":                          self = .iPhone(.iPhone13Mini)
-        case "iPhone14,5":                          self = .iPhone(.iPhone13)
+        case "iPhone14,2":                          self = .iPhone(.iPhone13Pro)//31
+        case "iPhone14,3":                          self = .iPhone(.iPhone13ProMax)//32
+        case "iPhone14,4":                          self = .iPhone(.iPhone13Mini)//33
+        case "iPhone14,5":                          self = .iPhone(.iPhone13)//34
             
-        case "iPhone14,7":                          self = .iPhone(.iPhone14)
-        case "iPhone14,8":                          self = .iPhone(.iPhone14Plus)
-        case "iPhone15,2":                          self = .iPhone(.iPhone14Pro)
-        case "iPhone15,3":                          self = .iPhone(.iPhone14ProMax)
+        case "iPhone14,7":                          self = .iPhone(.iPhone14)//35
+        case "iPhone14,8":                          self = .iPhone(.iPhone14Plus)//36
+        case "iPhone15,2":                          self = .iPhone(.iPhone14Pro)//37
+        case "iPhone15,3":                          self = .iPhone(.iPhone14ProMax)//38
 
-        case "iPhone15,4":                          self = .iPhone(.iPhone15)
-        case "iPhone15,5":                          self = .iPhone(.iPhone15Plus)
-        case "iPhone16,1":                          self = .iPhone(.iPhone15Pro)
-        case "iPhone16,2":                          self = .iPhone(.iPhone15ProMax)
+        case "iPhone15,4":                          self = .iPhone(.iPhone15)//39
+        case "iPhone15,5":                          self = .iPhone(.iPhone15Plus)//40
+        case "iPhone16,1":                          self = .iPhone(.iPhone15Pro)//41
+        case "iPhone16,2":                          self = .iPhone(.iPhone15ProMax)//42
 
-        case "iPhone17,3":                          self = .iPhone(.iPhone16)
-        case "iPhone17,4":                          self = .iPhone(.iPhone16Plus)
-        case "iPhone17,1":                          self = .iPhone(.iPhone16Pro)
-        case "iPhone17,2":                          self = .iPhone(.iPhone16ProMax)
+        case "iPhone17,3":                          self = .iPhone(.iPhone16)//43
+        case "iPhone17,4":                          self = .iPhone(.iPhone16Plus)//44
+        case "iPhone17,1":                          self = .iPhone(.iPhone16Pro)//45
+        case "iPhone17,2":                          self = .iPhone(.iPhone16ProMax)//46
         case "iPhone17,5":                          self = .iPhone(.iPhone16e)
 
-        case "iPhone18,3":                          self = .iPhone(.iPhone17)
-        case "iPhone18,1":                          self = .iPhone(.iPhone17Pro)
-        case "iPhone18,2":                          self = .iPhone(.iPhone17ProMax)
-        case "iPhone18,4":                          self = .iPhone(.iPhoneAir)
+        case "iPhone18,3":                          self = .iPhone(.iPhone17)//47
+        case "iPhone18,1":                          self = .iPhone(.iPhone17Pro)//48
+        case "iPhone18,2":                          self = .iPhone(.iPhone17ProMax)//49
+        case "iPhone18,4":                          self = .iPhone(.iPhoneAir)//50
 
             /**iPad*/
         case "iPad1,1":                                   self = .iPad(.iPad1)
@@ -128,10 +128,11 @@ internal enum WRHardware {
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":        self = .iPad(.iPadPro_110_1)
         case "iPad8,9", "iPad8,10":                             self = .iPad(.iPadPro_110_2)
         case "iPad13,4", "iPad13,5", "iPad13,6", "iPad13,7":    self = .iPad(.iPadPro_110_3)
-//        case "unknown":    self = .iPad(.iPadPro_110_4)
-//        case "unknown":    self = .iPad(.iPadPro_129_6)
+        case "iPad14,3":                                        self = .iPad(.iPadPro_110_4)
+        case "iPad14,5":                                        self = .iPad(.iPadPro_129_6)
+        case "iPad16,5":                                        self = .iPad(.iPadPro_129_7)
         case "iPad16,3", "iPad16,4":                            self = .iPad(.iPadPro_110_m4)
-        case "iPad16,5", "iPad16,6":                            self = .iPad(.iPadPro_130_m4)
+        case "iPad16,6":                                        self = .iPad(.iPadPro_130_m4)
 
         /**iPod Touch*/
         case "iPod1,1": self = .iPodTouch(.iPodTouch1)
@@ -150,9 +151,9 @@ internal enum WRHardware {
         case "Watch4,1", "Watch4,2", "Watch4,3", "Watch4,4":    self = .AppleWatch(.AppleWatchSeries_4)
         case "Watch5,1", "Watch5,2", "Watch5,3", "Watch5,4":    self = .AppleWatch(.AppleWatchSeries_5)
         case "Watch6,1", "Watch6,2", "Watch6,3", "Watch6,4":    self = .AppleWatch(.AppleWatchSeries_6)
-        case "Watch5,9", "Watch5,10", "Watch5,11", "Watch5,12": self = .AppleWatch(.AppleWatchSE)
+        case "Watch5,9", "Watch5,10", "Watch5,11", "Watch5,12": self = .AppleWatch(.AppleWatchSE_1)
         case "Watch6,6", "Watch6,7", "Watch6,8", "Watch6,9":    self = .AppleWatch(.AppleWatchSeries_7)
-        case "Watch6,10", "Watch6,11", "Watch6,12", "Watch6,13": self = .AppleWatch(.AppleWatchSE)
+        case "Watch6,10", "Watch6,11", "Watch6,12", "Watch6,13": self = .AppleWatch(.AppleWatchSE_2)
         case "Watch6,16", "Watch6,17":                          self = .AppleWatch(.AppleWatchSeries_8)
         case "Watch6,18":                                       self = .AppleWatch(.AppleWatchUltra_1)
         case "Watch7,1", "Watch7,2", "Watch7,3", "Watch7,4":    self = .AppleWatch(.AppleWatchSeries_9)
@@ -239,6 +240,135 @@ internal enum WRHardware {
         case .AppleTV(_):
             return "tvOS"
         }
+    }
+    
+    var year: String? {
+        if case .iPhone(let iPhone) = self,
+            case .iPad(let iPad) = self,
+           case .iPodTouch(let iPodTouch) = self,
+           case .AppleWatch(let AppleWatch) = self,
+           case .AppleTV(let AppleTV) = self
+        {
+            if iPhone == .iPhone2G ||
+                iPodTouch == .iPodTouch1 ||
+                AppleTV == .AppleTV_1
+            {
+                return "2007" // 1
+                
+            } else if iPhone == .iPhone3G ||
+                        iPodTouch == .iPodTouch2
+            {
+                return "2008" // 2
+                
+            } else if iPhone == .iPhone3GS ||
+                        iPodTouch == .iPodTouch3
+            {
+                return "2009" // 3
+                
+            } else if iPhone == .iPhone4 ||
+                      iPad == .iPad1 || // ipad 1
+                        iPodTouch == .iPodTouch4 ||
+                        AppleTV == .AppleTV_2
+            {
+                return "2010" // 4
+                
+            } else if iPhone == .iPhone4S ||
+                      iPad == .iPad2 // ipad 2
+            {
+                return "2011" // 5
+                
+            } else if iPhone == .iPhone5 ||
+                      iPad == .iPad3 || iPad == .iPad4 || iPad == .iPadMini_1 || // ipad 5
+                        iPodTouch == .iPodTouch5 ||
+                        AppleTV == .AppleTV_3
+            {
+                return "2012" // 6
+                
+            } else if iPhone == .iPhone5c || iPhone == .iPhone5s ||
+                      iPad == .iPadAir_1 || iPad == .iPadMini_2 // ipad 7
+            {
+                return "2013"// 8
+                
+            } else if iPhone == .iPhone6 || iPhone == .iPhone6Plus ||
+                      iPad == .iPadAir_2 || iPad == .iPadMini_3 // ipad 9
+            {
+                return "2014" // 10
+               
+            } else if iPhone == .iPhone6s || iPhone == .iPhone6sPlus ||
+                      iPad == .iPadMini_4 || iPad == .iPadPro_129_1 || // ipad 11
+                        iPodTouch == .iPodTouch6 ||
+                        AppleWatch == .AppleWatch_1 ||
+                        AppleTV == .AppleTV_HD
+            {
+                return "2015" // 12
+
+            } else if iPhone == .iPhone7 || iPhone == .iPhone7Plus || iPhone == .iPhoneSE1 ||
+                      iPad == .iPadPro_097_1 || // ipad 12
+                        AppleWatch == .AppleWatchSeries_1 || AppleWatch == .AppleWatchSeries_2
+            {
+                return "2016" // 15
+
+            } else if iPhone == .iPhone8 || iPhone == .iPhone8Plus || iPhone == .iPhoneX ||
+                      iPad == .iPad5 || iPad == .iPadPro_105_1 || iPad == .iPadPro_129_2 || // ipad 15
+                        AppleWatch == .AppleWatchSeries_3 ||
+                        AppleTV == .AppleTV4K_1
+            {
+                return "2017" // 18
+                
+            } else if iPhone == .iPhoneXR || iPhone == .iPhoneXS || iPhone == .iPhoneXSMax ||
+                      iPad == .iPad6 || iPad == .iPadPro_110_1 || iPad == .iPadPro_129_3 || //ipad 18
+                        AppleWatch == .AppleWatchSeries_4
+            {
+                return "2018" // 21
+
+            } else if iPhone == .iPhone11 || iPhone == .iPhone11Pro || iPhone == .iPhone11ProMax ||
+                        iPad == .iPad7 || iPad == .iPadAir_3 || iPad == .iPadMini_5 || // ipad 21
+                        iPodTouch == .iPodTouch7 ||
+                        AppleWatch == .AppleWatchSeries_5
+            {
+                return "2019" // 24
+
+            } else if iPhone == .iPhone12Mini || iPhone == .iPhone12 || iPhone == .iPhone12Pro || iPhone == .iPhone12ProMax || iPhone == .iPhoneSE2 ||
+                        iPad == .iPad8 || iPad == .iPadAir_4 || iPad == .iPadPro_110_2 || iPad == .iPadPro_129_4 || // ipad 25
+                        AppleWatch == .AppleWatchSeries_6 || AppleWatch == .AppleWatchSE_1 ||
+                        AppleTV == .AppleTV4K_2
+            {
+                return "2020" // 29
+ 
+            } else if iPhone == .iPhone13Mini || iPhone == .iPhone13 || iPhone == .iPhone13Pro || iPhone == .iPhone13ProMax ||
+                        iPad == .iPad9 || iPad == .iPadMini_6 || iPad == .iPadPro_110_3 || iPad == .iPadPro_129_5 || // ipad 29
+                        AppleWatch == .AppleWatchSeries_7
+            {
+                return "2021" // 33
+
+            } else if iPhone == .iPhone14 || iPhone == .iPhone14Pro || iPhone == .iPhone14ProMax || iPhone == .iPhone14Plus || iPhone == .iPhoneSE3 ||
+                        iPad == .iPad10 || iPad == .iPadAir_5 || iPad == .iPadPro_110_4 || iPad == .iPadPro_129_6 || // ipad 33
+                        AppleWatch == .AppleWatchSeries_8 || AppleWatch == .AppleWatchSE_2 || AppleWatch == .AppleWatchUltra_1 ||
+                        AppleTV == .AppleTV4K_3
+            {
+                return "2022" // 38
+
+            } else if iPhone == .iPhone15 || iPhone == .iPhone15Pro || iPhone == .iPhone15ProMax || iPhone == .iPhone15Plus ||
+                        iPad == .iPad_a16 || // ipad 34
+                        AppleWatch == .AppleWatchSeries_9 || AppleWatch == .AppleWatchUltra_2
+            {
+                return "2023" // 42
+
+            } else if iPhone == .iPhone16 || iPhone == .iPhone16Pro || iPhone == .iPhone16ProMax || iPhone == .iPhone16Plus ||
+                        iPad == .iPadPro_110_m4 || iPad == .iPadPro_130_m4 || iPad == .iPadAir_11_m2 || iPad == .iPadAir_13_m2 || iPad == .iPadPro_129_7 || iPad == .iPadMini_a17_pro || // ipad 40
+                        AppleWatch == .AppleWatchSeries_10
+            {
+                return "2024" // 46
+
+            } else if iPhone == .iPhone17 || iPhone == .iPhone17Pro || iPhone == .iPhone17ProMax || iPhone == .iPhoneAir ||
+                        iPad == .iPadAir_11_m3 || iPad == .iPadAir_13_m3 // ipad 42
+            {
+                return "2025" // 50
+
+            }
+        }
+        
+        return nil
     }
 }
 
@@ -444,6 +574,7 @@ enum iPadKind: String, WRDeviceSize {
     case iPadPro_129_4 = "iPad Pro (12.9-inch)(4th generation)"
     case iPadPro_129_5 = "iPad Pro (12.9-inch)(5th generation)"
     case iPadPro_129_6 = "iPad Pro (12.9-inch)(6th generation)"
+    case iPadPro_129_7 = "iPad Pro (12.9-inch)(7th generation)"
 
     case iPadPro_097_1  = "iPad Pro (9.7-inch)(1th generation)"
     
@@ -454,7 +585,7 @@ enum iPadKind: String, WRDeviceSize {
     case iPadPro_110_3  = "iPad Pro (11-inch)(3th generation)"
     case iPadPro_110_4  = "iPad Pro (11-inch)(4th generation)"
     case iPadPro_110_m4 = "iPad Pro 11-inch(M4)"
-    case iPadPro_130_m4 = "iPad Pro 13-inch(M4)"
+    case iPadPro_130_m4 = "iPad Pro 13-inch(M4)" // 42个
 
     var size: CGSize {
         switch self {
@@ -485,7 +616,7 @@ enum iPadKind: String, WRDeviceSize {
         case .iPadPro_110_m4:
             return CGSize(width: 844, height: 1210);
 
-        case .iPadPro_129_1, .iPadPro_129_2, .iPadPro_129_3, .iPadPro_129_4, .iPadPro_129_5, .iPadPro_129_6,
+        case .iPadPro_129_1, .iPadPro_129_2, .iPadPro_129_3, .iPadPro_129_4, .iPadPro_129_5, .iPadPro_129_6, .iPadPro_129_7,
                 .iPadAir_13_m2, .iPadAir_13_m3:
             return CGSize(width: 1024, height: 1366)
             
@@ -528,7 +659,7 @@ enum iPadKind: String, WRDeviceSize {
                 .iPadPro_110_1, .iPadPro_110_2, .iPadPro_110_3, .iPadPro_110_4, .iPadPro_110_m4:
             return 11.0
             
-        case .iPadPro_129_1, .iPadPro_129_2, .iPadPro_129_3, .iPadPro_129_4, .iPadPro_129_5, .iPadPro_129_6:
+        case .iPadPro_129_1, .iPadPro_129_2, .iPadPro_129_3, .iPadPro_129_4, .iPadPro_129_5, .iPadPro_129_6, .iPadPro_129_7:
             return 12.9
 
         case .iPadAir_13_m2, .iPadAir_13_m3,
@@ -599,10 +730,11 @@ enum AppleWatchKind: String {
     case AppleWatchSeries_9  = "Apple Watch Series 9"
     case AppleWatchSeries_10 = "Apple Watch Series 10"
 
-    case AppleWatchSE = "Apple Watch SE"
-    
+    case AppleWatchSE_1 = "Apple Watch SE 1"
+    case AppleWatchSE_2 = "Apple Watch SE 2"
+
     case AppleWatchUltra_1 = "Apple Watch Ultra 1"
-    case AppleWatchUltra_2 = "Apple Watch Ultra 2"
+    case AppleWatchUltra_2 = "Apple Watch Ultra 2" // 15个
 }
 
 //MARK: -
