@@ -6,6 +6,8 @@
 //  Copyright (c) 2020 GodFighter. All rights reserved.
 //
 
+#import "WRSwiftKit/WRSwiftKit-Swift.h"
+
 #import "WRViewController.h"
 @import WRSwiftKit;
 
@@ -18,6 +20,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"size = %@", [NSValue valueWithCGSize:WRDevice.current.size]);
+    NSLog(@"model = %@", WRDevice.current.model);
+    NSLog(@"inches = %@", @(WRDevice.current.inches).stringValue);
+
+    NSLog(@"free = %@, %@", @([WRDevice.current storageValue:StorageFree]).stringValue, [WRDevice.current storageString:StorageFree]);
+    NSLog(@"total = %@, %@", @([WRDevice.current storageValue:StorageTotal]).stringValue, [WRDevice.current storageString:StorageTotal]);
+
+    NSLog(@"memory free = %@, %@", @([WRDevice.current memoryValue:MemoryFree]).stringValue, [WRDevice.current memoryString:MemoryFree]);
+    NSLog(@"memory total = %@, %@", @([WRDevice.current memoryValue:MemoryTotal]).stringValue, [WRDevice.current memoryString:MemoryTotal]);
+    NSLog(@"wifi = %@", WRDevice.current.wifi);
+
+//    NSLog(@"total = %@", @(WRDevi))
     
 //    UIImage *image = [UIImage.Rotate vertical:[UIImage imageNamed:@"wuren"]];
 //    UIImageView *imageview = [[UIImageView alloc] initWithImage:image];

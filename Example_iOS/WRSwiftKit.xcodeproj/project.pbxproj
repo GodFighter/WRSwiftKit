@@ -48,7 +48,7 @@
 		BB90750823CD623400CC08AF /* WRSwiftKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WRSwiftKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		D540D5FB6560A7C0238CBDDA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D7A24C11AA9D40759F7B6499 /* Pods-WRSwiftKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WRSwiftKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-WRSwiftKit_Example/Pods-WRSwiftKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		F8758538E3D6550C58D1CC71 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WRSwiftKit.podspec; path = ../WRSwiftKit.podspec; sourceTree = "<group>"; };
+		F8758538E3D6550C58D1CC71 /* WRSwiftKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WRSwiftKit.podspec; path = ../WRSwiftKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
