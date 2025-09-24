@@ -27,7 +27,7 @@ extension UIScrollView {
 
 public extension WRScrollViewExtension {
     
-    var snapshot: UIImage? {
+    @objc func snapshotFullContent() -> UIImage? {
         guard let scrollView = _scrollView else { return nil }
 
         UIGraphicsBeginImageContextWithOptions(scrollView.contentSize, false, 0)

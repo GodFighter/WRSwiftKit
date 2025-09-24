@@ -36,7 +36,7 @@ import UIKit
 
 //MARK:-  Public
 fileprivate typealias WRImageExtension_Public = WRImageExtension
-public extension WRImageExtension_Public {
+@objc public extension WRImageExtension_Public {
     /**调整图片尺寸*/
     /**
     不修改比例
@@ -198,7 +198,7 @@ public extension WRImageExtension_Public {
     /// - parameter color: 图片颜色
     /// - parameter size: 修改的目标尺寸
     /// - returns: 生成的图片
-    @objc static func Color(_ color : UIColor, _ size : CGSize) -> UIImage? {
+    static func Color(_ color : UIColor, _ size : CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         
         guard let context = UIGraphicsGetCurrentContext() else{
@@ -221,7 +221,7 @@ public extension WRImageExtension_Public {
     /// - parameter start: 开始点
     /// - parameter end: 结束点
     /// - returns: 生成的图片
-    @objc static func Color(_ colors : [UIColor], _ size : CGSize, _ locations: [CGFloat], _ start: CGPoint, _ end: CGPoint) -> UIImage? {
+    static func Color(_ colors : [UIColor], _ size : CGSize, _ locations: [CGFloat], _ start: CGPoint, _ end: CGPoint) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         
         guard let context = UIGraphicsGetCurrentContext() else{
@@ -278,7 +278,7 @@ public extension WRImageExtension_Public {
     /**修改图片中不可见部分的颜色*/
     /// - parameter tintColor: 目标颜色
     /// - returns: 生成的图片
-    @objc func tintColor(_ tintColor: UIColor) -> UIImage?
+    func tintColor(_ tintColor: UIColor) -> UIImage?
     {
         guard let image = self.value as? UIImage, !image.size.equalTo(.zero) else { return nil }
         return WRImageExtension.TintColor(tintColor, image)
@@ -288,7 +288,7 @@ public extension WRImageExtension_Public {
     /// - parameter image: 待修改颜色图片
     /// - parameter tintColor: 目标颜色
     /// - returns: 生成的图片
-    @objc static func TintColor(_ tintColor: UIColor, _ image : UIImage) -> UIImage? {
+    static func TintColor(_ tintColor: UIColor, _ image : UIImage) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(image.size, false, image.scale)
         
         let context = UIGraphicsGetCurrentContext()
@@ -316,7 +316,7 @@ public extension WRImageExtension_Public {
     /// - parameter scale: 放大倍数
     /// - parameter opaque: 不透明
     /// - returns: 生成的图片
-    @objc static func Snapshot(_ view : UIView, size : CGSize, scale : CGFloat, opaque: Bool) -> UIImage? {
+    static func Snapshot(_ view : UIView, size : CGSize, scale : CGFloat, opaque: Bool) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, opaque, scale)
         
         guard let context = UIGraphicsGetCurrentContext() else{
@@ -343,7 +343,7 @@ public extension WRImageExtension_Public {
     /// - parameter scale: 放大倍数
     /// - parameter size: 尺寸
     /// - returns: 生成的图片
-    @objc static func Combination(_ image : CGImage?, bgImage : CGImage?, size : CGSize, scale : CGFloat) -> UIImage? {
+    static func Combination(_ image : CGImage?, bgImage : CGImage?, size : CGSize, scale : CGFloat) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, scale);
         
         guard let context = UIGraphicsGetCurrentContext() else{
@@ -362,14 +362,14 @@ public extension WRImageExtension_Public {
 
     /**修正图片方向*/
     /// - returns: 修正后的图片
-    @objc func fixOrientation() -> UIImage? {
+    func fixOrientation() -> UIImage? {
         guard let image = self.value as? UIImage, !image.size.equalTo(.zero) else { return nil }
         return WRImageExtension.FixOrientation(image)
     }
      /**修正图片方向*/
      /// - parameter fixImage: 待修改图片
      /// - returns: 修正后的图片
-    @objc static func FixOrientation(_ fixImage : UIImage) -> UIImage {
+    static func FixOrientation(_ fixImage : UIImage) -> UIImage {
          guard let fixImageCG = fixImage.cgImage , fixImage.imageOrientation != UIImage.Orientation.up else{
              return fixImage
          }

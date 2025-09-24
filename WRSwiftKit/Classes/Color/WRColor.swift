@@ -8,7 +8,7 @@
 import UIKit
 
 //MARK:-  Initializers
-public extension UIColor {
+@objc public extension UIColor {
     
     /// 整型初始化
     ///
@@ -33,15 +33,15 @@ public extension UIColor {
     ///
     /// - parameter hex: 16进制数
     /// - parameter wr_alpha: 透明度
-    convenience init(hex:Int, _ wr_alpha: CGFloat = 1) {
-        self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff, wr_alpha)
+    convenience init(hex:Int, alpha: CGFloat = 1) {
+        self.init(red:(hex >> 16) & 0xff, green:(hex >> 8) & 0xff, blue:hex & 0xff, alpha)
     }
 
     /// 16进制字符串初始化
     /// - Parameters:
     ///   - hexString: 16进制字符串
     ///   - wr_alpha: 透明度
-    convenience init?(hexString: String, _ wr_alpha: CGFloat = 1) {
+    convenience init?(hexString: String, alpha: CGFloat = 1) {
         var string = ""
         
         if hexString.lowercased().hasPrefix("0x") {
@@ -57,8 +57,17 @@ public extension UIColor {
             string = str
         }
         guard let hexValue = Int(string, radix: 16) else { return nil }
-        self.init(hex: hexValue, wr_alpha)
+        self.init(hex: hexValue, alpha: alpha)
     }
+    
+    static func Hex(_ hex: Int, alpha: CGFloat = 1) -> UIColor {
+        return UIColor.init(hex: hex, alpha: alpha)
+    }
+    
+    static func HexString(_ hex: String, alpha: CGFloat = 1) -> UIColor {
+        return UIColor.init(hexString: hex, alpha: alpha) ?? .white
+    }
+
 }
 
 //MARK:-

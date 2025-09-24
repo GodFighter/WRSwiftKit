@@ -31,7 +31,12 @@
     NSLog(@"memory free = %@, %@", @([WRDevice.current memoryValue:MemoryFree]).stringValue, [WRDevice.current memoryString:MemoryFree]);
     NSLog(@"memory total = %@, %@", @([WRDevice.current memoryValue:MemoryTotal]).stringValue, [WRDevice.current memoryString:MemoryTotal]);
     NSLog(@"wifi = %@", WRDevice.current.wifi);
-
+    
+    UIColor *hexColor = [UIColor Hex:0x00ff00 alpha:1]; //[[UIColor alloc] initWithHex:0x00ff00 alpha:1];
+    UIColor *hexStringColor = [UIColor HexString:@"0000ff" alpha:1]; //[[UIColor alloc] initWithHexString:@"ff00ff" alpha:1];
+    
+    
+    
 //    NSLog(@"total = %@", @(WRDevi))
     
 //    UIImage *image = [UIImage.Rotate vertical:[UIImage imageNamed:@"wuren"]];
@@ -53,7 +58,8 @@
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
     button.frame = CGRectMake(100, 100, 50, 50);
-    button.backgroundColor = [UIColor blueColor];
+    button.backgroundColor = hexStringColor;
+    button.titleLabel.textColor = hexColor;
     [button setTitle:@"button" forState:UIControlStateNormal];
     [self.view addSubview:button];
     
